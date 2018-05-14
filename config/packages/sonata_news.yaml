@@ -1,0 +1,32 @@
+sonata_news:
+
+    admin:
+        post:
+            class:       App\Admin\PostAdmin
+            controller:  SonataAdminBundle:CRUD
+        comment:
+            class:       Sonata\NewsBundle\Admin\CommentAdmin
+            controller:  SonataNewsBundle:CommentAdmin
+
+    title: Webchain Network News
+    link: /news
+    description: Webchain Network News
+    salt: 'secureToken'
+    permalink_generator: sonata.news.permalink.collection
+
+    # comment options
+    comment:
+        notification:
+            emails: [ swiftmailer.username ]
+            from: swiftmailer.username
+            template: 'SonataNewsBundle:Mail:comment_notification.txt.twig'
+
+
+# Enable Doctrine to map the provided entities
+doctrine:
+    orm:
+        entity_managers:
+            default:
+                mappings:
+                    ApplicationSonataNewsBundle: ~
+                    SonataNewsBundle: ~

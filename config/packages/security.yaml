@@ -1,0 +1,70 @@
+# To get started with security, check out the documentation:
+# https://symfony.com/doc/current/security.html
+security:
+    encoders:
+        FOS\UserBundle\Model\UserInterface: bcrypt
+
+    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    providers:
+        fos_userbundle:
+            id: fos_user.user_provider.username
+
+    firewalls:
+        # disables authentication for assets and the profiler, adapt it according to your needs
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            anonymous: ~
+            form_login:
+                provider: fos_userbundle
+                csrf_token_generator: security.csrf.token_manager
+            remember_me:
+                secret: '%kernel.secret%'
+            logout_on_user_change: true
+
+            # activate different ways to authenticate
+
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+            #http_basic: ~
+
+            # https://symfony.com/doc/current/security/form_login_setup.html
+            #form_login: ~
+    role_hierarchy:
+        ROLE_ADMIN_USER_ADMIN:
+            - ROLE_ADMIN_USER_LIST
+            - ROLE_ADMIN_USER_VIEW
+        ROLE_ADMIN_USER_SUPPORT:
+            - ROLE_ADMIN_USER_LIST
+            - ROLE_ADMIN_USER_VIEW
+            - ROLE_ADMIN_USER_EDIT
+        ROLE_ADMIN_USER_SUPER:
+            - ROLE_ADMIN_USER_ALL
+            - ROLE_ADMIN_USER_EDITROLES
+        ROLE_ADMIN_PROFILE_ADMIN:
+            - ROLE_ADMIN_PROFILE_LIST
+            - ROLE_ADMIN_PROFILE_VIEW
+        ROLE_ADMIN_PROFILE_SUPER:
+            - ROLE_ADMIN_PROFILE_ALL
+        ROLE_ADMIN_NEWS_ADMIN:
+            - ROLE_SONATA_NEWS_ADMIN_POST_ALL
+            - ROLE_SONATA_NEWS_ADMIN_COMMENT_ALL
+            - ROLE_SONATA_MEDIA_ADMIN_MEDIA_ALL
+            - ROLE_SONATA_CLASSIFICATION_ADMIN_TAG_ALL
+            - ROLE_SONATA_CLASSIFICATION_ADMIN_COLLECTION_ALL
+            - ROLE_SONATA_CLASSIFICATION_ADMIN_CONTEXT_ALL
+
+        ROLE_ADMIN: [ROLE_USER, ROLE_ADMIN_USER_ADMIN, ROLE_ADMIN_PROFILE_ADMIN]
+        ROLE_SUPPORTER: [ROLE_ADMIN, ROLE_ADMIN_USER_SUPPORT]
+        ROLE_COPYWRITER: [ROLE_ADMIN, ROLE_ADMIN_NEWS_ADMIN]
+        ROLE_SUPER_ADMIN: [ROLE_ADMIN, ROLE_ADMIN_USER_SUPER, ROLE_ADMIN_PROFILE_SUPER]
+
+    access_decision_manager:
+        strategy: unanimous
+
+    access_control:
+        - { path: ^/login$, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/admin, roles: ROLE_ADMIN }

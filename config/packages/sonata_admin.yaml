@@ -1,0 +1,25 @@
+sonata_admin:
+    security:
+        handler: sonata.admin.security.handler.role
+    dashboard:
+        blocks:
+            # display a dashboard block
+            - { position: left, type: sonata.admin.block.admin_list }
+
+        groups:
+
+            sonata.admin.group.content:
+                label: Content
+                items:
+                    - sonata.news.admin.comment
+                    - sonata.news.admin.post
+                    - sonata.media.admin.media
+                    - sonata.media.admin.gallery
+
+            sonata.admin.group.classification:
+                label: Classification
+                items:
+                    - sonata.classification.admin.category
+                    - sonata.classification.admin.tag
+                    - sonata.classification.admin.collection
+                    - sonata.classification.admin.context
