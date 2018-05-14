@@ -20,8 +20,6 @@
         </div>
     </div>
 
-    {{ include('default/share_buttons.html.twig', { 'url': url('sonata_news_view', { 'permalink': sonata_news_permalink(post) }) }) }}
-
     {% if post.iscommentable %}
         {{ render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) }}
         {{ render(controller('SonataNewsBundle:Post:addCommentForm', {

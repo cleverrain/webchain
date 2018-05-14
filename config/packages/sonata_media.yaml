@@ -1,4 +1,9 @@
 sonata_media:
+    class:
+        media:             App\Entity\Media\Media
+        gallery:           App\Entity\Media\Gallery
+        gallery_has_media: App\Entity\Media\GalleryHasMedia
+        category:          App\Entity\Classification\Category
 
     db_driver:       doctrine_orm
     force_disable_category: true
@@ -78,5 +83,4 @@ doctrine:
         entity_managers:
             default:
                 mappings:
-                    ApplicationSonataMediaBundle: ~
                     SonataMediaBundle: ~

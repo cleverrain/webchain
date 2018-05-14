@@ -26,3 +26,20 @@ services:
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
 
+    # sonata news bundle sf4 compability hack
+    # =============================================
+    sonata.news.manager.post:
+        class: Sonata\NewsBundle\Entity\PostManager
+        public: true
+        arguments:
+            - App\Entity\News\Post
+
+    sonata.news.blog:
+        class: Sonata\NewsBundle\Model\Blog
+        public: true
+        arguments:
+            - sonata_news.title
+            - sonata_news.link
+            - sonata_news.description
+            - '@sonata.news.permalink.date'
+    # =============================================

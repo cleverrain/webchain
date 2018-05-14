@@ -26,8 +26,4 @@ return [
     Sonata\ClassificationBundle\SonataClassificationBundle::class => ['all' => true],
     Sonata\NewsBundle\SonataNewsBundle::class => ['all' => true],
     Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle::class => ['all' => true],
-    Application\Sonata\NewsBundle\ApplicationSonataNewsBundle::class  => ['all' => true],
-    Application\Sonata\UserBundle\ApplicationSonataUserBundle::class  => ['all' => true],
-    Application\Sonata\MediaBundle\ApplicationSonataMediaBundle::class  => ['all' => true],
-    Application\Sonata\ClassificationBundle\ApplicationSonataClassificationBundle::class  => ['all' => true],
 ];

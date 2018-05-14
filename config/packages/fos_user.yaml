@@ -3,9 +3,9 @@
 fos_user:
     db_driver: orm # Use Doctrine ORM
     firewall_name: main
-    user_class: App\Entity\User
+    user_class: App\Entity\User\User
     from_email:
         address: swiftmailer.username
         sender_name: swiftmailer.username
     group:
-        group_class: Sonata\UserBundle\Entity\BaseGroup
+        group_class: App\Entity\User\Group

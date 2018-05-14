@@ -1,12 +1,11 @@
 sonata_user:
     class:
-        user: Application\Sonata\UserBundle\Entity\User
-        group: Application\Sonata\UserBundle\Entity\Group
+        user: App\Entity\User\User
+        group: App\Entity\User\Group
 
 doctrine:
     orm:
         entity_managers:
             default:
                 mappings:
-                    ApplicationSonataUserBundle: ~
                     SonataUserBundle: ~
