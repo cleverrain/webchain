@@ -34,6 +34,13 @@ services:
         arguments:
             - App\Entity\News\Post
 
+    sonata.news.manager.comment:
+        class: Sonata\NewsBundle\Entity\CommentManager
+        public: true
+        arguments:
+            $class: App\Entity\News\Comment
+            $postManager: '@sonata.news.manager.post'
+
     sonata.news.blog:
         class: Sonata\NewsBundle\Model\Blog
         public: true

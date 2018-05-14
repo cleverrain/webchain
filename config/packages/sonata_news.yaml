@@ -10,7 +10,7 @@ sonata_news:
     title: Webchain Network News
     link: /news
     description: Webchain Network News
-    salt: 'secureToken'
+    salt: '%env(resolve:APP_SECRET)%'
     permalink_generator: sonata.news.permalink.collection
 
     # comment options
