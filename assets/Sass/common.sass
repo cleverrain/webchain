@@ -1,0 +1,169 @@
+@import ~bootstrap/scss/bootstrap
+@import ~bootstrap-vue/dist/bootstrap-vue.css
+@import ~aos/dist/aos.css
+@import variables
+@import news
+
+html
+  font-size: calc(.75rem + ((1vw - 3.2px) * .5))
+
+html, body
+  overflow-x: hidden
+
+body
+  font-size: 1em
+
+  @include media-breakpoint-only(lg)
+    font-size: 1.2em
+
+  font-family: $font-general
+  background-color: $color-background
+  color: $color-text
+
+  .text-white
+  	color: $color-background!important
+
+  @for $index from 1 through 6
+    h#{$index}, .h#{$index}
+      @if #{$index} != 1
+      	font-family: $font-title
+      color: $color-title
+
+  .btn:focus
+    box-shadow: none
+
+  h1
+    font-family: $font-title-bold
+    font-size: 4em
+
+    @include media-breakpoint-down(sm)
+      font-size: 3em
+    @include media-breakpoint-only(md)
+      font-size: 3em
+    @include media-breakpoint-only(lg)
+      font-size: 3em
+
+  a:hover
+    text-decoration: none
+
+  a
+    color: $color-background
+
+    &:hover
+      color: $color-logo
+
+  h2, .h2
+    font-size: 4em
+    @include media-breakpoint-down(sm)
+      font-size: 2.1em
+
+  h3, .h3
+    font-size: 1.2em
+
+  $font-brand: 'Bosun', sans-serif
+
+  header
+    background-color: $color-black-bg
+    .navbar
+      .logo
+        display: block
+        background: url("../Images/favicon.png") no-repeat
+        background-size: 2em
+        background-position-y: -0.25em
+        padding-left: 2.2em
+
+      #nav_collapse
+
+        @include media-breakpoint-down(sm)
+          font-size: 1.4em
+          position: absolute
+          padding: 0
+          padding-top: 3em
+          width: 100%
+          top: 0
+          left: 0
+          z-index: 1
+          background: $color-black-bg
+          .navbar-nav
+            padding: 0!important
+
+            .nav-item
+              padding: 0.5em
+              text-align: center
+
+              &:hover
+                background-color: $color-whitepaper
+
+        .ml-auto
+          padding: 2%
+
+      padding: 0 3%
+
+      .github-icon
+        background: url("../Images/github-icon.svg") no-repeat
+        background-size: 100%
+        width: 2.5em
+        height: 2.5em
+        margin: 0 auto
+        transform: translate(-25%, -20%)
+        @include media-breakpoint-up(md)
+          margin: 0
+
+      .navbar-toggler-icon
+        outline: none
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+
+      .navbar-toggler
+        z-index: 2
+        outline: none
+        border: none
+
+        &:focus
+          outline: none
+          border: none
+
+      &.navbar-dark .navbar-nav .nav-link
+        color: $color-background
+
+        &:hover
+          color: $color-logo
+          @include media-breakpoint-down(sm)
+            color: $color-background
+
+      .nav-item
+        padding-right: 1em
+
+      .navbar-brand
+        z-index: 2
+        font-family: $font-brand
+        font-size: 1.7em
+        text-align: center
+        width: 100%
+
+        @include media-breakpoint-up(md)
+          width: auto
+
+  .fg-main
+    color: $color-logo
+
+  #wrapper
+    min-height: calc(100vh - 100px)
+
+  footer
+    background-color: $color-black-bg
+
+@font-face
+  font-family: 'Bosun'
+  src: url("../Fonts/bosun03.otf") format("opentype")
+
+@font-face
+  font-family: 'Raleway'
+  src: url("../Fonts/Raleway-Regular.otf")
+
+@font-face
+  font-family: 'FuturaStdBold'
+  src: url("../Fonts/FuturaStd-CondensedBold.otf")
+
+@font-face
+  font-family: 'FuturaStdLight'
+  src: url("../Fonts/FuturaStd-Condensed.otf")

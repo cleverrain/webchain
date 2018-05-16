@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8" />
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <meta name="theme-color" content="#141C29">
+        <meta name="description" content="Webchain is a blockchain network that makes the most of the untapped CPU resources of internet of things(iOT) devices to secure Smart-Contract-powered DApps. Which is done by Proof-of- Work consensus mechanism based on CryptoNight, which uses community of website users as the low-impact processing grid for applications">
+        <meta name="application-name" content="Smart contracts & Dapps enabled Blockchain network">
+        <meta name="keywords" content="webchain, blockchain network, blockchain, Smart contracts, dapps, cryptonight, Internet of things, iot">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="manifest" href="/manifest.json">
+        <link rel="icon shortcut" href="{{ asset('build/images/favicon.png') }}">
+        <title>
+        {% block title %}
+            Smart contracts & Dapps enabled Blockchain network
+        {% endblock %}
+        </title>
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/app.css') }}">
+            <link rel="stylesheet" type="text/css" href="{{ asset('build/nav.css') }}">
+        {% endblock %}
     </head>
     <body>
         {% block body %}
-            {% block header %}{% endblock %}
+            <div id="app">
+                <Mainlayout>
+                    <Navbar class="pt-2"></Navbar>
+                    {% block content %}{% endblock %}
+                </Mainlayout>
+            </div>
 
-
-
-            {% block content %}{% endblock %}
-
-            {% block footer %}{% endblock %}
-
-            {% block javascripts %}{% endblock %}
-
+            {% block javascripts %}
+                <script src="{{ asset('build/app.js') }}"></script>
+                <script src="{{ asset('build/main.js') }}"></script>
+            {% endblock %}
         {% endblock %}
     </body>
 </html>

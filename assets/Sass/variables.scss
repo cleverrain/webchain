@@ -1,0 +1,37 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+
+$font-general: 'Raleway';
+$font-title-bold: 'FuturaStdBold';
+$font-title: 'FuturaStdLight';
+
+$color-background: #FAFAFA;
+$color-logo: #0092EE;
+$color-text: #333333;
+$color-title: #012C4F;
+$color-whitepaper: #01579b;
+$color-dark-hover: #002F4F;
+$color-light-hover: #27a2db;
+$color-roadmap-line: #808080;
+$color-roadmap-text: $color-text;
+$color-roadmap-active: $color-whitepaper;
+$color-chat: $color-roadmap-active;
+$color-chat-hover: #012C4F;
+$color-black-bg: #141417;
+
+$grid-breakpoints: map_merge($grid-breakpoints, (
+  xxl: 1850px,
+  xxxl:2500px,
+  xxs: 400px
+));
+
+$orientations: (
+  landscape: landscape,
+  portrait: portrait
+);
+
+@mixin media-orientation($orientations) {
+  @media screen and (orientation: $orientations) {
+	@content
+  }
+};

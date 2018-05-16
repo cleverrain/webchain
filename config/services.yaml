@@ -29,7 +29,7 @@ services:
     # sonata news bundle sf4 compability hack
     # =============================================
     sonata.news.manager.post:
-        class: Sonata\NewsBundle\Entity\PostManager
+        class: App\Manager\PostManager
         public: true
         arguments:
             - App\Entity\News\Post

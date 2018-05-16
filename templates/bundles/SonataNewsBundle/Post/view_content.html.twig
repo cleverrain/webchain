@@ -1,15 +1,14 @@
-<article class="container">
-    <header>
+<article class="container mt-5">
+    <div>
         <h1>
             {{ post.title }}
         </h1>
 
-        <span>{{ 'archive_author'|trans({'%author%': post.author ?: global_default_post_author }, 'SonataNewsBundle') }} |
-
+        <span>
             {{ post.publicationDateStart | format_date }}
         </span>
 
-    </header>
+    </div>
 
     <div class="row mb-3">
         <div class="center-block col-12">
@@ -20,13 +19,13 @@
         </div>
     </div>
 
-    {% if post.iscommentable %}
-        {{ render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) }}
-        {{ render(controller('SonataNewsBundle:Post:addCommentForm', {
-            'postId': post.id,
-            'form': form
-        })) }}
-    {% endif %}
+    {#{% if post.iscommentable %}#}
+        {#{{ render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) }}#}
+        {#{{ render(controller('SonataNewsBundle:Post:addCommentForm', {#}
+            {#'postId': post.id,#}
+            {#'form': form#}
+        {#})) }}#}
+    {#{% endif %}#}
     <div class="mt-3 mb-3">
         <a href="{{ app.request.headers.get('referer') }}">&lt; Back to news</a>
     </div>
