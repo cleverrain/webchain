@@ -19,11 +19,16 @@ $color-chat: $color-roadmap-active;
 $color-chat-hover: #012C4F;
 $color-black-bg: #141417;
 
-$grid-breakpoints: map_merge($grid-breakpoints, (
-  xxl: 1850px,
-  xxxl:2500px,
-  xxs: 400px
-));
+$grid-breakpoints: (
+  xs:   0,
+  xxs:  400px,
+  sm:   600px,
+  md:   800px,
+  lg:   1000px,
+  xl:   1280px,
+  xxl:  1850px,
+  xxxl: 2500px
+);
 
 $orientations: (
   landscape: landscape,
