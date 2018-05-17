@@ -4,6 +4,7 @@
 /.env
 /public/bundles/
 /public/build/
+/public/uploads/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
