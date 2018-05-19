@@ -9,7 +9,7 @@
     {% endif %}
     <form class="container mt-5" action="{{ path("fos_user_security_check") }}" method="post">
         <div class="form-group row">
-            <label for="inputEmail" class="col-md-4 col-form-label">Email</label>
+            <label for="inputEmail" class="col-md-4 col-form-label">Username</label>
             <div class="col-md-8">
                 <input type="text" name="_username"  value ="{{ last_username }}" required="required" id="inputUsername" class="form-control form-control-md" autofocus>
             </div>
