@@ -2,6 +2,7 @@
 @import ~bootstrap-vue/dist/bootstrap-vue.css
 @import ~aos/dist/aos.css
 @import variables
+@import navbar
 @import news
 
 html
@@ -22,6 +23,13 @@ body
 
   .text-white
   	color: $color-background!important
+
+  .logo
+    display: block
+    background: url("../Images/favicon.png") no-repeat
+    background-size: 2em
+    background-position-y: -0.25em
+    padding-left: 2.2em
 
   @for $index from 1 through 6
     h#{$index}, .h#{$index}
@@ -60,97 +68,31 @@ body
   h3, .h3
     font-size: 1.2em
 
-  $font-brand: 'Bosun', sans-serif
-
-  header
-    background-color: $color-black-bg
-    .navbar
-      .logo
-        display: block
-        background: url("../Images/favicon.png") no-repeat
-        background-size: 2em
-        background-position-y: -0.25em
-        padding-left: 2.2em
-
-      #nav_collapse
-
-        @include media-breakpoint-down(sm)
-          font-size: 1.4em
-          position: absolute
-          padding: 0
-          padding-top: 3em
-          width: 100%
-          top: 0
-          left: 0
-          z-index: 1
-          background: $color-black-bg
-          .navbar-nav
-            padding: 0!important
-
-            .nav-item
-              padding: 0.5em
-              text-align: center
-
-              &:hover
-                background-color: $color-whitepaper
-
-        .ml-auto
-          padding: 2%
-
-      padding: 0 3%
-
-      .github-icon
-        background: url("../Images/github-icon.svg") no-repeat
-        background-size: 100%
-        width: 2.5em
-        height: 2.5em
-        margin: 0 auto
-        transform: translate(-25%, -20%)
-        @include media-breakpoint-up(md)
-          margin: 0
-
-      .navbar-toggler-icon
-        outline: none
-        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
-
-      .navbar-toggler
-        z-index: 2
-        outline: none
-        border: none
-
-        &:focus
-          outline: none
-          border: none
-
-      &.navbar-dark .navbar-nav .nav-link
-        color: $color-background
-
-        &:hover
-          color: $color-logo
-          @include media-breakpoint-down(sm)
-            color: $color-background
-
-      .nav-item
-        padding-right: 1em
-
-      .navbar-brand
-        z-index: 2
-        font-family: $font-brand
-        font-size: 1.7em
-        text-align: center
-        width: 100%
-
-        @include media-breakpoint-up(md)
-          width: auto
-
   .fg-main
     color: $color-logo
 
   #wrapper
-    min-height: calc(100vh - 100px)
+    min-height: calc(100vh - 130px)
 
   footer
     background-color: $color-black-bg
+
+  .bg-darken-gradient
+    background: $color-black-bg url("../Images/header-background.svg") no-repeat center center
+    background-size: cover
+
+    &.basic-header
+      height: 40vh
+      background: linear-gradient($color-black-bg 40%, $color-whitepaper)
+
+      h1
+        font-family: $font-title
+        font-size: 6em
+
+  .bg-dotted-map
+    background: url("../Images/dotted-map.svg") no-repeat center center
+    background-position-y: 0
+    background-size: cover
 
 @font-face
   font-family: 'Bosun'

@@ -3,28 +3,14 @@
 @import ~bootstrap/scss/mixins/breakpoints
 @import variables
 
-#news
-  .news-bar
-    background: $color-black-bg url("../Images/webchain-news_header.svg") left bottom
-    background-size: cover
-    width: 100%
-    height: 280px
-
-    @include media-breakpoint-down(sm)
-      height: 140px
-
-    @include media-breakpoint-down(md)
-      height: 180px
-
-    @include media-breakpoint-up(xxxl)
-      height: 600px
-
+.news
   .page-item
     background-color: inherit
 
     .page-link
       border: none
       color: $color-text
+      background-color: $color-background
 
     &.active .page-link
       background-color: inherit
@@ -34,16 +20,37 @@
     width: 75%
     height: 2px
     background-color: $color-whitepaper
-    margin: 40px auto
+    margin: 40px 0
+    @include media-breakpoint-down(md)
+      width: 100%
+      height: 1px
 
   .container-fluid
     max-width: 1920px
 
   p
-    font-size: 16px
+    font-size: 1em
+    color: $color-black-bg
+
+  h3, .h3
+    font-size: 0.8em
+    font-weight: bold
+    font-family: $font-general
 
   h2, .h2
-    font-size: 2.4em
+    font-size: 1.8em
+    font-family: $font-title
 
     a
       color: $color-whitepaper
+
+  .image-header > img
+    display: block
+    width: 40%
+    height: auto
+
+    @include media-breakpoint-down(md)
+      width: 60%
+    @include media-breakpoint-down(sm)
+      width: 100%
+      margin: 0 auto

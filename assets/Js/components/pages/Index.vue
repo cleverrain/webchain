@@ -1,6 +1,6 @@
 <template>
     <MainLayout>
-        <section id="starter" class="container-fluid bg-head-gradient">
+        <section id="starter" class="container-fluid bg-darken-gradient">
             <div class="row p-0">
                 <NavBar class="col p-0 pt-2"></NavBar>
             </div>
@@ -247,19 +247,13 @@
             margin: 0 auto
     
     #starter
-        background: $color-black-bg url("../../../Images/header-background.svg") no-repeat center center
-        background-size: cover
-    
         .row:first-of-type
             height: 4.5em
         
         .bg-dotted-map
             padding-top: 3.6em
             padding-bottom: 5em
-            background: url("../../../Images/dotted-map.svg") no-repeat center center
-            background-position-y: 0
-            background-size: cover
-            
+
             div
                 width: 85%
                 padding-bottom: 2em

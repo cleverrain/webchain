@@ -1,0 +1,78 @@
+@import ~bootstrap/scss/functions
+@import ~bootstrap/scss/variables
+@import ~bootstrap/scss/mixins/breakpoints
+@import variables
+
+header
+  background-color: $color-black-bg
+  .navbar
+    #nav_collapse
+
+      @include media-breakpoint-down(sm)
+        font-size: 1.4em
+        position: absolute
+        padding: 0
+        padding-top: 3em
+        width: 100%
+        top: 0
+        left: 0
+        z-index: 1
+        background: $color-black-bg
+        .navbar-nav
+          padding: 0!important
+
+          .nav-item
+            padding: 0.5em
+            text-align: center
+
+            &:hover
+              background-color: $color-whitepaper
+
+      .ml-auto
+        padding: 2%
+
+    padding: 0 3%
+
+    .github-icon
+      background: url("../Images/github-icon.svg") no-repeat
+      background-size: 100%
+      width: 2.5em
+      height: 2.5em
+      margin: 0 auto
+      transform: translate(-25%, -20%)
+      @include media-breakpoint-up(md)
+        margin: 0
+
+    .navbar-toggler-icon
+      outline: none
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E")
+
+    .navbar-toggler
+      z-index: 2
+      outline: none
+      border: none
+
+      &:focus
+        outline: none
+        border: none
+
+    &.navbar-dark .navbar-nav .nav-link
+      color: $color-background
+
+      &:hover
+        color: $color-logo
+        @include media-breakpoint-down(sm)
+          color: $color-background
+
+    .nav-item
+      padding-right: 1em
+
+    .navbar-brand
+      z-index: 2
+      font-family: $font-brand
+      font-size: 1.7em
+      text-align: center
+      width: 100%
+
+      @include media-breakpoint-up(md)
+        width: auto

@@ -1,32 +1,40 @@
-<article class="container mt-5">
-    <div>
-        <h1>
-            {{ post.title }}
-        </h1>
-
-        <span>
-            {{ post.publicationDateStart | format_date }}
-        </span>
-
-    </div>
-
-    <div class="row mb-3">
-        <div class="center-block col-12">
-            {% media post.image, 'wide' %}
-        </div>
-        <div class="col-12 mt-3">
-            {{ post.content|raw }}
+<div id="news">
+    <div class="bg-darken-gradient">
+        <div class="bg-dotted-map mx-md-4 h-100 d-flex align-items-end">
+            <h1 class="text-white d-block ml-5 mb-0">News</h1>
         </div>
     </div>
 
-    {#{% if post.iscommentable %}#}
-        {#{{ render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) }}#}
-        {#{{ render(controller('SonataNewsBundle:Post:addCommentForm', {#}
-            {#'postId': post.id,#}
-            {#'form': form#}
-        {#})) }}#}
-    {#{% endif %}#}
-    <div class="mt-3 mb-3">
-        <a href="{{ app.request.headers.get('referer') }}">&lt; Back to news</a>
-    </div>
-</article>
+    <article class="container mt-5">
+        <div>
+            <h1>
+                {{ post.title }}
+            </h1>
+
+            <span>
+                {{ post.publicationDateStart | format_date }}
+            </span>
+
+        </div>
+
+        <div class="row mb-3">
+            <div class="center-block col-12">
+                {% media post.image, 'wide' %}
+            </div>
+            <div class="col-12 mt-3">
+                {{ post.content|raw }}
+            </div>
+        </div>
+
+        {#{% if post.iscommentable %}#}
+            {#{{ render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) }}#}
+            {#{{ render(controller('SonataNewsBundle:Post:addCommentForm', {#}
+                {#'postId': post.id,#}
+                {#'form': form#}
+            {#})) }}#}
+        {#{% endif %}#}
+        <div class="mt-3 mb-3">
+            <a href="{{ app.request.headers.get('referer') }}">&lt; Back to news</a>
+        </div>
+    </article>
+<</div>

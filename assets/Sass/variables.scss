@@ -4,6 +4,7 @@
 $font-general: 'Raleway';
 $font-title-bold: 'FuturaStdBold';
 $font-title: 'FuturaStdLight';
+$font-brand: 'Bosun', sans-serif;
 
 $color-background: #FAFAFA;
 $color-logo: #0092EE;
@@ -22,10 +23,10 @@ $color-black-bg: #141417;
 $grid-breakpoints: (
   xs:   0,
   xxs:  400px,
-  sm:   600px,
-  md:   800px,
-  lg:   1000px,
-  xl:   1280px,
+  sm:   576px,
+  md:   768px,
+  lg:   992px,
+  xl:   1200px,
   xxl:  1850px,
   xxxl: 2500px
 );
