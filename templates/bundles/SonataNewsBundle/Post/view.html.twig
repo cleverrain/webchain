@@ -1,7 +1,7 @@
-{% extends 'base.twig' %}
+{% extends 'base_basic_header.twig' %}
 
-{% block contentClass %}blog py-3 {% endblock %}
+{% block section %}News {% endblock %}
 
-{% block content %}
+{% block content_injected %}
     {{ include("@SonataNews/Post/view_content.html.twig") }}
 {% endblock %}

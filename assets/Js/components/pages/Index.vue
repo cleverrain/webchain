@@ -195,6 +195,14 @@
 </template>
 
 <script>
+    import AOS from 'aos';
+
+    AOS.init({
+        duration: 800,
+        once: true,
+        startEvent: 'load'
+    });
+
     import MainLayout from '../layouts/Mainlayout';
     import NavBar from '../Navbar';
     import SeparatorBanner from '../SeparatorBanner';
