@@ -32,17 +32,21 @@
     font-size: 1em
     color: $color-black-bg
 
+  h1, .h1
+    color: $color-black-bg
+
   h3, .h3
     font-size: 0.8em
     font-weight: bold
-    font-family: $font-general
+    font-family: $font-general-medium
 
-  h2, .h2
-    font-size: 1.8em
-    font-family: $font-title
+  h2, .h2, h1, .h2
+    font-size: 1.5em
+    font-family: $font-general-bold
+    font-weight: 500
 
-    a
-      color: $color-whitepaper
+  a
+    color: $color-whitepaper
 
   .image-header > img
     display: block
@@ -54,3 +58,12 @@
     @include media-breakpoint-down(sm)
       width: 100%
       margin: 0 auto
+
+  &.post
+    hr
+      width: 25%
+      margin: 20px 0
+
+    .image-header > img
+      display: block
+      width: 60%

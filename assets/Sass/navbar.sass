@@ -6,8 +6,8 @@
 header
   background-color: $color-black-bg
   .navbar
+    z-index: 10
     #nav_collapse
-
       @include media-breakpoint-down(sm)
         font-size: 1.4em
         position: absolute
@@ -16,7 +16,6 @@ header
         width: 100%
         top: 0
         left: 0
-        z-index: 1
         background: $color-black-bg
         .navbar-nav
           padding: 0!important

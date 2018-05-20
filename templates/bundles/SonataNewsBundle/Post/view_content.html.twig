@@ -1,18 +1,14 @@
-<div id="news">
-    <article class="container mt-5">
+<div class="news post">
+    <article class="container-fluid px-md-5 mx-auto mt-5">
         <div>
             <h1>
                 {{ post.title }}
             </h1>
 
-            <span>
-                {{ post.publicationDateStart | format_date }}
-            </span>
-
         </div>
 
-        <div class="row mb-3">
-            <div class="center-block col-12">
+        <div class="row mb-3 mt-4">
+            <div class="col-12 image-header">
                 {% media post.image, 'wide' %}
             </div>
             <div class="col-12 mt-3">
@@ -20,15 +16,12 @@
             </div>
         </div>
 
-        {#{% if post.iscommentable %}#}
-            {#{{ render(controller('SonataNewsBundle:Post:comments', {'postId': post.id})) }}#}
-            {#{{ render(controller('SonataNewsBundle:Post:addCommentForm', {#}
-                {#'postId': post.id,#}
-                {#'form': form#}
-            {#})) }}#}
-        {#{% endif %}#}
-        <div class="mt-3 mb-3">
-            <a href="{{ app.request.headers.get('referer') }}">&lt; Back to news</a>
+        <h3>
+            {{ post.publicationDateStart | format_date('y/MM/dd h:mm aa') | replace({'AM': 'a.m.', 'PM': 'p.m.'}) }}
+        </h3>
+        <hr>
+        <div class="mb-3">
+            <a href="{{ app.request.headers.get('referer') }}">&lt; BACK</a>
         </div>
     </article>
-<</div>
+</div>
