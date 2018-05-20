@@ -10,6 +10,9 @@ stages:
   - update-repository
   - build-sites
   - clean-unused-sites
+  - clean-unused-sites
+  - auto-merge
+
 
 update_repository_redmine_training.abchosting.org:
   stage: update-repository
@@ -31,16 +34,30 @@ build_webchain_sites:
     # this job only will be executed for branches
     - branches
 
-#clean_coinimp_sites:
-#  stage: clean-unused-sites
-#  script:
-#    - sudo clean-unused-sites-webchain.py
-#  tags:
+clean_coinimp_sites:
+  stage: clean-unused-sites
+  script:
+    - sudo clean-unused-sites-webchain.py
+  tags:
     # This job only will be executed by this runner:
-#    - webchain
-#  only:
+    - webchain
+  only:
     # this job only will be executed for branches named
     # v*.*.* (v3.1.6), master
-#    - /^v\d{1,2}[.]\d{1,2}[.]\d{1,2}$/
-#    - master
-#  allow_failure: true
+    - /^v\d{1,2}[.]\d{1,2}[.]\d{1,2}$/
+    - master
+  allow_failure: true
+
+auto_merge_release_branch:
+  stage: auto-merge
+  script:
+    - sudo auto-merge-release-branch.py
+  tags:
+    # This job only will be executed by this runner:
+    - webchain
+  only:
+    # this job only will be executed for these branches:
+    - /^v\d{1,2}[.]\d{1,2}[.]\d{1,2}$/
+    - master
+  allow_failure: true 
+  
