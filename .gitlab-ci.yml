@@ -19,17 +19,17 @@ update_repository_redmine_training.abchosting.org:
     # this job will be executed only on training.abchosting.org server
     - training.abchosting.org    
 
-#build_webchain_sites:
-#  stage: build-sites
-#  script:
-#    - SRC=$(pwd)
-#    - sudo build-sites-webchain.sh -a build -b $CI_COMMIT_REF_NAME -s $SRC
-#  tags:
+build_webchain_sites:
+  stage: build-sites
+  script:
+    - SRC=$(pwd)
+    - sudo build-sites-webchain.sh -a build -b $CI_COMMIT_REF_NAME -s $SRC
+  tags:
     # This job only will be executed by this runner:
-#    - webchain
-#  only:
+    - webchain
+  only:
     # this job only will be executed for branches
-#    - branches
+    - branches
 
 #clean_coinimp_sites:
 #  stage: clean-unused-sites
