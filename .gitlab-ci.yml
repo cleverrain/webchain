@@ -10,6 +10,9 @@ stages:
   - update-repository
   - build-sites
   - clean-unused-sites
+  - clean-unused-sites
+  - auto-merge
+
 
 update_repository_redmine_training.abchosting.org:
   stage: update-repository
