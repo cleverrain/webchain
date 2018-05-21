@@ -8,25 +8,25 @@
 
                 <div class="col-12 text-center">
                     <p class="d-block align-items-center justify-content-center">
-                        <a href="https://www.facebook.com/coinimp" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.facebook.com/webchain.network" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="facebook" :width="50">
                         </a>
-                        <a href="http://www.linkedin.com/company/webchain-blockchain" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.linkedin.com/company/webchain-blockchain" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="linkedin" :width="50">
                         </a>
-                        <a href="https://www.twitter.com/coinimp" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.twitter.com/TheWebchain" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="twitter" :width="50">
                         </a>
-                        <a href="https://www.reddit.com/r/coinimp" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.reddit.com/r/Webchain" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="reddit" :width="50">
                         </a>
-                        <a href="http://www.t.me/joinchat/IdMikBC1Ew28ufxKdfnKMQ" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.t.me/joinchat/IdMikBC1Ew28ufxKdfnKMQ" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="telegram_channel" :width="50">
                         </a>
-                        <a href="http://www.t.me/webchainnetwork" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.t.me/webchainnetwork" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="telegram_group" :width="50">
                         </a>
-                        <a href="http://www.discordapp.com/invite/K7AptZt" class="mr-3" rel="nofollow" target="_blank">
+                        <a href="https://www.discordapp.com/invite/K7AptZt" class="mr-3" rel="nofollow" target="_blank">
                             <img :src="discord" :width="50">
                         </a>
                     </p>
