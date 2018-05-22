@@ -188,7 +188,7 @@
             </FeaturedButton>
         </section>
         <section id="tw-widget" class="container-fluid m-auto">
-            <h2>Latest News</h2>
+            <h2>Latest tweets</h2>
             <TwtrTimeline id="TheWebchain" :options="twConfiguration" />
         </section>
     </MainLayout>
