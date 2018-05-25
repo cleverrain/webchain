@@ -6,9 +6,10 @@
 .start
   ol
     list-style: none
+    padding-left: 1rem
 
   .with-gui
-    display: none
+    display: block
 
   .without-gui
     display: block
@@ -31,12 +32,13 @@
     margin-left: 0
     color: $color-text
 
-  a
-    color: $color-logo !important
-
   .description-text
     font-family: $font-general
     margin-left: 3rem
+    word-break: break-word
+
+  a
+    color: $color-logo !important
 
   li
     margin-top: 3.5rem
@@ -53,3 +55,8 @@
 
   b
     font-family: $font-general-bold
+
+  img
+    max-width: 100%
+    min-width: 50px
+    height: auto

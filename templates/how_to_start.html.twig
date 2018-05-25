@@ -43,14 +43,14 @@
                     <b>2.5.2)</b> - Set a password and repeat it (following the directions given on the screen)<br>
                     <b>2.5.3)</b> - Click on "Generate an account"<br>
                     <b>2.5.4)</b> - Carefully read the instructions given on the next screen and click on "Download Account Key File" to continue<br>
-                    <b>2.5.6)</b> Once you have downloaded your keystore file, the system will give you an Unencrypted private key which you should never give to anyone. Read the instructions given on the screen and click on "next" once you're done with it<br>
-                    <b>2.5.7)</b> Set account properties: on this section you can create a new account name (or skip it, if you're ok without it). Press "SAVE" or "SKIP" depending on what you prefer.<br><br>
+                    <b>2.5.5)</b> Once you have downloaded your keystore file, the system will give you an Unencrypted private key which you should never give to anyone. Read the instructions given on the screen and click on "next" once you're done with it<br>
+                    <b>2.5.6)</b> Set account properties: on this section you can create a new account name (or skip it, if you're ok without it). Press "SAVE" or "SKIP" depending on what you prefer.<br><br>
 
                     In case you need to import an account:<br><br>
 
                     The best and fastest way is to import the json file located in your keystore account. Follow the instructions given at <a href="https://github.com/webchain-network/webchaind#create-or-manage-accounts" target="_blank">How to Create or Manage an Account</a> so you can find the json file with your account details.<br><br>
 
-                    <b>2.5.1)</b> - Select the option "FROM KEYSTORE FILE (UTC/JSON)"<br>
+                    <b>2.5.1)</b> Select the option "FROM KEYSTORE FILE (UTC/JSON)"<br>
                     <b>2.5.2)</b> Once you've selected the file, click on "submit"<br>
                     <b>2.5.3)</b> You will see the account you've registered. From that screen you can return to the dashboard, and continue managing your accounts.<br>
                 </p>
@@ -69,15 +69,15 @@
 
                     <code>If your device is slow, you should set the second pool as predetermined in config.json.</code>
 
-                    <code>There are other parameters that can be set up in config.json: number of threads , max-cpu-usage, etc.<br>You can do it before you continue with this guide.</code>
-                </p>
+                    <code>There are other parameters that can be set up in config.json: number of threads , max-cpu-usage, etc.<br>You can do it before you continue with this guide.</code><br>
 
-                <img src="" width="800" height="800">
+                    <img src="{{ asset('build/images/config_json.jpg') }}" width="1200" height="800">
+                </p>
             </li>
 
             <li>
                 <p class="title-text"><span class="square-black">5</span>Mining : Introduction</p>
-                <div class="description-text">
+                <p class="description-text">
                     There is a new block every 10 seconds, approximately. In order to mine WEB coins:<br><br>
 
                     <b>A)</b>  Download the miner binary for your system from here <a href="https://github.com/webchain-network/webchain-miner/releases" target="_blank">https://github.com/webchain-network/webchain-miner/releases</a><br>
@@ -107,16 +107,16 @@
 
                     You’ll get information about the miner and the pool you’re trying to mine.<br><br>
 
-                    <img src="" width="800" height="800"><br><br>
+                    <img src="{{ asset('build/images/mining_linux.jpg') }}" width="1200" height="800"><br><br>
 
                     <b>4.1)</b> After you start mining:<br><br>
                     - Go to  <a href="https://pool.webchain.network" target="_blank">https://pool.webchain.network</a> <br>
                     - On "Your Stats & Payment History", type your wallet number (including the 0x suffix)<br>
                     - After the miner has sent the first accepted share, you will see realtime stats on the upper part of this page.<br><br>
 
-                    At the beginning, you will see coins as Immature Balance<br><br>
+                    At the beginning, you will see coins as <b>Immature Balance</b><br><br>
 
-                    <img src="" width="800" height="800"><br><br>
+                    <img src="{{ asset('build/images/mining_monitoring.jpg') }}" width="1200" height="800"><br><br>
 
                     This means that you have indeed mined some coins, but transactions are still waiting to be confirmed.<br><br>
 
@@ -136,8 +136,8 @@
 
                     <code>Type your wallet number on the upper right corner and you will see how many coins you’ve earned</code>
 
-                    <img src="" width="800" height="800">
-                </div>
+                    <img src="" width="1200" height="800">
+                </p>
             </li>
 
             <li>
@@ -155,20 +155,25 @@
 
         <ol class="without-gui">
             <p>Webchain has two binaries:</p>
-            <div class="row w-50 mb-4">
-                <div class="col-6 text-center">
-                    <img src="{{ asset('build/images/wallet-icon.svg') }}" height="100"><br>
-                    <span>webchaind.exe</span>
-                </div>
-                <div class="col-6 text-center">
-                    <img src="{{ asset('build/images/miner-icon.svg') }}" height="100"><br>
-                    <span>Webchain-miner.exe</span>
-                </div>
-            </div>
+            <table style="height: 100px;">
+                <tbody>
+                <tr>
+                    <td class="align-middle text-center pr-3">
+                        <img src="{{ asset('build/images/wallet-icon.svg') }}" width="210" height="100"><br>
+                        <span>webchaind.exe</span>
+                    </td>
+                    <td class="align-middle text-center">
+                        <img src="{{ asset('build/images/miner-icon.svg') }}" width="100" height="100"><br>
+                        <span>Webchain-miner.exe</span>
+                    </td>
+                </tr>
+                </tbody>
+            </table><br>
+
             <li class="mt-0">
                 <p class="title-text">Procedure:</p>
                 <p class="description-text">
-                    <img src="" width="800" height="800">
+                    <img src="" width="1200" height="800">
                 </p>
             </li>
             <li>
@@ -212,7 +217,7 @@
                     Example:<br>
                     > Address: {8d1ba0497c3e3db17143604ab7f5e93a3cbac68b}<br><br>
 
-                    <img src="" width="800" height="800"><br>
+                    <img src="{{ asset('build/images/create_account.jpg') }}" width="1200" height="800"><br>
                 </p>
             </li>
             <li>
@@ -233,13 +238,13 @@
 
                     You will see the initial screen from webchain.network and a console prompt<br><br>
 
-                    <img src="" width="800" height="800"><br><br>
+                    <img src="{{ asset('build/images/console.jpg') }}" width="1200" height="800"><br><br>
 
                     On this console you can run all commands to communicate with webchain network.<br>
 
                     <code>You can see a list of those and more commands <a href="https://github.com/webchain-network/webchaind" target="_blank">here</a></code>
 
-                    <img src="" width="800" height="800"><br>
+                    <img src="" width="1200" height="800"><br>
                 </p>
             </li>
             <li>
@@ -254,12 +259,12 @@
 
                     <code>There are other parameters that can be set up in config.json: number of threads , max-cpu-usage, etc.<br> You can do it before you continue with this guide.</code>
 
-                    <img src="" width="800" height="800"><br>
+                    <img src="{{ asset('build/images/config_json.jpg') }}" width="1200" height="800">
                 </p>
             </li>
             <li>
                 <p class="title-text"><span class="square-black">4</span>Mining : Introduction</p>
-                <div class="description-text">
+                <p class="description-text">
                     There is a new block every 10 seconds, approximately. In order to mine WEB coins:<br><br>
 
                     <b>A)</b>  Download the miner binary for your system from here <a href="https://github.com/webchain-network/webchain-miner/releases" target="_blank">https://github.com/webchain-network/webchain-miner/releases</a><br>
@@ -289,16 +294,16 @@
 
                     You’ll get information about the miner and the pool you’re trying to mine.<br><br>
 
-                    <img src="" width="800" height="800"><br><br>
+                    <img src="{{ asset('build/images/mining_linux.jpg') }}" width="1200" height="800"><br><br>
 
                     <b>4.1)</b> After you start mining:<br><br>
                     - Go to  <a href="https://pool.webchain.network" target="_blank">https://pool.webchain.network</a> <br>
                     - On "Your Stats & Payment History", type your wallet number (including the 0x suffix)<br>
                     - After the miner has sent the first accepted share, you will see realtime stats on the upper part of this page.<br><br>
 
-                    At the beginning, you will see coins as Immature Balance<br><br>
+                    At the beginning, you will see coins as <b>Immature Balance<br><br>
 
-                    <img src="" width="800" height="800"><br><br>
+                    <img src="{{ asset('build/images/mining_monitoring.jpg') }}" width="1200" height="800"><br><br>
 
                     This means that you have indeed mined some coins, but transactions are still waiting to be confirmed.<br><br>
 
@@ -318,8 +323,8 @@
 
                     <code>Type your wallet number on the upper right corner and you will see how many coins you’ve earned</code>
 
-                    <img src="" width="800" height="800">
-                </div>
+                    <img src="" width="1200" height="800">
+                </p>
             </li>
 
             <li>
