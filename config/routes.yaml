@@ -1,3 +1,7 @@
+homepage:
+    path: /
+    controller: App\Controller\DefaultController:index
+
 fos_user_security:
     resource: "@FOSUserBundle/Resources/config/routing/security.xml"
 
@@ -21,3 +25,7 @@ _sonata_admin:
 news:
     resource: '@SonataNewsBundle/Resources/config/routing/news.xml'
     prefix: /news
+
+how_to_start:
+    path: /start
+    controller: App\Controller\DefaultController:howToStartAction
