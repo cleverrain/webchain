@@ -7,6 +7,7 @@ Encore
     .addEntry('app', './assets/Js/config.js')
     .addEntry('index', './assets/Js/index.js')
     .addEntry('main', './assets/Js/main.js')
+    .addEntry('post', './assets/Js/post.js')
     .autoProvidejQuery()
     .enableSourceMaps(!Encore.isProduction())
     .cleanupOutputBeforeBuild()
