@@ -10,15 +10,15 @@
 {% block content_injected %}
 
     <div class="start container-fluid px-md-5 mx-auto mt-5">
-        <ol class="with-gui">
-            <li class="mt-0">
-                <p class="title-text"><span class="square-black">1</span>Download the GUI Wallet according to your OS and install it:</p>
+        <div class="mt-0 mb-3 pl-1 list-unstyled">
+            <div class="mt-0 list-item">
+                <p class="title-text"><span class="square-black mr-3">1</span>Download the GUI Wallet according to your OS and install it:</p>
                 <p class="description-text">
                     -Linux <a href="https://github.com/webchain-network/webchain-wallet/releases">(Link)</a><br>
                     -Windows 32 bits <a href="https://github.com/webchain-network/webchain-wallet/releases">(Link)</a> -Windows 64 bits <a href="https://github.com/webchain-network/webchain-wallet/releases">(Link)</a>
-            </li>
-            <li>
-                <p class="title-text"><span class="square-black">2</span>Open it and follow this short set of directions</p>
+            </div>
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">2</span>Open it and follow this short set of directions</p>
 
                 <p class="description-text">
                     <b>2.1) User Agreement:</b> terms you must agree on in order to use our GUI wallet. Go over then and click on "I Agree". If you don't agree, please close the installer.<br><br>
@@ -54,35 +54,35 @@
                     <b>2.5.2)</b> Once you've selected the file, click on "submit"<br>
                     <b>2.5.3)</b> You will see the account you've registered. From that screen you can return to the dashboard, and continue managing your accounts.<br>
                 </p>
-            </li>
+            </div>
 
-            <li>
-                <p class="title-text"><span class="square-black">3</span>Once you have created a new address or registered your existing one, you will be on the accounts module, where you can manage your accounts, add new ones, send or receive WEB, and see your transactions record.</p>
-            </li>
-            <li>
-                <p class="title-text"><span class="square-black">4</span>Pool and payments</p>
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">3</span>Once you have created a new address or registered your existing one, you will be on the accounts module, where you can manage your accounts, add new ones, send or receive WEB, and see your transactions record.</p>
+            </div>
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">4</span>Pool and payments</p>
                 <p class="description-text">
                     We currently have 2 pools, according to the hashing difficulty.<br><br>
 
                     <b>a)</b> Pool.webchain.network:3333, with 20000 difficulty<br>
                     <b>b)</b> Pool2.webchain.network:2222, with 5000 difficulty<br>
 
-                    <code>If your device is slow, you should set the second pool as predetermined in config.json.</code>
+                    <code class="my-3">If your device is slow, you should set the second pool as predetermined in config.json.</code>
 
-                    <code>There are other parameters that can be set up in config.json: number of threads , max-cpu-usage, etc.<br>You can do it before you continue with this guide.</code><br>
+                    <code class="my-3">There are other parameters that can be set up in config.json: number of threads , max-cpu-usage, etc.<br>You can do it before you continue with this guide.</code><br>
 
                     <img src="{{ asset('build/images/config_json.jpg') }}" width="1200" height="800">
                 </p>
-            </li>
+            </div>
 
-            <li>
-                <p class="title-text"><span class="square-black">5</span>Mining : Introduction</p>
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">5</span>Mining : Introduction</p>
                 <p class="description-text">
                     There is a new block every 10 seconds, approximately. In order to mine WEB coins:<br><br>
 
                     <b>A)</b>  Download the miner binary for your system from here <a href="https://github.com/webchain-network/webchain-miner/releases" target="_blank">https://github.com/webchain-network/webchain-miner/releases</a><br>
 
-                    <code>Select one according to your OS: 32win or 64win or Linux</code><br><br>
+                    <code class="my-3">Select one according to your OS: 32win or 64win or Linux</code><br><br>
 
                     <b>B)</b> Unpack it and open config.json , which is our miner configuration file.<br>
 
@@ -92,7 +92,7 @@
                     <b>B.2)</b> Add your address/wallet number, including the suffix “0x”.<br>
                     E.g"0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b",<br><br>
 
-                    <code>Remember to add the prefix “0x” to your account, so if your account  is 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b,<br>you would need to add it this way:  <b>0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</b></code><br><br>
+                    <code class="my-3">Remember to add the prefix “0x” to your account, so if your account  is 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b,<br>you would need to add it this way:  <b>0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</b></code><br><br>
 
                     <b>C)</b> We’re ready to start mining, follow one of these options:<br><br>
 
@@ -132,16 +132,16 @@
                     <b>Your round share</b> shows how much you’re contributing to the block solution using your worker(s).<br><br>
 
 
-                    <code>You can always check your coins balance visiting <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a></code>
+                    <code class="my-3">You can always check your coins balance visiting <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a></code>
 
-                    <code>Type your wallet number on the upper right corner and you will see how many coins you’ve earned</code><br>
+                    <code class="my-3">Type your wallet number on the upper right corner and you will see how many coins you’ve earned</code><br>
 
                     <img src="{{ asset('build/images/explorer.jpg') }}" width="1200" height="800"><br><br>
                 </p>
-            </li>
+            </div>
 
-            <li>
-                <p class="title-text"><span class="square-black">6</span>Transfers</p>
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">6</span>Transfers</p>
                 <p class="description-text">
                     You can send coins to others by running the following command on webchaind console<br><br>
 
@@ -150,7 +150,7 @@
                     where 0.05 is the amount of WEBs you want to send.<br><br>
                 </p>
 
-            </li>
-        </ol>
+            </div>
+        </div>
     </div>
 {% endblock %}

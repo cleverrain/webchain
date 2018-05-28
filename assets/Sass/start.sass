@@ -4,12 +4,6 @@
 @import variables
 
 .start
-  ol
-    list-style: none
-    padding-left: 1rem
-
-  .with-gui
-    display: block
 
   .square-black
     font-family: $font-general
@@ -17,17 +11,16 @@
     height: 3rem
     font-size: 2rem
     background: $color-black-bg
-    color: white
     text-align: center
     display: inline-block
-    margin-right: 1rem
 
   .title-text
     font-family: $font-general-bold
-    color: white
     font-size: 1.5rem
     margin-left: 0
     color: $color-text
+    *
+      color: white
 
   .description-text
     font-family: $font-general
@@ -35,25 +28,23 @@
     word-break: break-word
 
   a
-    color: $color-logo !important
+    color: $color-logo
 
-  li
-    margin-top: 3.5rem
-    margin-bottom: 3.5rem
+  .list-item
+    margin: 3.5em 0
 
   code
     background: $color-code-background
     color: $color-text
     padding: 0.7rem
     display: block
-    margin-top: 1rem
-    margin-bottom: 1rem
     width: fit-content
 
   b
     font-family: $font-general-bold
 
   img
-    max-width: 100%
+    width: 100%
+    max-width: 1200px
     min-width: 50px
     height: auto
