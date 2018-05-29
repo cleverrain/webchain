@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div id="wrapper" class="pb-5">
+        <div id="wrapper">
             <slot></slot>
         </div>
         <footer class="container-fluid mt-3 py-4 px-5">

@@ -5,3 +5,8 @@
 {% block content_injected %}
     {{ include("@SonataNews/Post/view_content.html.twig") }}
 {% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('build/post.js') }}"></script>
+{% endblock %}
