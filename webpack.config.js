@@ -4,10 +4,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 Encore
     .setOutputPath('public/build/')
     .setPublicPath('/build')
-    .addEntry('app', './assets/Js/config.js')
     .addEntry('index', './assets/Js/index.js')
     .addEntry('main', './assets/Js/main.js')
-    .addEntry('post', './assets/Js/post.js')
     .autoProvidejQuery()
     .enableSourceMaps(!Encore.isProduction())
     .cleanupOutputBeforeBuild()
@@ -18,7 +16,7 @@ Encore
         filename: 'static/index.html',
         template: 'assets/Static/index.html',
         favicon: 'assets/Images/favicon.png',
-        chunks: ['index', 'app']
+        chunks: ['index']
     }))
 ;
 
