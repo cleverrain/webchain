@@ -4,6 +4,9 @@
 @import variables
 
 .news
+  max-width: 1920px
+  margin: 0 auto
+
   .page-item
     background-color: inherit
 
@@ -24,9 +27,6 @@
     @include media-breakpoint-down(md)
       width: 100%
       height: 1px
-
-  .container-fluid
-    max-width: 1920px
 
   p
     font-size: 1em
@@ -75,13 +75,14 @@
     &:hover
       background-color: darken($color-grey-bg, 15)
 
-  a
-    margin-left: 1em
+  .back-btn
+    a
+      margin-left: 1em
 
-    b
-      display: block
-      position: absolute
-      margin-top: -1.63em
+      b
+        display: block
+        position: absolute
+        margin-top: -1.63em
 
   .social-container > span
     clear: both
