@@ -1,3 +1,4 @@
+import './config/config';
 import Index from './components/pages/Index';
 
 new Vue({
