@@ -23,12 +23,46 @@
                 </h3>
             </div>
             <div class="col">
-
+                <button class="btn btn-grey float-right py-1" @click="isSocialShareShown = true">Share</button>
             </div>
         </div>
 
-        <div class="mb-3 mt-5 pt-5">
+        <div class="mb-3 mt-5 pt-5 back-btn">
             <a href="{{ app.request.headers.get('referer') }}"><b>&lt;</b> BACK</a>
         </div>
+
+        <Modal v-if="isSocialShareShown" @close="isSocialShareShown = false">
+            <h3 slot="header">Share this post with your social!</h3>
+            <div slot="body">
+                <social-sharing title="{{ post.title }}"
+                                description="{{ post.abstract | slice(0, 200) ~ '...' }}"
+                                quote="{{ post.abstract | slice(0, 250) ~ '...' }}"
+                                hashtags="webchain"
+                                twitter-user="TheWebchain"
+                                inline-template>
+                    <div class="social-container">
+                        <network network="facebook">
+                            <i class="fa fa-facebook"></i> Facebook
+                        </network>
+                        <network network="googleplus">
+                            <i class="fa fa-google-plus"></i> Google +
+                        </network>
+                        <network network="linkedin">
+                            <i class="fa fa-linkedin"></i> LinkedIn
+                        </network>
+                        <network network="reddit">
+                            <i class="fa fa-reddit"></i> Reddit
+                        </network>
+                        <network network="telegram">
+                            <i class="fa fa-telegram"></i> Telegram
+                        </network>
+                        <network network="twitter">
+                            <i class="fa fa-twitter"></i> Twitter
+                        </network>
+                    </div>
+                </social-sharing>
+            </div>
+            <div slot="footer"></div>
+        </Modal>
     </article>
 </div>
