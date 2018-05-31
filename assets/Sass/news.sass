@@ -71,18 +71,26 @@
   .btn-grey
     background-color: $color-grey-bg
     color: $color-black-bg
+    border-radius: 0
 
     &:hover
       background-color: darken($color-grey-bg, 15)
 
   .back-btn
-    a
-      margin-left: 1em
+    display: block
+    padding-left: 1em
+    color: $color-whitepaper
 
-      b
-        display: block
-        position: absolute
-        margin-top: -1.63em
+    &:before
+      display: block
+      position: absolute
+      content: '<'
+      margin-top: -0.1em
+      margin-left: -1em
+
+    &:hover
+      color: $color-light-hover
+
 
   .social-container > span
     clear: both

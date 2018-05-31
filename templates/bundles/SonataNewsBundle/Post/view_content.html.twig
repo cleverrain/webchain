@@ -19,7 +19,7 @@
         <div class="row mb-3">
             <div class="col d-flex align-items-center">
                 <h3 class="d-block m-0">
-                    {{ post.publicationDateStart | format_date('y/MM/dd h:mm aa') | replace({'AM': 'a.m.', 'PM': 'p.m.'}) }}
+                    {{ post.publicationDateStart | format_date('y/MM/dd') }}
                 </h3>
             </div>
             <div class="col">
@@ -27,11 +27,11 @@
             </div>
         </div>
 
-        <div class="mb-3 mt-5 pt-5 back-btn">
-            <a href="{{ app.request.headers.get('referer') }}"><b>&lt;</b> BACK</a>
+        <div class="mb-3 mt-5 pt-5 d-inline-block">
+            <a class=" btn back-btn" href="{{ app.request.headers.get('referer') }}">BACK</a>
         </div>
 
-        <Modal v-if="isSocialShareShown" @close="isSocialShareShown = false">
+        <Modal v-if="isSocialShareShown" @close="isSocialShareShown = false" v-cloak>
             <h3 slot="header">Share this post with your social!</h3>
             <div slot="body">
                 <social-sharing title="{{ post.title }}"
