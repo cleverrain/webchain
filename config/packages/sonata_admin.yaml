@@ -1,4 +1,6 @@
 sonata_admin:
+    title: 'Webchain'
+    title_logo: /build/favicon.png
     security:
         handler: sonata.admin.security.handler.role
     dashboard:
@@ -15,17 +17,20 @@ sonata_admin:
                     - sonata.user.admin.group
 
             sonata.admin.group.content:
-                label: Content
+                label: News
                 items:
-                    - sonata.news.admin.comment
                     - sonata.news.admin.post
+                    - sonata.news.admin.comment
+
+            sonata.admin.group.media:
+                label: Resources
+                items:
                     - sonata.media.admin.media
                     - sonata.media.admin.gallery
 
             sonata.admin.group.classification:
                 label: Classification
                 items:
-                    - sonata.classification.admin.category
                     - sonata.classification.admin.tag
                     - sonata.classification.admin.collection
                     - sonata.classification.admin.context
