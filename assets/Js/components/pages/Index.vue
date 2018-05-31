@@ -187,8 +187,8 @@
                 Join our Bitcointalk thread
             </FeaturedButton>
         </section>
-        <section id="tw-widget" class="container-fluid m-auto pb-5">
-            <h2>Latest News</h2>
+        <section id="tw-widget" class="container-fluid m-auto">
+            <h2>Recent tweets</h2>
             <TwtrTimeline id="TheWebchain" :options="twConfiguration" />
         </section>
     </MainLayout>
