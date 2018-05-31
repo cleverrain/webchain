@@ -52,15 +52,14 @@ class Faq
 
                         After following these steps, you will see your account wallet number:<br>
 
-                        <code class="m-2">Remember to add the prefix “0x” to your account, so if it’s 18e173c8426593bd37d5bc7d03f17dcc154cd5b then the resulting account would be 0x18e173c8426593bd37d5bc7d03f17dcc154cd5b</code>
+                        <code class="m-2">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
 
                         <img src="">'
             ],
             [
                 'question' => 'I cannot generate my address, what can I do?',
                 'answer' => 'Creating the address is really simple. This guide might help you:<br>
-
-                        [Insert the How to mine guide here]'
+                    <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a>'
             ],
             [
                 'question' => 'I can\'t type in the Webchaind CMD prompt',
@@ -88,8 +87,7 @@ class Faq
             ],
             [
                 'question' => 'How do I get a wallet?',
-                'answer' => 'Webchain is node and wallet at the same time. Follow these instructions to create your wallet and mine
-                        [Insert how-to-mine link here]'
+                'answer' => 'Webchain is node and wallet at the same time. Follow these instructions to create your wallet and <a href="https://pool.webchain.network/#/help" target="_blank">mine</a>'
             ],
             [
                 'question' => 'There is high difficulty on pool is there any other pool?',
@@ -122,7 +120,7 @@ class Faq
             [
                 'question' => 'I checked the guide but still don\'t know how to send coins to other wallets',
                 'answer' => '<b>a)</b> In console, get to the webchaind directory  as was explained here:
-                        [insert  How-to-mine link]
+                        <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a>
 
                         <b>b)</b> type this command:<br><br>
 
@@ -145,18 +143,18 @@ class Faq
 
                         0.05 is the amount of WEBs to be sent  (0.05 WEB here is just an example).<br>
 
-                        <code class="m-2">Remember to add the prefix “0x” to your account, so if it’s 18e173c8426593bd37d5bc7d03f17dcc154cd5b then the resulting account would be 0x18e173c8426593bd37d5bc7d03f17dcc154cd5b</code>'
+                        <code class="m-2">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>'
             ],
             [
                 'question' => 'How can I see my wallet number?',
-                'answer' => '<b>a)</b> In console, get to the webchaind directory  as was explained here: [insert  How-to-mine link]<br>
+                'answer' => '<b>a)</b> In console, get to the webchaind directory  as was explained here: <a href="https://pool.webchain.network/#/help" target="_blank">https://pool.webchain.network/#/help</a><br>
                         <b>b)</b> Type the command “webchain.coinbase”; which will show you your main wallet in webchain.<br>
                         <b>c)</b> If you have multiple wallets you can see them all by typing “webchaind account list”.<br>'
             ],
             [
                 'question' => 'When will you be releasing GUI Wallet?',
                 'answer' => 'We are working on it and we will be releasing a GUI Wallet in 2018-3rdQ.<br>
-                        Meanwhile, we’ll be as helpful as possible about guiding you and other people needing a GUI. you can check the “How to mine”[INSERT HOW TO MINE LINK HERE] guide while our GUI is on development.'
+                        Meanwhile, we’ll be as helpful as possible about guiding you and other people needing a GUI. you can check the <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a> guide while our GUI is on development.'
             ],
             [
                 'question' => 'Will mining affect my CPU process? I mean, will I be able to use my pc while mining?',
