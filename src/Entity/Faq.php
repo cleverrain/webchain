@@ -2,10 +2,23 @@
 
 namespace App\Entity;
 
+use Symfony\Component\Asset\Packages;
+
 class Faq
 {
+    private $assetPackage;
+
+    public function __construct(Packages $assetPackage)
+    {
+        $this->assetPackage = $assetPackage;
+    }
+
     public function getData()
     {
+        $explorerImg = $this->assetPackage->getUrl("build/images/explorer.jpg");
+        $accountListImg = $this->assetPackage->getUrl("build/images/account_list.jpg");
+
+
         return [
             [
                 'question' => 'I receive an “Invalid Login” message > [pool.webchain.network:3333] error: "Invalid login", code: -1',
@@ -13,9 +26,8 @@ class Faq
             ],
             [
                 'question' => 'How can I check my balance?',
-                'answer' => 'Go to <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a> and search your address on the bar. It’ll look something like this:<br>
-                    <img src="{{ asset(\'build/images/explorer.jpg\') }}" width="1200" height="800"><br><br> Or from do it from console: 
-                    webchain.getBalance("address")'
+                'answer' => 'Go to <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a> and search your address on the bar. It’ll look something like this:<br><br>
+                    <img src="'. $explorerImg .'" width="1200" height="800"><br><br> Or from do it from console: webchain.getBalance("address")'
             ],
             [
                 'question' => 'I forgot / cannot see my wallet address, where can I see it?',
@@ -24,13 +36,11 @@ class Faq
                         <b>B.2</b> Let’s say you saved webchain.exe in the the following directory<br>
                         > C:\Users\UserName\AppData\Roaming\Webchain\<br><br>
                         <b>B.3</b> Then, to go to that folder nativate that folder, run the command:<br>
-                        > cd c:\users\UserName\AppData\Roaming\Webchain and hit enter<br><br>
+                        > cd c:\users\UserName\AppData\Roaming\Webchain and hit enter<br>
 
-                        <code class="m-2">Step B.3 will lead you to the directory where 
-                        your 
-                        webchaind.exe file is located</code>
+                        <code class="my-3">Step B.3 will lead you to the directory where your webchaind.exe file is located</code>
 
-                        <code class="m-2">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
+                        <code class="my-3">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
 
                         <b>B.4:</b> Execute the following command, which will show you your wallet address(es) created<br>
 
@@ -43,23 +53,22 @@ class Faq
                         <b>B.3</b> Type the following command:<br>
                         > cd /opt/webchaind/ and press enter<br>
 
-                        <code class="m-2">Step B.3 will lead you to the directory where your webchaind file is located</code>
+                        <code class="my-3">Step B.3 will lead you to the directory where your webchaind file is located</code>
 
-                        <code class="m-2">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
+                        <code class="my-3">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
 
                         <b>B.4:</b> Execute the following command, which will show you your wallet address(es) created<br>
                         > ./webchaind account list<br>
 
                         After following these steps, you will see your account wallet number:<br>
 
-                        <code class="m-2">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
+                        <code class="my-3">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
 
-                        <img src="">'
+                        <img src="'.$accountListImg.'" width="1200" height="800">'
             ],
             [
                 'question' => 'I cannot generate my address, what can I do?',
-                'answer' => 'Creating the address is really simple. This guide might help you:<br>
-                    <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a>'
+                'answer' => 'Creating the address is really simple. This guide might help you: <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a>'
             ],
             [
                 'question' => 'I can\'t type in the Webchaind CMD prompt',
@@ -77,13 +86,13 @@ class Faq
                         <b>A)</b> Go to “Webchain: the basics” <a href="https://github.com/webchain-network/webchaind#green_book-webchaind-the-basics" target="_blank">https://github.com/webchain-network/webchaind#green_book-webchaind-the-basics</a>. 	Here you will see a list of all the possible commands that you can use, from how to create a new wallet to how to access and mine Webchain.<br>
 
                         <b>B)</b> From CMD, PowerShell or your preferred console, go to the route where you stored webchaind.exe<br>
-                        <b>a)</b> Let’s say you stored webchain.exe in the recommended directory<br>
-                            C:\Users\UserName\AppData\Roaming\Webchain</br>
+                        <span class="ml-4 display-block"><b>a)</b> Let’s say you stored
+                         webchain.exe in the recommended directory<br> C:\Users\UserName\AppData\Roaming\Webchain</br>
                         <b>b)</b> Input the following command:<br>
-                            > cd c:\users\UserName\AppData\Roaming\Webchain<br><br>
+                            > cd c:\users\UserName\AppData\Roaming\Webchain<br>
                         and hit enter<br>
-                        <b>c)</b> Once you’re there, you can write all the commands that webchaind.exe can execute!<br>
-                            <b>C)</b> Check the following link if you need help to create your account <a href="https://github.com/webchain-network/webchaind#create-or-manage-accounts" target="_blank">https://github.com/webchain-network/webchaind#create-or-manage-accounts</a>'
+                        <b>c)</b> Once you’re there, you can write all the commands that webchaind.exe can execute!</span><br>
+                        <b>C)</b> Check the following link if you need help to create your account <a href="https://github.com/webchain-network/webchaind#create-or-manage-accounts" target="_blank">https://github.com/webchain-network/webchaind#create-or-manage-accounts</a>'
             ],
             [
                 'question' => 'How do I get a wallet?',
@@ -91,8 +100,7 @@ class Faq
             ],
             [
                 'question' => 'There is high difficulty on pool is there any other pool?',
-                'answer' => 'Yes, we have two official pools:<br>
-                        pool2.webchain.network:2222 which has much lower difficulty than on pool.webchain.network:3333'
+                'answer' => 'Yes, we have two official pools:<br>pool2.webchain.network:2222 which has much lower difficulty than on pool.webchain.network:3333'
             ],
             [
                 'question' => 'Do you have any plan to build a GPU miner?',
@@ -120,7 +128,7 @@ class Faq
             [
                 'question' => 'I checked the guide but still don\'t know how to send coins to other wallets',
                 'answer' => '<b>a)</b> In console, get to the webchaind directory  as was explained here:
-                        <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a>
+                        <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a><br><br>
 
                         <b>b)</b> type this command:<br><br>
 
@@ -143,7 +151,7 @@ class Faq
 
                         0.05 is the amount of WEBs to be sent  (0.05 WEB here is just an example).<br>
 
-                        <code class="m-2">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>'
+                        <code class="my-3">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>'
             ],
             [
                 'question' => 'How can I see my wallet number?',
@@ -176,7 +184,7 @@ class Faq
                         > ~/.webchain/mainnet/log<br><br>
 
                         On Windows:<br>
-                        > C:\Users\<profilename>\AppData\Roaming\Webchain\mainnet\log'
+                        > C:\Users\&lt;profilename&gt;\AppData\Roaming\Webchain\mainnet\log'
             ],
             [
                 'question' => 'Where is the link to the wallet with the premine?',
