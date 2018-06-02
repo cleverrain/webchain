@@ -31,4 +31,12 @@ class DefaultController extends AbstractController
             'data' => (new Faq)->getData()
         ]);
     }
+
+    /**
+     * @Route("/start", name="start")
+     */
+    public function howToStartAction() :Response
+    {
+        return $this->render('how_to_start.html.twig');
+    }
 }

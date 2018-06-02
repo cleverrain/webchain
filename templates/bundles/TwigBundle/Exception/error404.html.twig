@@ -1,14 +1,23 @@
 {% extends 'base.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <style>
+        #error404 a {
+            color: #00b3ee;
+        }
+    </style>
+{% endblock %}
+
 {% block content %}
-    <div class="container-fluid py-5 px-0">
-        <div class="row no-gutters">
+    <div id="error404" class="container-fluid py-5 px-0">
+        <div class="row no-gutters justify-content-center">
             <div class="col-xs-12 col-md-8 error-text">
-                <span class="title-big">Oops!</span>
-                <span class="title-small">There is nobody here</span>
+                <span class="text-center">
+                    Oops! There is nobody here. Error 404
+                </span>
                 <hr>
                 <p>The page you were looking for appears to have been moved, deleted or doesn't exist. You can go back to the <a href="#" onClick="window.history.back();">previous page</a> or to our <a href="/">home page</a>.</p>
-                <span class="subtitle">Error 404</span>
             </div>
         </div>
     </div>

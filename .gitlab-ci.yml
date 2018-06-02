@@ -16,7 +16,7 @@ stages:
 update_repository_redmine_training.abchosting.org:
   stage: update-repository
   script:
-    - cd /home/git/gitlab/news.git && sudo git fetch --all -p
+    - cd /home/git/gitlab/mainpage.git && sudo git fetch --all -p
   tags:
     # this job will be executed only on training.abchosting.org server
     - training.abchosting.org    
