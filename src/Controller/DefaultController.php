@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
@@ -17,5 +18,13 @@ class DefaultController extends AbstractController
     public function index() :RedirectResponse
     {
         return $this->redirect('/build/static/index.html');
+    }
+
+    /**
+     * @Route("/start", name="start")
+     */
+    public function howToStartAction() :Response
+    {
+        return $this->render('how_to_start.html.twig');
     }
 }

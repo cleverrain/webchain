@@ -1,9 +1,11 @@
 @import ~bootstrap/scss/bootstrap
 @import ~bootstrap-vue/dist/bootstrap-vue.css
 @import ~aos/dist/aos.css
+@import ~font-awesome/scss/font-awesome
 @import variables
 @import navbar
 @import news
+@import start
 
 html
   font-size: calc(.75rem + ((1vw - 3.2px) * .5))
@@ -94,6 +96,12 @@ body
     background: url("../Images/dotted-map.svg") no-repeat center center
     background-position-y: 0
     background-size: cover
+
+  .page-link:focus
+    box-shadow: none
+
+  [v-cloak] > *
+    display: none
 
 @font-face
   font-family: 'Bosun'

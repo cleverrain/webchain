@@ -1,5 +1,5 @@
 <template>
-    <MainLayout>
+    <MainLayout class="home-page">
         <section id="starter" class="container-fluid bg-darken-gradient">
             <div class="row p-0">
                 <NavBar class="col p-0 pt-2"></NavBar>
@@ -187,8 +187,8 @@
                 Join our Bitcointalk thread
             </FeaturedButton>
         </section>
-        <section id="tw-widget" class="container-fluid m-auto">
-            <h2>Latest News</h2>
+        <section id="tw-widget" class="container-fluid m-auto pb-5">
+            <h2>Recent tweets</h2>
             <TwtrTimeline id="TheWebchain" :options="twConfiguration" />
         </section>
     </MainLayout>
@@ -246,13 +246,14 @@
     @import ~bootstrap/scss/variables
     @import ~bootstrap/scss/mixins/breakpoints
     @import ../../../Sass/variables
-    
-    #wrapper
-        overflow: hidden
-        
-        & > *:not(#starter):not(#tw-widget)
-            max-width: map-get($grid-breakpoints, xxxl)
-            margin: 0 auto
+
+    .home-page
+        #wrapper
+            overflow: hidden
+
+            & > *:not(#starter):not(#tw-widget)
+                max-width: map-get($grid-breakpoints, xxxl)
+                margin: 0 auto
     
     #starter
         .row:first-of-type

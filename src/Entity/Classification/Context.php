@@ -17,7 +17,7 @@ class Context extends BaseContext
     /**
      * @ORM\Id
      * @ORM\Column(type="integer")
-     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\GeneratedValue(strategy="AUTO")
      * @Serializer\Groups({"sonata_api_read","sonata_api_write","sonata_search"})
      * @Serializer\Since(version="1.0")
      * @Serializer\Type(name="integer")
