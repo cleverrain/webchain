@@ -1,4 +1,4 @@
-Webchain - News
+Webchain - Mainpage
 ===============
 
 This is a webchain landing page developed with a fresh [vue](https://vuejs.org/) and [symfony](https://symfony.com/).
