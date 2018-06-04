@@ -14,8 +14,8 @@
             <div class="mt-0 list-item">
                 <p class="title-text"><span class="square-black mr-3">1</span>Download the GUI Wallet according to your OS and install it:</p>
                 <p class="description-text">
-                    Linux, Windows 32 / 64 bits
-                    <a class="gui-wallet-btn" href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank"></a><br>
+                    Linux, Windows 32 / 64 bits <a class="gui-wallet-btn" href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank"></a>
+
                     <code class="mb-3 mt-5">Please be aware that current GUI wallet shows only outgoing transactions. To check history of incoming transactions for selected account, use <a href="http://explorer.webchain.network" target="_blank">http://explorer.webchain.network</a>.</code>
                 </p>
             </div>
@@ -76,6 +76,10 @@
                         <b>Linux</b> <code class="my-2 py-1 command">> ./webchain-miner</code><br>
                         <b>Windows</b> <code class="my-2 py-1 command">> webchain-miner.exe</code><br>
 
+                        <b>3.3.1)</b> Run the "webchain-miner.exe"<br><br>
+
+                        You’ll get information about the miner and the pool you’re trying to mine.<br><br>
+
                         <img src="{{ asset('build/images/mining_linux.jpg') }}" width="1200" height="800"><br><br>
                     </span>
 
@@ -105,7 +109,7 @@
                     <b>Your round share</b> shows how much you’re contributing to the block solution using your worker(s).<br><br>
 
 
-                    <code class="my-3">You can always check your coins balance visiting <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a></code><br>
+                    <code class="my-3">You can always check your coins balance visiting <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a><br>Type your wallet number on the upper right corner and you will see how many coins you’ve earned</code><br>
 
                     <img src="{{ asset('build/images/explorer.jpg') }}" width="1200" height="800">
                 </p>
@@ -124,7 +128,7 @@
                     ThetaPool (<a href="http://webchain.thetapool.com" target="_blank">webchain.thetapool.com</a>)<br>
                     LOUDMining (<a href="http://webcn.loudmining.com" target="_blank">webcn.loudmining.com</a>)<br><br>
 
-                    <code class="my-3">There are other parameters that can be set up in config.json: number of threads , max-cpu-usage, etc.</code><br>
+                    <code class="my-3">There are other parameters that can be set up in config.json: number of threads, max-cpu-usage, etc.</code><br>
 
                     <img src="{{ asset('build/images/config_json.jpg') }}" width="1200" height="800">
                 </p>
@@ -139,9 +143,11 @@
                         <b>1.</b> Click on "SEND" button.<br>
                         <b>2.</b> Type the recipient address of account including "0x" prefix or choose it from the Address Book.<br>
                         <b>3.</b> Write the amount of WEB and click "CREATE TRANSACTION".<br>
-                    </span>
+                    </span><br>
 
                     <code class="my-3">Average time needed for one WEB transaction verification is 10 seconds.</code><br>
+
+                    Then you will need to enter a password and click "SIGN & SEND TRANSACTION". When transaction gets completed you will see it on dashboard in the history of transactions with status "Success". Until this status will be "In Queue".
                 </p>
 
             </div>
