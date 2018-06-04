@@ -53,19 +53,30 @@
     min-width: 50px
     height: auto
 
-  .gui-wallet-btn
-    width: 10rem
-    margin-bottom: -1.2rem
-    margin-left: 0.8rem
-    display: inline-block
-    height: 3rem
-    background-repeat: no-repeat
-    background-size: contain
-    background-image: url("../Images/start/gui_wallet_button.png")
-    border-radius: 1rem
+  .wallet-btn
+    color: white
     &:hover
-      background-image: url("../Images/start/gui_wallet_button_hover.png")
+      .gui-wallet-text
+        background-color: $color-light-hover
 
+  .gui-wallet-text
+    background-color: $color-title
+    margin-right: -0.4rem
+    height: 3.4rem
+    width: 13rem
+    border-radius: 0.5rem
+    padding-top: 0.7rem
+    font-weight: bold
+    font-size: 1.3rem
+    display: inline-block
+
+  .gui-wallet-circle
+    width: 5rem
+    margin-left: -1.5rem
+    margin-top: -5px
+    background: white
+    padding: 0.2em
+    border-radius: 2.5rem
 
   .circle
     width: 10px
