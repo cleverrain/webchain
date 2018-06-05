@@ -7,26 +7,26 @@
             <div class="row text-center">
                 <div class="col-md-7 col-sm-12 order-2 order-md-1">
                     <div class="col-12 d-block align-items-center justify-content-centertext-center mb-5">
-                        <!--<a href="https://www.facebook.com/webchain.network" class="mx-sm-2" rel="nofollow" target="_blank">-->
-                            <!--<img :src="facebook" :width="60">-->
+                        <!--<a href="https://www.facebook.com/webchain.network" rel="nofollow" target="_blank">-->
+                            <!--<img :src="facebook" :width="60" class="m-2">-->
                         <!--</a>-->
-                        <a href="https://www.linkedin.com/company/webchain-blockchain" class="mx-sm-2" rel="nofollow" target="_blank">
-                            <img :src="linkedin" :width="60">
+                        <a href="https://www.linkedin.com/company/webchain-blockchain" rel="nofollow" target="_blank">
+                            <img :src="linkedin" :width="60" class="m-2">
                         </a>
-                        <a href="https://www.twitter.com/TheWebchain" class="mx-sm-2" rel="nofollow" target="_blank">
-                            <img :src="twitter" :width="60">
+                        <a href="https://www.twitter.com/TheWebchain"  rel="nofollow" target="_blank">
+                            <img :src="twitter" :width="60" class="m-2">
                         </a>
-                        <a href="https://www.reddit.com/r/Webchain" class="mx-sm-2" rel="nofollow" target="_blank">
-                            <img :src="reddit" :width="60">
+                        <a href="https://www.reddit.com/r/Webchain"  rel="nofollow" target="_blank">
+                            <img :src="reddit" :width="60" class="m-2">
                         </a>
-                        <a href="https://www.t.me/joinchat/IdMikBC1Ew28ufxKdfnKMQ" class="mx-sm-2" rel="nofollow" target="_blank">
-                            <img :src="telegram_channel" :width="60">
+                        <a href="https://www.t.me/joinchat/IdMikBC1Ew28ufxKdfnKMQ" rel="nofollow" target="_blank">
+                            <img :src="telegram_channel" :width="60" class="m-2">
                         </a>
-                        <a href="https://www.t.me/webchainnetwork" class="mx-sm-2" rel="nofollow" target="_blank">
-                            <img :src="telegram_group" :width="60">
+                        <a href="https://www.t.me/webchainnetwork"  rel="nofollow" target="_blank">
+                            <img :src="telegram_group" :width="60" class="m-2">
                         </a>
-                        <a href="https://www.discordapp.com/invite/K7AptZt" class="mx-sm-2" rel="nofollow" target="_blank">
-                            <img :src="discord" :width="60">
+                        <a href="https://discordapp.com/invite/86nTHtf" rel="nofollow" target="_blank">
+                            <img :src="discord" :width="60" class="m-2">
                         </a>
                     </div>
 
