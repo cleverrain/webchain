@@ -82,8 +82,12 @@
     font-weight: 700
     font-size: 1.2rem
     display: inline-block
-    @include media-breakpoint-down(xxs)
-      padding-right: 0
+    @include media-orientation(portrait)
+      @include media-breakpoint-down(xxxs)
+        padding-right: 0
+    @include media-orientation(landscape)
+      @include media-breakpoint-down(md)
+        padding-right: 0
 
   .gui-wallet-circle
     width: 3.5rem
@@ -92,5 +96,9 @@
     background: #fff
     padding: .1em
     border-radius: 2.5rem
-    @include media-breakpoint-down(xxs)
-      display: none
+    @include media-orientation(portrait)
+      @include media-breakpoint-down(xxxs)
+        display: none
+    @include media-orientation(landscape)
+      @include media-breakpoint-down(md)
+        display: none
