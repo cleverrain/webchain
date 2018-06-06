@@ -22,8 +22,7 @@
     }
 </script>
 
-<style lang="sass" src="../../Sass/FeaturedButton.sass">
-    .arrow-circular
-        @include media-breakpoint-up(lg)
-            background: url("../../Images/bitcointalk-icon.svg") no-repeat
+<style lang="sass">
+    $circle-img: "../../Images/bitcointalk-icon.svg"
+    @import "../../Sass/FeaturedButton"
 </style>
