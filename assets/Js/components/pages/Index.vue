@@ -138,6 +138,17 @@
                 </template>
             </Division>
         </section>
+
+        <section class="container-fluid my-sm-5 py-5 webchain-coinimp" data-aos="zoom-in">
+            <div class="row px-3 py-2 d-flex">
+                <div class="col-5"></div>
+                <div class="col-7 px-md-3 px-0 text-left">
+                    <h2>Website monetization via CoinIMP</h2>
+                    <p>Our two projects CoinIMP and WEB are going to create full ecosystem for webmasters to monetize on their websites, breaking Google Adsense and Facebook ads monopoly.</p>
+                </div>
+            </div>
+        </section>
+
         <section id="roadmap">
             <DescriptionBlock data-aos="zoom-in" class="mt-md-5">
                 <template slot="title">Roadmap</template>
@@ -251,7 +262,7 @@
         #wrapper
             overflow: hidden
 
-            & > *:not(#starter):not(#tw-widget)
+            & > *:not(#starter):not(#tw-widget):not(.webchain-coinimp)
                 max-width: map-get($grid-breakpoints, xxxl)
                 margin: 0 auto
     
@@ -297,7 +308,47 @@
             &:hover
                 color: $color-background !important
                 background-color: $color-light-hover
-            
+
+    .webchain-coinimp
+        height: 25rem
+        *
+            color: $color-background
+        background: url("../Images/webchain-coinimp.png") no-repeat center center
+        background-size: 100%
+        min-height: calc(40vh - 7rem)
+        div
+            padding-top: 1.5rem
+        h2
+            font-size: 2.8em
+        p
+            font-size: 1.5em
+
+        @include media-breakpoint-down(md)
+                height: 18rem
+                h2
+                    font-size: 1.7em
+                p
+                    font-size: 1.1em
+
+        @include media-breakpoint-down(xxs)
+                height: 16rem
+                h2
+                    font-size: 1.6em
+                p
+                    font-size: 1em
+
+        @include media-breakpoint-down(sm)
+            @include media-orientation(landscape)
+                h2
+                    font-size: 1.1em
+                p
+                    font-size: 0.8em
+            @include media-orientation(portrait)
+                h2
+                    font-size: 0.9em
+                p
+                    font-size: 0.7em
+
     #divisions
         
         img
