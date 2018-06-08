@@ -139,10 +139,10 @@
             </Division>
         </section>
 
-        <section class="container-fluid my-sm-5 py-5 webchain-coinimp" data-aos="zoom-in">
-            <div class="row px-3 py-2 d-flex">
+        <section class="container-fluid my-sm-1 py-md-5 webchain-coinimp" data-aos="zoom-in">
+            <div class="row px-3 d-flex">
                 <div class="col-5"></div>
-                <div class="col-7 px-md-3 px-0 text-left">
+                <div class="col-7 px-0 text-left">
                     <h2>Website monetization via CoinIMP</h2>
                     <p>Our two projects CoinIMP and WEB are going to create full ecosystem for webmasters to monetize on their websites, breaking Google Adsense and Facebook ads monopoly.</p>
                 </div>
@@ -314,14 +314,18 @@
         *
             color: $color-background
         background: url("../Images/webchain-coinimp.png") no-repeat center center
-        background-size: 100%
-        min-height: calc(40vh - 7rem)
-        div
-            padding-top: 1.5rem
+        background-size: 100% calc(100% - 1vh)
         h2
             font-size: 2.8em
         p
             font-size: 1.5em
+
+        @include media-breakpoint-up(xl)
+            height: 32rem
+            h2
+                font-size: 4em
+            p
+                font-size: 2.3em
 
         @include media-breakpoint-down(md)
                 height: 18rem
@@ -330,24 +334,18 @@
                 p
                     font-size: 1.1em
 
-        @include media-breakpoint-down(xxs)
-                height: 16rem
+        @include media-breakpoint-down(xxxs)
+                height: 6rem
                 h2
                     font-size: 1.6em
                 p
                     font-size: 1em
 
-        @include media-breakpoint-down(sm)
-            @include media-orientation(landscape)
+        @include media-breakpoint-down(xxs)
                 h2
-                    font-size: 1.1em
+                    font-size: 1em
                 p
                     font-size: 0.8em
-            @include media-orientation(portrait)
-                h2
-                    font-size: 0.9em
-                p
-                    font-size: 0.7em
 
     #divisions
         
