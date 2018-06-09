@@ -309,7 +309,7 @@
 
     #stocks
         background: $color-grey-bg
-        p
+        span
             font-family: $font-title
             font-size: 2.4rem
         img
