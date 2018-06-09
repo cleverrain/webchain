@@ -18,6 +18,7 @@
                 </div>
             </div>
         </section>
+
         <section id="description">
             <SeparatorBanner data-aos="flip-up">
             <span>
@@ -27,6 +28,14 @@
             </span>
             </SeparatorBanner>
         </section>
+
+        <section id="stocks" class="container-fluid mt-5 pt-3 text-center">
+            <p class="d-inline-block m-0" data-aos="zoom-in">Don't miss opportunity to get in early! Trade WEB on</p>
+            <a class="d-inline-block" href="https://stocks.exchange/trade/WEB/BTC" target="_blank" data-aos="zoom-out-right">
+                <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left"/>
+            </a>
+        </section>
+
         <section id="divisions">
             <Division>
                 <template slot="title">
@@ -297,7 +306,17 @@
             &:hover
                 color: $color-background !important
                 background-color: $color-light-hover
-            
+
+    #stocks
+        background: $color-grey-bg
+        p
+            font-family: "FuturaStdLight"
+            font-size: 2.2rem
+            color: $color-dark-gray
+            font-weight: bold
+        img
+            width: 100%
+
     #divisions
         
         img
