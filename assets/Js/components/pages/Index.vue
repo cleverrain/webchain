@@ -371,6 +371,7 @@
 
         @include media-breakpoint-down(xxxs)
             height: 10rem
+            padding-top: 2rem
             h2
                 font-size: 1.2em
             p
@@ -385,11 +386,11 @@
                     font-size: 0.2em
             @include media-orientation(portrait)
                 height: 8.4rem
-                padding-top: 2.2rem
+                padding-top: 1.7rem
                 h2
                     font-size: 1.2em
                 p
-                    font-size: 0.5em
+                    font-size: 0.6em
 
     #divisions
         
