@@ -312,7 +312,6 @@
         p
             font-family: $font-title
             font-size: 2.4rem
-            color: $color-dark-gray
         img
             width: 100%
 
