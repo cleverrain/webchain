@@ -29,10 +29,10 @@
             </SeparatorBanner>
         </section>
 
-        <section id="stocks" class="container-fluid mt-5 pt-3 text-center">
-            <p class="d-inline-block m-0" data-aos="zoom-in">Don't miss opportunity to get in early! Trade WEB on</p>
+        <section id="stocks" class="container-fluid mt-5 pt-3 text-center" data-aos="zoom-out-right" data-aos-delay="200">
+            <p class="d-inline-block m-0">Don't miss opportunity to get in early! Trade WEB on</p>
             <a class="d-inline-block" href="https://stocks.exchange/trade/WEB/BTC" target="_blank" data-aos="zoom-out-right">
-                <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left"/>
+                <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
             </a>
         </section>
 
