@@ -308,7 +308,6 @@
                 background-color: $color-light-hover
 
     #stocks
-        background: $color-grey-bg
         span
             font-family: $font-title
             font-size: 2.4rem
