@@ -311,9 +311,8 @@
         background: $color-grey-bg
         p
             font-family: "FuturaStdLight"
-            font-size: 2.2rem
+            font-size: 2.4rem
             color: $color-dark-gray
-            font-weight: bold
         img
             width: 100%
 
