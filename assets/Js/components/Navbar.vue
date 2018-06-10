@@ -10,7 +10,7 @@
 
             <b-collapse is-nav id="nav_collapse">
                 <b-navbar-nav class="ml-auto p-3">
-                    <b-nav-item target="_self"  href="/start">How to Start</b-nav-item>
+                    <b-nav-item target="_self"  href="/start">How to Mine</b-nav-item>
                     <b-nav-item target="_self"  href="/news">News</b-nav-item>
                     <b-nav-item target="_blank" href="https://pool.webchain.network">Pool</b-nav-item>
                     <b-nav-item target="_blank" href="https://explorer.webchain.network">Explorer</b-nav-item>
