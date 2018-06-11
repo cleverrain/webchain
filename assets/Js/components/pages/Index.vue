@@ -139,7 +139,7 @@
             </Division>
         </section>
 
-        <section class="container-fluid my-sm-1 my-md-5 webchain-coinimp" data-aos="zoom-in">
+        <section class="container-fluid my-sm-1 my-md-5 mr-lg-5 pr-lg-5 webchain-coinimp" data-aos="zoom-in">
             <div class="row px-3 d-flex">
                 <div class="col-5"></div>
                 <div class="col-7 px-0 text-left">
@@ -310,19 +310,19 @@
                 background-color: $color-light-hover
 
     .webchain-coinimp
-        padding-top: 1.5rem
+        padding-top: 6rem
         *
             color: $color-background
         background: url("../Images/webchain-coinimp.png") no-repeat center center
         background-size: 100% calc(100% - 1vh)
 
         @include media-breakpoint-up(xxl)
-            padding-top: 7.5rem
-            height: 31rem
+            padding-top: 10rem
+            height: 33rem
             h2
-                font-size: 2.8em
+                font-size: 2.7em
             p
-                font-size: 1.8em
+                font-size: 0.8em
 
         @include media-breakpoint-down(xl)
             @include media-orientation(landscape)
@@ -331,13 +331,13 @@
                 h2
                     font-size: 3.2em
                 p
-                    font-size: 1.2em
+                    font-size: 1.1em
             @include media-orientation(portrait)
                 height: 24rem
                 h2
                     font-size: 3em
                 p
-                    font-size: 1.8em
+                    font-size: 1.7em
 
         @include media-breakpoint-down(lg)
             @include media-orientation(landscape)
@@ -346,28 +346,28 @@
                 h2
                     font-size: 2em
                 p
-                    font-size: 1em
+                    font-size: 0.8em
             @include media-orientation(portrait)
                 height: 20rem
                 h2
                     font-size: 2.2em
                 p
-                    font-size: 1.5em
+                    font-size: 1.4em
 
         @include media-breakpoint-down(md)
             @include media-orientation(landscape)
-                height: 14rem
-                padding-top: 2.5rem
+                height: 16rem
+                padding-top: 5.5rem
                 h2
                     font-size: 1.7em
                 p
-                    font-size: 1em
+                    font-size: 0.8em
             @include media-orientation(portrait)
                 height: 16.4rem
                 h2
                     font-size: 1.9em
                 p
-                    font-size: 1.3em
+                    font-size: 1.2em
 
         @include media-breakpoint-down(xxxs)
             height: 10rem
