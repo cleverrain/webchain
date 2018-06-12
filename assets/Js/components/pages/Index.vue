@@ -142,7 +142,7 @@
         <section class="container-fluid my-sm-1 my-md-5 mr-lg-5 pr-lg-5 webchain-coinimp" data-aos="zoom-in">
             <div class="row px-3 d-flex">
                 <div class="col-md-5"></div>
-                <div class="col-md-7 px-0 text-left">
+                <div class="col-md-7 offset-5 px-0 text-left">
                     <h2>Website monetization via CoinIMP</h2>
                     <p>Our two projects CoinIMP and WEB are going to create full ecosystem for webmasters to monetize on their websites, breaking Google Adsense and Facebook ads monopoly.</p>
                 </div>
