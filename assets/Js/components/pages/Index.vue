@@ -314,9 +314,9 @@
         *
             color: $color-background
         h2
-            font-size: 3.7vw
+            font-size: 3.5vw
         p
-            font-size: 1.6vw
+            font-size: 1.4vw
 
         background: url("../Images/webchain-coinimp.png") no-repeat center center
         background-size: 100% calc(100% - 1vh)
