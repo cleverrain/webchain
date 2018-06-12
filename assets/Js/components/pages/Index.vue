@@ -139,7 +139,7 @@
             </Division>
         </section>
 
-        <section id="webchain-coinimp" class="container-fluid my-sm-1 my-md-5 mr-lg-5 pr-lg-5" data-aos="zoom-in">
+        <section id="webchain-coinimp" class="container-fluid" data-aos="zoom-in">
             <div class="row px-3 d-flex">
                 <div class="col-md-5"></div>
                 <div class="col-md-7 offset-5 px-0 text-left">
@@ -147,6 +147,7 @@
                     <p>Our two projects CoinIMP and WEB are going to create full ecosystem for webmasters to monetize on their websites, breaking Google Adsense and Facebook ads monopoly.</p>
                 </div>
             </div>
+            <img src="../../../Images/webchain-coinimp.png" />
         </section>
 
         <section id="roadmap">
@@ -310,7 +311,9 @@
                 background-color: $color-light-hover
 
     #webchain-coinimp
-        padding-top: 6rem
+        img
+            visibility: hidden
+            width: 100%
         *
             color: $color-background
         h2
@@ -319,47 +322,8 @@
             font-size: 1.4vw
 
         background: url("../Images/webchain-coinimp.png") no-repeat center center
-        background-size: 100% calc(100% - 1vh)
+        background-size: 100%
 
-        @include media-breakpoint-up(xxl)
-            padding-top: 10rem
-            height: 33rem
-            p
-                font-size: 0.8vw
-            h2
-                font-size: 2.5vw
-
-        @include media-breakpoint-down(xl)
-            @include media-orientation(landscape)
-                height: 22rem
-                padding-top: 5rem
-            @include media-orientation(portrait)
-                height: 24rem
-
-        @include media-breakpoint-down(lg)
-            @include media-orientation(landscape)
-                height: 18rem
-                padding-top: 4.5rem
-            @include media-orientation(portrait)
-                height: 20rem
-
-        @include media-breakpoint-down(md)
-            @include media-orientation(landscape)
-                height: 16rem
-                padding-top: 5.5rem
-            @include media-orientation(portrait)
-                height: 16.4rem
-
-        @include media-breakpoint-down(xxxs)
-            height: 10rem
-            padding-top: 2rem
-
-        @include media-breakpoint-down(xxs)
-            @include media-orientation(landscape)
-                height: 6rem
-            @include media-orientation(portrait)
-                height: 8.4rem
-                padding-top: 1.7rem
 
     #divisions
         
