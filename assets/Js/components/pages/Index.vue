@@ -139,7 +139,7 @@
             </Division>
         </section>
 
-        <section class="container-fluid my-sm-1 my-md-5 mr-lg-5 pr-lg-5 webchain-coinimp" data-aos="zoom-in">
+        <section id="webchain-coinimp" class="container-fluid my-sm-1 my-md-5 mr-lg-5 pr-lg-5" data-aos="zoom-in">
             <div class="row px-3 d-flex">
                 <div class="col-md-5"></div>
                 <div class="col-md-7 offset-5 px-0 text-left">
@@ -262,7 +262,7 @@
         #wrapper
             overflow: hidden
 
-            & > *:not(#starter):not(#tw-widget):not(.webchain-coinimp)
+            & > *:not(#starter):not(#tw-widget):not(#webchain-coinimp)
                 max-width: map-get($grid-breakpoints, xxxl)
                 margin: 0 auto
     
@@ -309,88 +309,57 @@
                 color: $color-background !important
                 background-color: $color-light-hover
 
-    .webchain-coinimp
+    #webchain-coinimp
         padding-top: 6rem
         *
             color: $color-background
+        h2
+            font-size: 3.7vw
+        p
+            font-size: 1.6vw
+
         background: url("../Images/webchain-coinimp.png") no-repeat center center
         background-size: 100% calc(100% - 1vh)
 
         @include media-breakpoint-up(xxl)
             padding-top: 10rem
             height: 33rem
-            h2
-                font-size: 2.7em
             p
-                font-size: 0.8em
+                font-size: 0.8vw
+            h2
+                font-size: 2.5vw
 
         @include media-breakpoint-down(xl)
             @include media-orientation(landscape)
                 height: 22rem
                 padding-top: 5rem
-                h2
-                    font-size: 3.2em
-                p
-                    font-size: 1.1em
             @include media-orientation(portrait)
                 height: 24rem
-                h2
-                    font-size: 3em
-                p
-                    font-size: 1.7em
 
         @include media-breakpoint-down(lg)
             @include media-orientation(landscape)
                 height: 18rem
                 padding-top: 4.5rem
-                h2
-                    font-size: 2em
-                p
-                    font-size: 0.8em
             @include media-orientation(portrait)
                 height: 20rem
-                h2
-                    font-size: 2.2em
-                p
-                    font-size: 1.4em
 
         @include media-breakpoint-down(md)
             @include media-orientation(landscape)
                 height: 16rem
                 padding-top: 5.5rem
-                h2
-                    font-size: 1.7em
-                p
-                    font-size: 0.8em
             @include media-orientation(portrait)
                 height: 16.4rem
-                h2
-                    font-size: 1.9em
-                p
-                    font-size: 1.2em
 
         @include media-breakpoint-down(xxxs)
             height: 10rem
             padding-top: 2rem
-            h2
-                font-size: 1.2em
-            p
-                font-size: 0.7em
 
         @include media-breakpoint-down(xxs)
             @include media-orientation(landscape)
                 height: 6rem
-                h2
-                    font-size: 0.7em
-                p
-                    font-size: 0.2em
             @include media-orientation(portrait)
                 height: 8.4rem
                 padding-top: 1.7rem
-                h2
-                    font-size: 1.2em
-                p
-                    font-size: 0.6em
 
     #divisions
         
