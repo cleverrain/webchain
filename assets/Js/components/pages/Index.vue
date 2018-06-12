@@ -139,10 +139,10 @@
             </Division>
         </section>
 
-        <section id="webchain-coinimp" class="container-fluid" data-aos="zoom-in">
+        <section id="webchain-coinimp" class="container-fluid my-5" data-aos="zoom-in">
             <div class="row px-3 d-flex">
                 <div class="col-md-5"></div>
-                <div class="col-md-7 offset-5 px-0 text-left">
+                <div class="col-md-7 offset-5 text-left">
                     <h2>Website monetization via CoinIMP</h2>
                     <p>Our two projects CoinIMP and WEB are going to create full ecosystem for webmasters to monetize on their websites, breaking Google Adsense and Facebook ads monopoly.</p>
                 </div>
@@ -311,6 +311,8 @@
                 background-color: $color-light-hover
 
     #webchain-coinimp
+        .row
+            position: absolute
         img
             visibility: hidden
             width: 100%
