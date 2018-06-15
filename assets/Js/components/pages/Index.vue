@@ -34,12 +34,16 @@
 
             <div class="row">
                 <div class="col">
-                    <a class="d-inline-block px-4" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                        <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
-                    </a>
-                    <a class="d-inline-block px-4" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                        <h2 class="bitebtc-text">BiteBTC</h2>
-                    </a>
+                    <div class="d-inline-block px-4">
+                        <a class="" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                            <img src="../../../Images/stocks-logo.png" class="my-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        </a>
+                    </div>
+                    <div class="d-inline-block px-4 bitebtc-block">
+                        <a class="" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                            <h2 class="bitebtc-text">BiteBTC</h2>
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -332,6 +336,18 @@
             font-size: 2.4rem
         img
             width: 100%
+            @include media-breakpoint-down(sm)
+                width: 60%
+
+    .bitebtc-block
+        vertical-align: middle
+
+    .bitebtc-text
+        font-family: Roboto,sans-serif
+        color: $color-bitebtc
+        font-size: 3.5rem
+        @include media-breakpoint-down(sm)
+            font-size: 2.1rem
 
     #webchain-coinimp
         .row
@@ -367,10 +383,6 @@
             
             &:first-of-type
                 margin-top: 4%
-    .bitebtc-text
-        font-family: Roboto,sans-serif
-        color: $color-bitebtc
-        font-size: 3.5rem
 
     #roadmap
         h3, .h3
@@ -429,4 +441,3 @@
             opacity: 1
             clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
 </style>
-   
