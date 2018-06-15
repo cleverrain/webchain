@@ -37,9 +37,8 @@
                     <a class="d-inline-block px-4" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
                         <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
                     </a>
-                    <span id="or-block">or</span>
                     <a class="d-inline-block px-4" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                        <img src="../../../Images/bitebtc-logo.jpg" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        <h2 class="bitebtc-text">BiteBTC</h2>
                     </a>
                 </div>
             </div>
@@ -368,7 +367,11 @@
             
             &:first-of-type
                 margin-top: 4%
-            
+    .bitebtc-text
+        font-family: Roboto,sans-serif
+        color: $color-bitebtc
+        font-size: 3.5rem
+
     #roadmap
         h3, .h3
             font-family: $font-general
@@ -388,13 +391,6 @@
             padding: 15px 0
             border-top: 1px solid $color-text
             border-bottom: 1px solid $color-text
-    #or-block
-        margin-top: -1rem
-        @include media-breakpoint-up(sm)
-            display: inline-block
-        @include media-breakpoint-down(sm)
-            display: block
-
 
     .gitter-open-chat-button
         font-size: 1vw
