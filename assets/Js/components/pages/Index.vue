@@ -35,7 +35,7 @@
             <div class="row align-items-center">
                 <div class="col-6 text-right d-inline-block">
                     <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                        <img src="../../../Images/stocks-logo.png" class="my-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        <img src="../../../Images/stocks-logo.png" class="my-3 img-fluid" data-aos="zoom-out-left" data-aos-delay="250"/>
                     </a>
                 </div>
                 <div class="col-6 text-left d-inline-block bitebtc-block">
@@ -332,10 +332,6 @@
         span
             font-family: $font-title
             font-size: 2.4rem
-        img
-            width: 200px
-            @include media-breakpoint-down(sm)
-                width: 125px
 
     .bitebtc-block
         margin-top: 10px
