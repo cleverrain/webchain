@@ -35,12 +35,12 @@
             <div class="row">
                 <div class="col">
                     <div class="d-inline-block px-4">
-                        <a class="" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
                             <img src="../../../Images/stocks-logo.png" class="my-3" data-aos="zoom-out-left" data-aos-delay="250"/>
                         </a>
                     </div>
                     <div class="d-inline-block px-4 bitebtc-block">
-                        <a class="" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
                             <h2 class="bitebtc-text">BiteBTC</h2>
                         </a>
                     </div>
@@ -343,7 +343,7 @@
         vertical-align: middle
 
     .bitebtc-text
-        font-family: Roboto,sans-serif
+        font-family: $font-bitebtc
         color: $color-bitebtc
         font-size: 3.5rem
         @include media-breakpoint-down(sm)
