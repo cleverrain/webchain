@@ -31,7 +31,7 @@
                         <a href="https://jq.qq.com/?_wv=1027&k=5f9VO0G" rel="nofollow" target="_blank">
                             <img :src="qq" :width="60" class="m-2">
                         </a>
-			<a href="https://gitter.im/webchain-network/public" rel="nofollow" target="_blank">
+                        <a href="https://gitter.im/webchain-network/public" rel="nofollow" target="_blank">
                             <img :src="gitter" :width="60" class="m-2">
                         </a>
 
