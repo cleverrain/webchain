@@ -32,18 +32,16 @@
         <section id="stocks" class="container-fluid mt-5 pt-3 text-center" data-aos="zoom-out-right" data-aos-delay="200">
             <span class="d-inline-block m-0 text-center">Don't miss opportunity to get in early! Trade WEB on</span>
 
-            <div class="row">
-                <div class="col">
-                    <div class="d-inline-block px-4">
-                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                            <img src="../../../Images/stocks-logo.png" class="my-3" data-aos="zoom-out-left" data-aos-delay="250"/>
-                        </a>
-                    </div>
-                    <div class="d-inline-block px-4 bitebtc-block">
-                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                            <h2 class="bitebtc-text">BiteBTC</h2>
-                        </a>
-                    </div>
+            <div class="row align-items-center">
+                <div class="col-6 text-right d-inline-block">
+                    <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <img src="../../../Images/stocks-logo.png" class="my-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                    </a>
+                </div>
+                <div class="col-6 text-left d-inline-block bitebtc-block">
+                    <h2 class="bitebtc-text">
+                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">BiteBTC</a>
+                    </h2>
                 </div>
             </div>
         </section>
@@ -335,17 +333,18 @@
             font-family: $font-title
             font-size: 2.4rem
         img
-            width: 100%
+            width: 200px
             @include media-breakpoint-down(sm)
-                width: 60%
+                width: 125px
 
     .bitebtc-block
-        vertical-align: middle
+        margin-top: 10px
 
     .bitebtc-text
-        font-family: $font-bitebtc
-        color: $color-bitebtc
-        font-size: 3.5rem
+        font-size: 3.4rem
+        a
+            font-family: $font-bitebtc
+            color: $color-bitebtc
         @include media-breakpoint-down(sm)
             font-size: 2.1rem
 
