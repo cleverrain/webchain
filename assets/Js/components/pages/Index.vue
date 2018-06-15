@@ -30,10 +30,19 @@
         </section>
 
         <section id="stocks" class="container-fluid mt-5 pt-3 text-center" data-aos="zoom-out-right" data-aos-delay="200">
-            <span class="d-inline-block m-0">Don't miss opportunity to get in early! Trade WEB on</span>
-            <a class="d-inline-block" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
-            </a>
+            <span class="d-inline-block m-0 text-center">Don't miss opportunity to get in early! Trade WEB on</span>
+
+            <div class="row">
+                <div class="col">
+                    <a class="d-inline-block px-4" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <img src="../../../Images/stocks-logo.png" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                    </a>
+                    <span id="or-block">or</span>
+                    <a class="d-inline-block px-4" href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <img src="../../../Images/bitebtc-logo.jpg" class="mb-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                    </a>
+                </div>
+            </div>
         </section>
 
         <section id="divisions">
@@ -379,7 +388,14 @@
             padding: 15px 0
             border-top: 1px solid $color-text
             border-bottom: 1px solid $color-text
-    
+    #or-block
+        margin-top: -1rem
+        @include media-breakpoint-up(sm)
+            display: inline-block
+        @include media-breakpoint-down(sm)
+            display: block
+
+
     .gitter-open-chat-button
         font-size: 1vw
         background-color: $color-chat
@@ -417,3 +433,4 @@
             opacity: 1
             clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0)
 </style>
+   
