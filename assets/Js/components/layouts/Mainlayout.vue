@@ -66,6 +66,7 @@
                 telegram_channel: telegram_channel,
                 telegram_group: telegram_group,
                 discord: discord,
+                gitter: gitter,
                 qq: qq
             }
         }
