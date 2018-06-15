@@ -147,6 +147,17 @@
                 </template>
             </Division>
         </section>
+
+        <section id="webchain-coinimp" class="container-fluid my-5" data-aos="zoom-in">
+            <div class="row mx-3 d-flex">
+                <div class="col-7 offset-5 text-left">
+                    <h2>Website monetization via CoinIMP</h2>
+                    <p>Our two projects CoinIMP and WEB are going to create full ecosystem for webmasters to monetize on their websites, breaking Google Adsense and Facebook ads monopoly.</p>
+                </div>
+            </div>
+            <img src="../../../Images/webchain-coinimp.png" />
+        </section>
+
         <section id="roadmap">
             <DescriptionBlock data-aos="zoom-in" class="mt-md-5">
                 <template slot="title">Roadmap</template>
@@ -260,7 +271,7 @@
         #wrapper
             overflow: hidden
 
-            & > *:not(#starter):not(#tw-widget)
+            & > *:not(#starter):not(#tw-widget):not(#webchain-coinimp)
                 max-width: map-get($grid-breakpoints, xxxl)
                 margin: 0 auto
     
@@ -313,6 +324,23 @@
             font-size: 2.4rem
         img
             width: 100%
+
+    #webchain-coinimp
+        .row
+            padding-top: 9%
+            position: absolute
+        img
+            visibility: hidden
+            width: 100%
+        *
+            color: $color-background
+        h2
+            font-size: 3.5vw
+        p
+            font-size: 1.4vw
+
+        background: url("../Images/webchain-coinimp.png") no-repeat center center
+        background-size: 100%
 
     #divisions
         
