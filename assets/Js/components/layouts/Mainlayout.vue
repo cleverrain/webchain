@@ -31,6 +31,10 @@
                         <a href="https://jq.qq.com/?_wv=1027&k=5f9VO0G" rel="nofollow" target="_blank">
                             <img :src="qq" :width="60" class="m-2">
                         </a>
+			<a href="https://gitter.im/webchain-network/public" rel="nofollow" target="_blank">
+                            <img :src="gitter" :width="60" class="m-2">
+                        </a>
+
                     </div>
 
                     <div class="col-12">
@@ -53,6 +57,7 @@
     import telegram_channel from "../../../Images/social/icon-telegram.png"
     import telegram_group from "../../../Images/social/icon-telegram-group.png"
     import discord from "../../../Images/social/icon-discord.png"
+    import gitter from "../../../Images/social/icon-gitter.png"
     import qq from "../../../Images/social/icon-qq.png"
 
     export default {
@@ -66,6 +71,7 @@
                 telegram_channel: telegram_channel,
                 telegram_group: telegram_group,
                 discord: discord,
+                gitter: gitter
                 qq: qq
             }
         }
