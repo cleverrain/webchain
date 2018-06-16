@@ -33,14 +33,16 @@
             <span class="d-inline-block m-0 text-center">Don't miss opportunity to get in early! Trade WEB on</span>
 
             <div class="row align-items-center">
-                <div class="col-6 text-right d-inline-block">
+                <div class="col-6 text-center d-inline-block">
                     <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                        <img src="../../../Images/stocks-logo.png" class="my-3 img-fluid" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        <img src="../../../Images/stocks-logo.png" class="my-3 img-fluid pl-2" data-aos="zoom-out-left" data-aos-delay="250"/>
                     </a>
                 </div>
-                <div class="col-6 text-left d-inline-block bitebtc-block">
+                <div class="col-6 text-center d-inline-block">
                     <h2 class="bitebtc-text">
-                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">BiteBTC</a>
+                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                            <img src="../../../Images/bitebtc-logo.png" class="my-3 img-fluid" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        </a>
                     </h2>
                 </div>
             </div>
@@ -332,9 +334,6 @@
         span
             font-family: $font-title
             font-size: 2.4rem
-
-    .bitebtc-block
-        margin-top: 10px
 
     .bitebtc-text
         font-size: 3.4rem
