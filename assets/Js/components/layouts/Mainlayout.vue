@@ -5,7 +5,7 @@
         </div>
         <footer class="container-fluid mt-3 py-4 px-5">
             <div class="row text-center">
-                <div class="col-md-7 col-sm-12 order-2 order-md-1">
+                <div class="col-12 order-2 order-md-1">
                     <div class="col-12 d-block align-items-center justify-content-centertext-center mb-5">
                         <!--<a href="https://www.facebook.com/webchain.network" rel="nofollow" target="_blank">-->
                             <!--<img :src="facebook" :width="60" class="m-2">-->
@@ -28,6 +28,13 @@
                         <a href="https://discordapp.com/invite/86nTHtf" rel="nofollow" target="_blank">
                             <img :src="discord" :width="60" class="m-2">
                         </a>
+                        <a href="https://jq.qq.com/?_wv=1027&k=5f9VO0G" rel="nofollow" target="_blank">
+                            <img :src="qq" :width="60" class="m-2">
+                        </a>
+                        <a href="https://gitter.im/webchain-network/public" rel="nofollow" target="_blank">
+                            <img :src="gitter" :width="60" class="m-2">
+                        </a>
+
                     </div>
 
                     <div class="col-12">
@@ -50,6 +57,8 @@
     import telegram_channel from "../../../Images/social/icon-telegram.png"
     import telegram_group from "../../../Images/social/icon-telegram-group.png"
     import discord from "../../../Images/social/icon-discord.png"
+    import gitter from "../../../Images/social/icon-gitter.png"
+    import qq from "../../../Images/social/icon-qq.png"
 
     export default {
         name: "MainLayout",
@@ -61,7 +70,9 @@
                 reddit: reddit,
                 telegram_channel: telegram_channel,
                 telegram_group: telegram_group,
-                discord: discord
+                discord: discord,
+                gitter: gitter,
+                qq: qq
             }
         }
     }
