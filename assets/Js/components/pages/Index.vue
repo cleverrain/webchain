@@ -243,9 +243,6 @@
     import Division from '../Division';
     import TwtrTimeline from '../TwtrTimeline';
     import FeaturedButton from '../FeaturedButton';
-    import Sidecar from '../../modules/GitterSidecar';
-
-    Sidecar('webchain-network/public');
 
     export default {
         name: 'index',
