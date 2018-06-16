@@ -35,13 +35,13 @@
             <div class="row align-items-center">
                 <div class="col-6 text-right d-inline-block">
                     <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                        <img src="../../../Images/stocks-logo.png" class="my-3 img-fluid pl-2" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        <img src="../../../Images/stocks-logo.png" class="my-3 img-fluid pl-4" data-aos="zoom-out-left" data-aos-delay="250"/>
                     </a>
                 </div>
                 <div class="col-6 text-left d-inline-block">
                     <h2 class="bitebtc-text">
                         <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
-                            <img src="../../../Images/bitebtc-logo.png" class="my-3 img-fluid" data-aos="zoom-out-left" data-aos-delay="250"/>
+                            <img src="../../../Images/bitebtc-logo.png" class="my-3 img-fluid pr-3" data-aos="zoom-out-left" data-aos-delay="250"/>
                         </a>
                     </h2>
                 </div>
