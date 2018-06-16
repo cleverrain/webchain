@@ -18,6 +18,7 @@
                 </div>
             </div>
         </section>
+
         <section id="description">
             <SeparatorBanner data-aos="flip-up">
             <span>
@@ -27,6 +28,26 @@
             </span>
             </SeparatorBanner>
         </section>
+
+        <section id="stocks" class="container-fluid mt-5 pt-3 text-center" data-aos="zoom-out-right" data-aos-delay="200">
+            <span class="d-inline-block m-0 text-center">Don't miss opportunity to get in early! Trade WEB on</span>
+
+            <div class="row align-items-center">
+                <div class="col-6 text-right d-inline-block">
+                    <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <img src="../../../Images/stocks-logo.png" class="my-3 img-fluid pl-4" data-aos="zoom-out-left" data-aos-delay="250"/>
+                    </a>
+                </div>
+                <div class="col-6 text-left d-inline-block">
+                    <h2 class="bitebtc-text">
+                        <a href="https://bitebtc.com/trade/web_btc" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                            <img src="../../../Images/bitebtc-logo.png" class="my-3 img-fluid pr-3" data-aos="zoom-out-left" data-aos-delay="250"/>
+                        </a>
+                    </h2>
+                </div>
+            </div>
+        </section>
+
         <section id="divisions">
             <Division>
                 <template slot="title">
@@ -306,6 +327,19 @@
                 color: $color-background !important
                 background-color: $color-light-hover
 
+    #stocks
+        span
+            font-family: $font-title
+            font-size: 2.4rem
+
+    .bitebtc-text
+        font-size: 3.4rem
+        a
+            font-family: $font-bitebtc
+            color: $color-bitebtc
+        @include media-breakpoint-down(sm)
+            font-size: 2.1rem
+
     #webchain-coinimp
         .row
             padding-top: 9%
@@ -322,7 +356,6 @@
 
         background: url("../Images/webchain-coinimp.png") no-repeat center center
         background-size: 100%
-
 
     #divisions
         
@@ -341,7 +374,7 @@
             
             &:first-of-type
                 margin-top: 4%
-            
+
     #roadmap
         h3, .h3
             font-family: $font-general
@@ -361,7 +394,7 @@
             padding: 15px 0
             border-top: 1px solid $color-text
             border-bottom: 1px solid $color-text
-    
+
     .gitter-open-chat-button
         font-size: 1vw
         background-color: $color-chat
