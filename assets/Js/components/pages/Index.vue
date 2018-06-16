@@ -40,7 +40,7 @@
                 </div>
                 <div class="col-6 text-left d-inline-block">
                     <h2 class="bitebtc-text">
-                        <a href="https://stocks.exchange/trade/WEB/BTC" rel="nofollow" target="_blank" data-aos="zoom-out-right">
+                        <a href="https://bitebtc.com/trade/web_btc" rel="nofollow" target="_blank" data-aos="zoom-out-right">
                             <img src="../../../Images/bitebtc-logo.png" class="my-3 img-fluid pr-3" data-aos="zoom-out-left" data-aos-delay="250"/>
                         </a>
                     </h2>
