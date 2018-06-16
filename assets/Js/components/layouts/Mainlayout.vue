@@ -5,7 +5,7 @@
         </div>
         <footer class="container-fluid mt-3 py-4 px-5">
             <div class="row text-center">
-                <div class="col-md-7 col-sm-12 order-2 order-md-1">
+                <div class="col-12 order-2 order-md-1">
                     <div class="col-12 d-block align-items-center justify-content-centertext-center mb-5">
                         <!--<a href="https://www.facebook.com/webchain.network" rel="nofollow" target="_blank">-->
                             <!--<img :src="facebook" :width="60" class="m-2">-->
