@@ -7,17 +7,17 @@ export default {
     methods: {
         toggle: function(event)
         {
-            var icon = $(event.toElement.childNodes[1]);
+            var icon = $(event.toElement.childNodes[0]);
 
-            if (icon.hasClass('fa-plus'))
+            if (icon.hasClass('fa-plus-circle'))
             {
-                icon.removeClass('fa-plus');
-                icon.addClass('fa-minus');
+                icon.removeClass('fa-plus-circle');
+                icon.addClass('fa-minus-circle');
                 return;
             }
 
-            icon.removeClass('fa-minus');
-            icon.addClass('fa-plus');
+            icon.removeClass('fa-minus-circle');
+            icon.addClass('fa-plus-circle');
 
         }
     }
