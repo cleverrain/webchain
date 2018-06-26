@@ -5,20 +5,28 @@ export default {
     data:{
     },
     methods: {
-        toggle: function(event)
+        changeIcon: function (icon)
         {
-            var icon = $(event.toElement.childNodes[0]);
-
-            if (icon.hasClass('fa-plus-circle'))
+            if (icon.hasClass('fa-plus'))
             {
-                icon.removeClass('fa-plus-circle');
-                icon.addClass('fa-minus-circle');
+                icon.removeClass('fa-plus');
+                icon.addClass('fa-minus');
                 return;
             }
-
-            icon.removeClass('fa-minus-circle');
-            icon.addClass('fa-plus-circle');
-
+            icon.removeClass('fa-minus');
+            icon.addClass('fa-plus');
+        },
+        pToggle: function(event)
+        {
+            var icon = $($(event.toElement.childNodes[0]).children()[1]);
+            console.log(icon);
+            this.changeIcon(icon);
+        },
+        iToggle: function (event)
+        {
+            var icon = $(event.toElement);
+            this.changeIcon(icon);
         }
+
     }
 }

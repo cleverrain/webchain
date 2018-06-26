@@ -14,26 +14,42 @@
 
         <p class="py-3">This Frequently Asked Questions section is made picking the most common questions submitted in our Bitcointalk thread, Telegram and Discord groups.</p>
 
-        <div class="mt-0 mb-3 pl-1">
+        <div class="mt-0 mb-3 pl-3">
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-1 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>I receive an “Invalid Login” message > [pool.webchain.network:3333] error: "Invalid login", code: -1</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-1">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-1 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                    I receive an “Invalid Login” message > [pool.webchain.network:3333] error: "Invalid login", code: -1
+                </p>
+                <b-collapse class="answer" id="q-1">
                     Make sure to add the 0x prefix to you address. If your address is 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b, you will have to write it like this on the file 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-2 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>How can I check my balance?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-2">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-2 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+How can I check my balance?</p>
+                <b-collapse class="answer" id="q-2">
                     Go to <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a> and search your address on the bar. It’ll look something like this:<br><br>
                         <img src="{{ asset('build/images/explorer.jpg') }}" width="1200" height="800"><br><br> Or from do it from console: webchain.getBalance("address")
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-3 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>I forgot / cannot see my wallet address, where can I see it?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-3">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-3 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+I forgot / cannot see my wallet address, where can I see it?</p>
+                <b-collapse class="answer" id="q-3">
                     <b>Windows version:</b><br>
                         <b>B.1</b> From CMD, PowerShell or your preferred console, go to the route where you saved webchaind.exe<br>
                         <b>B.2</b> Let’s say you saved webchain.exe in the the following directory<br>
@@ -72,16 +88,26 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-4 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>I cannot generate my address, what can I do?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-4">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-4 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+I cannot generate my address, what can I do?</p>
+                <b-collapse class="answer" id="q-4">
                     Creating the address is really simple. This guide might help you: <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a>
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-5 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>I can't type in the Webchaind CMD prompt</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-5">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-5 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+I can't type in the Webchaind CMD prompt</p>
+                <b-collapse class="answer" id="q-5">
                     In case you're using windows, you can use powershell (CMD,  Git bash or your preferred terminal) and type the command “cd” to enter the directory where the webchain-miner app was saved. Ex: “cd c:\Users\MyName\webchain”<br><br>
                         After you're in that directory you can use any of the commands listed here <a href="https://github.com/webchain-network/webchaind" target="_blank">https://github.com/webchain-network/webchaind</a><br>
                         as webchaind account new <----to create new addresses<br>
@@ -89,9 +115,14 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-6 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>I don’t know how to run commands and I’m a windows user</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-6">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-6 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+I don’t know how to run commands and I’m a windows user</p>
+                <b-collapse class="answer" id="q-6">
                     A guide for those Windows users that have no clue about how to run webchaind miner from console:<br><br>
 
                         Steps are easy to follow:<br><br>
@@ -99,7 +130,7 @@
                         <b>A)</b> Go to “Webchain: the basics” <a href="https://github.com/webchain-network/webchaind#green_book-webchaind-the-basics" target="_blank">https://github.com/webchain-network/webchaind#green_book-webchaind-the-basics</a>. 	Here you will see a list of all the possible commands that you can use, from how to create a new wallet to how to access and mine Webchain.<br>
 
                         <b>B)</b> From CMD, PowerShell or your preferred console, go to the route where you stored webchaind.exe<br>
-                        <span class="ml-4 d-block"><b>a)</b> Let’s say you stored
+                        <span class=" d-block"><b>a)</b> Let’s say you stored
                          webchain.exe in the recommended directory<br> C:\Users\UserName\AppData\Roaming\Webchain</br>
                             <b>b)</b> Input the following command:<br>
                             > cd c:\users\UserName\AppData\Roaming\Webchain<br>
@@ -109,39 +140,64 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-7 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>How do I get a wallet?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-7">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-7 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+How do I get a wallet?</p>
+                <b-collapse class="answer" id="q-7">
                     Webchain is node and wallet at the same time. Follow these instructions to create your wallet and <a href="https://pool.webchain.network/#/help" target="_blank">mine</a>
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-8 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>There is high difficulty on pool is there any other pool?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-8">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-8 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+There is high difficulty on pool is there any other pool?</p>
+                <b-collapse class="answer" id="q-8">
                     Yes, we have two official pools:<br>pool2.webchain.network:2222 which has much lower difficulty than on pool.webchain.network:3333
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-9 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Do you have any plan to build a GPU miner?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-9">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-9 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Do you have any plan to build a GPU miner?</p>
+                <b-collapse class="answer" id="q-9">
                     There are no plans to build a GPU miner for the coin,  as it would reduce the opportunity for low-budget devices, compromising one of our reasons to be, which is to guarantee a profitable and egalitarian opportunity for most users.<br><br>
                         We suggest you to keep in touch with us not to miss any important updates.<br>
                         <a href="https://twitter.com/TheWebchain" target="_blank">https://twitter.com/TheWebchain</a><br><a href="https://reddit.com/r/webchain" target="_blank">https://reddit.com/r/webchain</a><br><a href=" https://github.com/webchain-network" target="_blank"> https://github.com/webchain-network</a>
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-10 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>When could we start trading?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-10">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-10 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+When could we start trading?</p>
+                <b-collapse class="answer" id="q-10">
                     There is no "exchange listing" on our roadmap yet; we're currently focused on making webchain user friendly so it works as well as possible. However, we will start the process of adding our coin to exchanges later, and  as soon as there is a clear milestone about it, our community will be informed about it.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-11 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>20% premine for a pow project is too large</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-11">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-11 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+20% premine for a pow project is too large</p>
+                <b-collapse class="answer" id="q-11">
                     Consider that we're not holding any ICO or sale. Our chance to finance this project comes from those premined coins.<br><br>
 
                         We’ve set a lock-in for those premined coins that will divide our access in four moments:<br><br>
@@ -155,9 +211,14 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-12 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>I checked the guide but still don't know how to send coins to other wallets</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-12">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-12 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+I checked the guide but still don't know how to send coins to other wallets</p>
+                <b-collapse class="answer" id="q-12">
                     <b>a)</b> In console, get to the webchaind directory  as was explained here:
                         <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a><br><br>
 
@@ -186,40 +247,65 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-13 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>How can I see my wallet number?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-13">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-13 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+How can I see my wallet number?</p>
+                <b-collapse class="answer" id="q-13">
                     <b>a)</b> In console, get to the webchaind directory  as was explained here: <a href="https://pool.webchain.network/#/help" target="_blank">https://pool.webchain.network/#/help</a><br>
                         <b>b)</b> Type the command “webchain.coinbase”; which will show you your main wallet in webchain.<br>
                         <b>c)</b> If you have multiple wallets you can see them all by typing “webchaind account list”.<br>
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-14 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>When will you be releasing GUI Wallet?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-14">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-14 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+When will you be releasing GUI Wallet?</p>
+                <b-collapse class="answer" id="q-14">
                     We are working on it and we will be releasing a GUI Wallet in 2018-3rdQ.<br>
                         Meanwhile, we’ll be as helpful as possible about guiding you and other people needing a GUI. you can check the <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a> guide while our GUI is on development.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-15 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Will mining affect my CPU process? I mean, will I be able to use my pc while mining?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-15">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-15 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Will mining affect my CPU process? I mean, will I be able to use my pc while mining?</p>
+                <b-collapse class="answer" id="q-15">
                     Of course you can use your PC normally while mining; you can always select the amount of CPU that will be used,so you’re able to mine and do other things at the same time. Remember that you can also use more than one device (a.k.a “worker”) to mine at the same time using the same address.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-16 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Miner is working but i see no workers on pool</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-16">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-16 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Miner is working but i see no workers on pool</p>
+                <b-collapse class="answer" id="q-16">
                     It means that pool didn’t get shares from your miner. A possible reason is that you have low hashrate (about 20-30 H/s or less ) and you’re mining on first pool pool.webchain.network:3333 with high difficulty (20000). You need to switch you miner to second pool pool2.webchain.network:2222 with lower difficulty (5000) and try again.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-17 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>The balance I get when using the console is different than the balance showed on the website.</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-17">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-17 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+The balance I get when using the console is different than the balance showed on the website.</p>
+                <b-collapse class="answer" id="q-17">
                     The balance you get when you’re using the console must be the same you get from the website. If you are mining, it could be a little different because of the network syncing.<br><br>
 
                         Check the log file and see if there are warnings about time differences. If your clock is significantly out of sync with the current time, it may prevent you from downloading.<br><br>
@@ -234,30 +320,50 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-18 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Where is the link to the wallet with the premine?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-18">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-18 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Where is the link to the wallet with the premine?</p>
+                <b-collapse class="answer" id="q-18">
                     <a href="https://explorer.webchain.network/addr/0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b" target="_blank">https://explorer.webchain.network/addr/0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</a>
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-19 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Can you provide some nodes? I can't sync it</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-19">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-19 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Can you provide some nodes? I can't sync it</p>
+                <b-collapse class="answer" id="q-19">
                     Everyone who runs webchaind is node. and webchaind finds all nodes automatically, it works as p2p. but on first connection webchaind needs at least one ip to connect and get list of peers from it, that's why we have two servers hardcoded.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-20 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Solo mining, slow synchronization</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-20">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-20 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Solo mining, slow synchronization</p>
+                <b-collapse class="answer" id="q-20">
                     You can try considerably faster method described here: <a href="https://github.com/webchain-network/webchaind#fast-synchronisation" target="_blank">https://github.com/webchain-network/webchaind#fast-synchronisation</a>
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-21 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>If I can’t get any peers so how can I rebuild my wallet?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-21">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-21 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+If I can’t get any peers so how can I rebuild my wallet?</p>
+                <b-collapse class="answer" id="q-21">
                     To rebuild your wallet, you need the keystore and the password you set before. The fact that you can't get any peers might be related to one of the followings:<br><br>
 
                         1. Your local time might be incorrect.<br>
@@ -265,25 +371,40 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-22 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>Is it mineable with cryptonight GPU miner?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-22">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-22 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+Is it mineable with cryptonight GPU miner?</p>
+                <b-collapse class="answer" id="q-22">
                     So far we haven't found evidence of GPU miners on webchain. As we've said before, we aren't planning to release any GPU miners because our goal is to make CPU mining profitable.<br><br>
 
                         So I might say the answer to your question is that we don't focus on GPU miners.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-23 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>When using webchain pool, is there a way to set a username to identify miners in the config of the mining software?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-23">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-23 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+When using webchain pool, is there a way to set a username to identify miners in the config of the mining software?</p>
+                <b-collapse class="answer" id="q-23">
                     Yes, when you edit the json file, you add your wallet address number as your username, through which you can be identified.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-24 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>How can I change the password of my wallet</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-24">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-24 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+How can I change the password of my wallet</p>
+                <b-collapse class="answer" id="q-24">
                     Write this command in linux shell console or windows cmd console in dir of webchaind:<br><br>
 
                         webchaind account update YOURWALLETNUMBER<br><br>
@@ -292,9 +413,14 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-25 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>If someone complains about 20% pre-mine or wants to know a valid reason for this:</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-25">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-25 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+If someone complains about 20% pre-mine or wants to know a valid reason for this:</p>
+                <b-collapse class="answer" id="q-25">
                     We already announced lock-in for premined coins:<br><br>
 
                         5% - available this year (part of it might be used as airdrops on another project to spread awareness about webchain)<br>
@@ -310,16 +436,26 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-26 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>My antivirus swears on the Windows client that it is infected with a virus Malware-gen, is this a false positive?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-26">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-26 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+My antivirus swears on the Windows client that it is infected with a virus Malware-gen, is this a false positive?</p>
+                <b-collapse class="answer" id="q-26">
                     Yes, it is false positive. AVs usually warn about every cryptocurrency miner.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-27 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>How to mine alone?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-27">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-27 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+How to mine alone?</p>
+                <b-collapse class="answer" id="q-27">
                     You can use these steps:<br>
                         1. Start the console: ./webchaind console or (webchaind.exe for windows)<br>
                         2. Get your balance (on console): web3.fromWei(webchain.getBalance(webchain.coinbase), "ether")<br>
@@ -328,25 +464,40 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-28 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>How is it possible to have such huge hashes/second e.g. 20 KH, 30 KH etc?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-28">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-28 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+How is it possible to have such huge hashes/second e.g. 20 KH, 30 KH etc?</p>
+                <b-collapse class="answer" id="q-28">
                     That is farm of servers. Some of those guys sit on discord and even posted their stats - how many servers they have and with what CPU.<br><br>
 
                         Farm of servers is pretty much same as many computers, we cannot distinguish farm from many different computers of different owners. Unless we would forbid mining on one address from more than one location, but then they would simply generate many wallets.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-29 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>May I try to make a GPU miner?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-29">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-29 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+May I try to make a GPU miner?</p>
+                <b-collapse class="answer" id="q-29">
                     You can try to figure out a GPU miner, but it will be not much more effective as CPU mining due to specifics of our Cryptonight algorithm.
                 </b-collapse>
             </div>
 
-            <div class="faq-block my-2 mx-0">
-                <p v-b-toggle.q-30 class="question py-2 ml-2 mb-2 font-weight-bold" v-on:click="toggle"><i class="float-left pr-3 pt-1 fa fa-lg fa-plus-circle"></i>As for the difficulty, do I gain more depending on the difficulty?</p>
-                <b-collapse class="answer ml-4 pt-0" id="q-30">
+            <div class="faq-block pt-2 pb-1 mx-0">
+                <p v-b-toggle.q-30 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
+<span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+    <i class="fa fa-circle-thin fa-stack-2x"></i>
+    <i class="fa fa-plus fa-stack-1x"></i>
+</span>
+As for the difficulty, do I gain more depending on the difficulty?</p>
+                <b-collapse class="answer" id="q-30">
                     <b>A lower difficulty</b> makes it easier and faster to find solutions for a block, which means a smaller but faster payout. However, difficulty doesn't determine how many coins you'll earn at the end, but how often you'll get paid.
                 </b-collapse>
             </div>
