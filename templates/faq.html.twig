@@ -16,7 +16,7 @@
 
         <div class="mt-0 mb-3 pl-3">
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-1 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -29,7 +29,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-2 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -39,11 +39,11 @@
                 </p>
                 <b-collapse class="answer" id="q-2">
                     Go to <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a> and search your address on the bar. It’ll look something like this:<br><br>
-                        <img src="{{ asset('build/images/explorer.jpg') }}" width="1200" height="800"><br><br> Or from do it from console: webchain.getBalance("address")
+                        <img src="{{ asset('build/images/explorer.jpg') }}" width="1200" height="800"><br><br> Or from do it from console: <code>webchain.getBalance("address")</code>
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-3 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -53,44 +53,44 @@
                 </p>
                 <b-collapse class="answer" id="q-3">
                     <b>Windows version:</b><br>
-                        <b>B.1</b> From CMD, PowerShell or your preferred console, go to the route where you saved webchaind.exe<br>
-                        <b>B.2</b> Let’s say you saved webchain.exe in the the following directory<br>
-                        > C:\Users\UserName\AppData\Roaming\Webchain\<br><br>
-                        <b>B.3</b> Then, to go to that folder nativate that folder, run the command:<br>
-                        > cd c:\users\UserName\AppData\Roaming\Webchain and hit enter<br>
+                    <b>B.1</b> From CMD, PowerShell or your preferred console, go to the route where you saved webchaind.exe<br>
+                    <b>B.2</b> Let’s say you saved webchain.exe in the the following directory<br>
+                    <code>> C:\Users\UserName\AppData\Roaming\Webchain</code><br><br>
+                    <b>B.3</b> Then, to go to that folder nativate that folder, run the command:<br>
+                    <code>> cd c:\users\UserName\AppData\Roaming\Webchain</code> and hit enter<br>
 
-                        <code class="my-3">Step B.3 will lead you to the directory where your webchaind.exe file is located</code>
+                    <code class="my-3">Step B.3 will lead you to the directory where your webchaind.exe file is located</code>
 
-                        <code class="my-3">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
+                    <code class="my-3">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
 
-                        <b>B.4:</b> Execute the following command, which will show you your wallet address(es) created<br>
+                    <b>B.4:</b> Execute the following command, which will show you your wallet address(es) created<br>
 
-                        > webchaind.exe account list<br><br>
-                        <b>Linux version:</b><br>
+                    <code>> webchaind.exe account list</code><br><br>
+                    <b>Linux version:</b><br>
 
-                        <b>B.1</b> From Linux shell go to the folder where you decompressed webchaind by  running the command “cd”<br>
-                        <b>B.2</b> Let’s say you stored webchain in the directory<br>
-                        > /opt/webchaind/<br>
-                        <b>B.3</b> Type the following command:<br>
-                        > cd /opt/webchaind/ and press enter<br>
+                    <b>B.1</b> From Linux shell go to the folder where you decompressed webchaind by  running the command “cd”<br>
+                    <b>B.2</b> Let’s say you stored webchain in the directory<br>
+                    <code>> /opt/webchaind/</code><br>
+                    <b>B.3</b> Type the following command:<br>
+                    <code>> cd /opt/webchaind/ and press enter</code><br>
 
-                        <code class="my-3">Step B.3 will lead you to the directory where your webchaind file is located</code>
+                    <code class="my-3">Step B.3 will lead you to the directory where your webchaind file is located</code>
 
-                        <code class="my-3">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
+                    <code class="my-3">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute!</code>
 
-                        <b>B.4:</b> Execute the following command, which will show you your wallet address(es) created<br>
-                        > ./webchaind account list<br>
+                    <b>B.4:</b> Execute the following command, which will show you your wallet address(es) created<br>
+                    <code>> ./webchaind account list</code><br>
 
-                        After following these steps, you will see your account wallet number:<br>
+                    After following these steps, you will see your account wallet number:<br>
 
-                        <code class="my-3">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
+                    <code class="my-3">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
 
-                        <img src="{{ asset('build/images/account_list.jpg') }}" width="1200" height="800">
-                    
+                    <img src="{{ asset('build/images/account_list.jpg') }}" width="1200" height="800"><br>
+
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-4 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -103,7 +103,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-5 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -119,7 +119,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-6 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -137,15 +137,15 @@
                         <b>B)</b> From CMD, PowerShell or your preferred console, go to the route where you stored webchaind.exe<br>
                         <span class=" d-block"><b>a)</b> Let’s say you stored
                          webchain.exe in the recommended directory<br> C:\Users\UserName\AppData\Roaming\Webchain</br>
-                            <b>b)</b> Input the following command:<br>
-                            > cd c:\users\UserName\AppData\Roaming\Webchain<br>
+                        <b>b)</b> Input the following command:<br>
+                        <code>> cd c:\users\UserName\AppData\Roaming\Webchain</code><br>
                         and hit enter<br>
                         <b>c)</b> Once you’re there, you can write all the commands that webchaind.exe can execute!</span><br>
                         <b>C)</b> Check the following link if you need help to create your account <a href="https://github.com/webchain-network/webchaind#create-or-manage-accounts" target="_blank">https://github.com/webchain-network/webchaind#create-or-manage-accounts</a>
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-7 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -158,7 +158,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-8 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -171,7 +171,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-9 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -186,7 +186,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-10 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -199,7 +199,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-11 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -221,7 +221,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-12 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -231,34 +231,34 @@
                 </p>
                 <b-collapse class="answer" id="q-12">
                     <b>a)</b> In console, get to the webchaind directory  as was explained here:
-                        <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a><br><br>
+                    <a href="https://pool.webchain.network/#/help" target="_blank">How to mine</a><br><br>
 
-                        <b>b)</b> type this command:<br><br>
+                    <b>b)</b> type this command:<br><br>
 
-                        (on windows)<br>
-                        > webchaind.exe console<br>
-                        (on linux)<br>
-                        > webchaind console<br><br>
+                    (on windows)<br>
+                    <code>> webchaind.exe console</code><br>
+                    (on linux)<br>
+                    <code>> webchaind console</code><br><br>
 
-                        <b>c)</b> then use this command in console:<br><br>
+                    <b>c)</b> then use this command in console:<br><br>
 
-                        > personal.unlockAccount(WALLET)<br><br>
+                    <code>> personal.unlockAccount(WALLET)</code><br><br>
 
-                        where “WALLET” refers to your webchain wallet number. You will be prompted with your wallet password.<br><br>
+                    where “WALLET” refers to your webchain wallet number. You will be prompted with your wallet password.<br><br>
 
-                        <b>d)</b> To send coins to other wallet, use this command with the following      arguments:<br>
+                    <b>d)</b> To send coins to other wallet, use this command with the following      arguments:<br>
 
-                        > webchain.sendTransaction({from:'WALLET1', to:'WALLET2', value: web3.toWei(0.05, "ether"), gas:21000});<br>
+                    <code>> webchain.sendTransaction({from:'WALLET1', to:'WALLET2', value: web3.toWei(0.05, "ether"), gas:21000});</code><br>
 
-                        where “WALLET1” represents your wallet, and “WALLET2” the recipient's wallet.<br>
+                    where “WALLET1” represents your wallet, and “WALLET2” the recipient's wallet.<br>
 
-                        0.05 is the amount of WEBs to be sent  (0.05 WEB here is just an example).<br>
+                    0.05 is the amount of WEBs to be sent  (0.05 WEB here is just an example).<br>
 
-                        <code class="my-3">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
+                    <code class="my-3">Remember to add the prefix “0x” to your account, so if it’s 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b then the resulting account would be 0x8d1ba0497c3e3db17143604ab7f5e93a3cbac68b</code>
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-13 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -273,7 +273,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-14 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -287,7 +287,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-15 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -300,7 +300,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-16 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -313,7 +313,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-17 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -324,19 +324,20 @@
                 <b-collapse class="answer" id="q-17">
                     The balance you get when you’re using the console must be the same you get from the website. If you are mining, it could be a little different because of the network syncing.<br><br>
 
-                        Check the log file and see if there are warnings about time differences. If your clock is significantly out of sync with the current time, it may prevent you from downloading.<br><br>
+                    Check the log file and see if there are warnings about time differences. If your clock is significantly out of sync with the current time, it may prevent you from downloading.<br><br>
 
-                        To check log file:<br><br>
+                    To check log file:<br><br>
 
-                        On Linux:<br>
-                        > ~/.webchain/mainnet/log<br><br>
+                    On Linux:<br>
+                    <code>> ~/.webchain/mainnet/log</code><br><br>
 
-                        On Windows:<br>
-                        > C:\Users\&lt;profilename&gt;\AppData\Roaming\Webchain\mainnet\log
+                    On Windows:<br>
+                    <code>> C:\Users\&lt;profilename&gt;\AppData\Roaming\Webchain\mainnet\log</code><br>
+
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-18 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -349,7 +350,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-19 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -362,7 +363,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-20 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -375,7 +376,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-21 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -391,7 +392,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-22 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -406,7 +407,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-23 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -419,7 +420,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-24 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -436,7 +437,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-25 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -460,7 +461,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-26 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -473,7 +474,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-27 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -490,7 +491,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-28 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -505,7 +506,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-29 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
@@ -518,7 +519,7 @@
                 </b-collapse>
             </div>
 
-            <div class="faq-block pt-2 pb-1 mx-0">
+            <div class="faq-block mx-0">
                 <p v-b-toggle.q-30 class="question ml-2 my-2 font-weight-bold" v-on:click="pToggle">
                     <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
                         <i class="fa fa-circle-thin fa-stack-2x"></i>

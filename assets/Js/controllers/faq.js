@@ -18,13 +18,12 @@ export default {
         },
         pToggle: function(event)
         {
-            var icon = $($(event.toElement.childNodes[0]).children()[1]);
-            console.log(icon);
+            var icon = $($(event.target.childNodes[0]).children()[1]);
             this.changeIcon(icon);
         },
         iToggle: function (event)
         {
-            var icon = $(event.toElement);
+            var icon = $(event.target);
             this.changeIcon(icon);
         }
 
