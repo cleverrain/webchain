@@ -5,7 +5,7 @@
         </div>
         <footer class="container-fluid mt-3 py-4 px-5">
             <div class="row text-center">
-                <div class="col-12 order-2 order-md-1">
+                <div class="col-md-7 order-2 order-md-1">
                     <div class="col-12 d-block align-items-center justify-content-centertext-center mb-5">
                         <!--<a href="https://www.facebook.com/webchain.network" rel="nofollow" target="_blank">-->
                             <!--<img :src="facebook" :width="60" class="m-2">-->
@@ -43,6 +43,22 @@
                     <div class="col-12 mt-2">
                         <p class="text-white m-0">Copyright 2018 Webchain.network, All rights reserved</p>
                     </div>
+                </div>
+                <div class="col-md-5 col-sm-12 mb-4 order-1 order-md-2 mt-md-4">
+                    <section class="container">
+                        <div class="row">
+                            <div class="text-center col-sm-12">
+                                <h3 class="text-white newsletter-label">Signup in our Newsletter</h3>
+                                <span class="text-white">Receive Webchain news and updates in your inbox.</span>
+                                <div class="input-group mt-3">
+                                    <input type="email" class="form-control news round-left" placeholder="Your email address">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-primary round-right">SUBSCRIBE</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </footer>
