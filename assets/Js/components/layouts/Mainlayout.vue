@@ -50,12 +50,12 @@
                             <div class="text-center col-sm-12">
                                 <h3 class="text-white newsletter-label">Signup in our Newsletter</h3>
                                 <span class="text-white">Receive Webchain news and updates in your inbox.</span>
-                                <div class="input-group mt-3">
-                                    <input type="email" class="form-control news round-left" placeholder="Your email address">
+                                <form action="/newsletter/join" method="POST"  class="input-group mt-3">
+                                    <input type="email" class="form-control news round-left" name="email" placeholder="Your email address">
                                     <span class="input-group-btn">
-                                        <button class="btn btn-primary round-right">SUBSCRIBE</button>
+                                        <input type="submit" class="btn btn-primary round-right" id="newsletter-subscribe-button" value="SUBSCRIBE">
                                     </span>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </section>

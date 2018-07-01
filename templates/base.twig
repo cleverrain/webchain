@@ -24,6 +24,15 @@
             <div id="app">
                 <Mainlayout>
                     <Navbar class="pt-2"></Navbar>
+                    {% block newsletter %}
+                        {% for label, messages in app.flashes %}
+                            {% for message in messages %}
+                                <div class="alert alert-{{ label }} text-center m-2">
+                                    {{ message|raw}}
+                                </div>
+                            {% endfor %}
+                        {% endfor %}
+                    {% endblock %}
                     {% block content %}{% endblock %}
                 </Mainlayout>
             </div>
