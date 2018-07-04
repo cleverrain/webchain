@@ -7,9 +7,14 @@ $(document).ready( function ()
         $.post('./newsletter/search/' + email, function (data)
         {
             var searchResult = $('#search-result');
+            var searchError = $('#search-error');
+
 
             if (data.status == 'ok')
             {
+                console.log('ok');
+                searchError.removeClass('d-block');
+                searchError.addClass('d-none');
 
                 searchResult.removeClass("d-none");
 
@@ -41,10 +46,10 @@ $(document).ready( function ()
 
             }else
             {
-                if (!searchResult.hasClass('d-none'))
-                {
-                    searchResult.addClass("d-none");
-                }
+                searchError.removeClass('d-none');
+                searchError.addClass('d-block');
+
+                searchResult.addClass("d-none");
             }
         });
     });

@@ -28,8 +28,10 @@
             </div>
         </div>
 
-        <input type="search" id="search-email-input" placeholder="search for email">
+        <input type="email" id="search-email-input" placeholder="search for email">
         <button class="btn btn-sm btn-primary" id="search-email-button">Search</button>
+
+        <span class="alert alert-danger text-center d-none" id="search-error">Email not found!</span>
 
         <table class="table table-striped table-bordered w-100 d-none" id="search-result">
             <thead>
