@@ -5,6 +5,8 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use JMS\Serializer\Annotation as Serializer;
 use Sonata\UserBundle\Entity\BaseUser as BaseUser;
+use \DateTime as DateTime;
+use Symfony\Component\Validator\Constraints\Date;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\News\PostRepository")
@@ -38,15 +40,19 @@ class Newsletter
     private $enabled;
 
     /**
-     * @ORM\Column(type="datetime")
+     * @ORM\Column(name="created_at", type="string", length=255)
      */
     private $created_at;
 
 
-    public function __construct(string $email, bool $enabled = true)
+    public function __construct(
+        string $email = '',
+        bool $enabled = true,
+        string $created_at = '')
     {
         $this->setEmail($email);
         $this->setEnabled($enabled);
+        $this->setCreated($created_at);
     }
 
     /**
@@ -82,8 +88,19 @@ class Newsletter
         $this->enabled = $enabled;
     }
 
-    public function getCreated() :\DateTime
+    public function getCreated() :string
     {
         return $this->created_at;
+    }
+
+    public function setCreated(string $created_at) :void
+    {
+        if ($created_at == '')
+        {
+            $this->created_at = date('Y-m-d H:i:s');
+            return;
+        }
+
+        $this->created_at = $created_at;
     }
 }

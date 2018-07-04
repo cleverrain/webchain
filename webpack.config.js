@@ -6,6 +6,7 @@ Encore
     .setPublicPath('/build')
     .addEntry('index', './assets/Js/index.js')
     .addEntry('main', './assets/Js/main.js')
+    .addEntry('newsletter', './assets/Js/newsletter.js')
     .autoProvidejQuery()
     .enableSourceMaps(!Encore.isProduction())
     .cleanupOutputBeforeBuild()

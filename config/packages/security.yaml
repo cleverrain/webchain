@@ -16,6 +16,7 @@ security:
             security: false
 
         main:
+            logout: true
             anonymous: ~
             form_login:
                 provider: fos_userbundle
