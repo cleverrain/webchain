@@ -20,7 +20,6 @@
         "sonata-project/intl-bundle": "^2.4",
         "sonata-project/media-bundle": "^3.10",
         "sonata-project/news-bundle": "^3.4",
-        "sylius/mailer-bundle": "^1.2",
         "symfony/console": "^4.0",
         "symfony/flex": "^1.0",
         "symfony/framework-bundle": "^4.0",
