@@ -31,10 +31,7 @@ class NewsletterController extends AbstractController
 
         $emailConstraint = new Assert\Email();
 
-        $errors = $validator->validate(
-            $email,
-            $emailConstraint
-        );
+        $errors = $validator->validate($email, $emailConstraint);
 
         if (!$request->isMethod('POST'))
         {
@@ -205,9 +202,8 @@ class NewsletterController extends AbstractController
         {
             $handle = fopen('php://output', 'w+');
             foreach ($newsletters as $newsletter)
-            {
                 fputcsv($handle,[$newsletter->getEmail()],';');
-            }
+
             fclose($handle);
         };
         $response = new StreamedResponse();
@@ -230,9 +226,8 @@ class NewsletterController extends AbstractController
         {
             $handle = fopen('php://output', 'w+');
             foreach ($newsletters as $newsletter)
-            {
                 fputcsv($handle,[$newsletter->getEmail()],';');
-            }
+
             fclose($handle);
         };
         $response = new StreamedResponse();
@@ -255,9 +250,8 @@ class NewsletterController extends AbstractController
         {
             $handle = fopen('php://output', 'w+');
             foreach ($newsletters as $newsletter)
-            {
                 fputcsv($handle,[$newsletter->getEmail()],';');
-            }
+
             fclose($handle);
         };
         $response = new StreamedResponse();

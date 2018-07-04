@@ -1,6 +1,5 @@
 $(document).ready( function ()
 {
-
     $('#search-email-button').on('click', function ()
     {
         var email = $('#search-email-input').val();
@@ -9,10 +8,8 @@ $(document).ready( function ()
             var searchResult = $('#search-result');
             var searchError = $('#search-error');
 
-
             if (data.status == 'ok')
             {
-                console.log('ok');
                 searchError.removeClass('d-block');
                 searchError.addClass('d-none');
 
