@@ -30,10 +30,10 @@
                     <b>1.</b> Go to <a href="https://github.com/webchain-network/webchaind#green_book-webchaind-the-basics" target="_blank">Webchain: the basics</a>. Here you will see a list of all the possible commands that you can use, from how to create a new wallet to how to access and mine Webchain.<br>
                     <b>2.</b> From CMD, PowerShell or your preferred console, go to the route where you stored webchaind.exe<br>
                     <span class="ml-5 d-block">
-                            <b>2.1</b> Let’s say you stored webchain.exe in the recommended directory<br>
+                            <b>2.1</b> Let’s say you stored webchain.exe in the recommended directory:<br>
                             <code>C:\Users\UserName\AppData\Roaming\Webchain</code>
                         <b>2.2</b> Run the following command:<br>
-                            <code class="d-inline-block my-1">> cd c:\users\UserName\AppData\Roaming\Webchain</code> and hit enter<br>
+                            <code class="d-inline-block my-1">> cd c:\users\UserName\AppData\Roaming\Webchain</code> and hit enter.<br>
                             <b>2.3</b> Once you’re there, you can write all the commands that webchaind.exe can execute.
                     </span>
                     <b>3</b> Check the instructions to <a href="https://github.com/webchain-network/webchaind#create-or-manage-accounts" target="_blank">Create or manage account(s)</a> if you need help to create your account.
@@ -51,7 +51,6 @@
                 </p>
                 <b-collapse class="answer" id="q-2">
                     If you get the following message when trying to run the miner:<br>
-                    <img src="{{ asset('build/images/error_code.jpg') }}"><br>
                     The error means that the wallet address you added to the config file is not correct or is not a real webchain wallet address. If you generated the account (via GUI wallet or via console with webchaind), just make sure to add the 0x prefix to you address, when adding it to the config file. For example:<br>
                     <b>Account address number:</b> 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b<br>
                     <b>Way it should be added to the config file:</b> <b>0x</b>8d1ba0497c3e3db17143604ab7f5e93a3cbac68b.
@@ -121,7 +120,7 @@
                 </p>
                 <b-collapse class="answer" id="q-7">
                     Everyone who runs webchaind becomes a node. And webchaind finds all nodes automatically, as it works according to the Peer-to-Peer principles. If you run webchaind, after sync it should show something like this:<br><br>
-                    <img src="{{ asset('build/images/peers_error.png') }}"><br><br>
+                    <img src="{{ asset('build/images/peers_error.png') }}" class="full-width"><br><br>
                     But sometimes you just can't get connected to the network (0 peers). The most common reasons are:<br><br>
 
                     - <b>Your local time might be incorrect.</b> An accurate clock sync is required in order to be a Webchain node. Check your OS for how to resync your clock (example sudo ntpdate -s time.nist.gov). Consider that even 12 seconds of difference can lead you to 0 peers.<br>
@@ -194,7 +193,7 @@
                     Do I earn more or fewer WEB depending on the pool difficulty?
                 </p>
                 <b-collapse class="answer" id="q-11">
-                    A <b>low difficult pool</b> allows miners to submit more shares before a new block is generated, so you get a higher number of payouts because this frequency is determined by the number of shares you submit. However, the size of the payout depends on the number of hashes contained in each share, which is lower as the pool difficulty is also lower. In the case of a <b>high difficult pool</b>, the miner is not able to submit the same number of shares before a new block is generated, but the submitted shares contain more hashes, meaning you get fewer but bigger payouts.<br><br>
+                    A <b><i>low difficult pool</i></b> allows miners to submit more shares before a new block is generated, so you get a higher number of payouts because this frequency is determined by the number of shares you submit. However, the size of the payout depends on the number of hashes contained in each share, which is lower as the pool difficulty is also lower. In the case of a <b><i>high difficult pool</i></b>, the miner is not able to submit the same number of shares before a new block is generated, but the submitted shares contain more hashes, meaning you get fewer but bigger payouts.<br><br>
 
                     In summary, the difficulty doesn't determine how many coins you'll earn at the end of the day, but the frequency of the payouts.
                     <span class="py-2 d-block"></span>
@@ -212,8 +211,8 @@
                 <b-collapse class="answer" id="q-12">
                     Yes, when you edit the json file, you add your wallet address number as your username, through which your transactions can be identified. In case of using different workers to mine off webchain for the same wallet, we have also enabled Worker-ID functionality for webchain miner after the 2.6.2.0 version. Just follow these steps:<br><br>
 
-                    <b>1.</b> Open you config file.
-                    <b>2.</b> Find “worker-id” as an argument within pools.
+                    <b>1.</b> Open you config file.<br>
+                    <b>2.</b> Find “worker-id” as an argument within <i><u>pools</u></i>.<br>
                     <b>3.</b> Add the ID you prefer (a number, a word or a combination of both).<br><br>
 
                     Run the miner, and after having the first share accepted, you will be able to track the performance of your workers on the <a href="https://pool.webchain.network" target="_blank">pool</a> website. Enter your account including the <b>0x</b> prefix:<br>
@@ -311,7 +310,7 @@
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-plus fa-stack-1x"></i>
                     </span>
-                    where can I find the GUI wallet for Win32?
+                    Where can I find the GUI wallet for Win32?
                 </p>
                 <b-collapse class="answer" id="q-17">
                     Hello! You can download the GUI Wallet according to your OS from our <a href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">Github Repository</a>. So far, the wallet is only available for linux and win64. Follow our social media and our <a href="https://webchain.network/news" target="_blank">News Section</a> for future updates.<br><br>
@@ -341,7 +340,7 @@
                     <code>> C:\Users\UserName\Download\Webchaind</code><br>
 
                     <b>3.</b> Then, to go to that folder, run the command:<br>
-                    <code>> cd C:\Users\UserName\Download\Webchaind</code><br><br>
+                    <code>> cd C:\Users\UserName\Download\Webchaind</code><br>
 
                     <span class="border-section p-2">Step 3 will lead you to the directory where your webchaind.exe file is located</span><br>
 
@@ -365,10 +364,6 @@
                     <b>4.</b> Execute the following command, which will show you the wallet address(es) created and stored in that directory:<br>
                     <code>> ./webchaind account list</code><br>
 
-                    After following these steps, you will see your account wallet(s) number(s):<br>
-
-                    <img src="{{ asset('build/images/wallets_number.png') }}">
-
                     <span class="py-2 d-block"></span>
                 </b-collapse>
             </div>
@@ -386,7 +381,7 @@
 
                     <b>1. Explorer:</b> go to <a href="https://explorer.webchain.network/" target="_blank">https://explorer.webchain.network/</a> and search your address on the bar. Your balance will be shown this way:<br>
 
-                    <img src="{{ asset('build/images/balance.png') }}"><br>
+                    <img src="{{ asset('build/images/balance.png') }}" class="width-350"><br>
 
 
                     <b>2. Console:</b> execute the command:<br>
@@ -396,6 +391,7 @@
                     Remember to add the address including <b>0x</b> at the beginning.<br>
 
                     <b>3. Wallet:</b> open <a href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">GUI Wallet App</a>, add your account using a mnemonic phrase or the UTC file which is located in your keystore directory. On the <a href="https://webchain.network/start" target="_blank">How to Mine</a> page you can find more details (Check step 2.3. "In case you need to import an account").
+
                     <span class="py-2 d-block"></span>
                 </b-collapse>
             </div>
@@ -466,10 +462,11 @@
                 <b-collapse class="answer" id="q-23">
                     Increase your hashrate by adding your smartphone as a mining worker, you can identify how much power it adds by setting a worker ID. Requirements:<br><br>
 
-                    •	Supported CPUs: arm64-v8a (64 bit), armeabi-v7a (32 bit) and x86 devices.<br>
-                    •	Supported Android versions: 5.0.0+.<br>
-
-                    Download the <a href="https://play.google.com/store/apps/details?id=webchain.miner">mobile app</a> now!
+                    <span class="ml-4 d-block">
+                        - Supported CPUs: arm64-v8a (64 bit), armeabi-v7a (32 bit) and x86 devices.<br>
+                        - Supported Android versions: 5.0.0+.<br>
+                    </span><br>
+                    Download the <a href="https://play.google.com/store/apps/details?id=webchain.miner" target="_blank">mobile app</a> now!
 
                     <span class="py-2 d-block"></span>
                 </b-collapse>
@@ -499,7 +496,7 @@
                     Will the iOS version be ready soon?
                 </p>
                 <b-collapse class="answer" id="q-25">
-                    Apple has explicitly banned apps that mine cryptocurrency on its devices, according to newly updated <a href="https://developer.apple.com/app-store/review/guidelines/" target="_blank">Review Guidelines for the App Store</a>. The new ban extends to all Apple platforms.
+                    Apple has explicitly banned apps that mine cryptocurrency on its devices, according to newly updated Review Guidelines for the App Store. The new ban extends to all Apple platforms.
 
                     <span class="py-2 d-block"></span>
                 </b-collapse>
