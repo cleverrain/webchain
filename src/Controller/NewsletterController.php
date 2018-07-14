@@ -199,6 +199,25 @@ class NewsletterController extends AbstractController
     }
 
     /**
+     * @Route("/admin/newsletter/get/all", name="getAllNewsletters")
+     * @return JsonResponse
+     */
+    public function getAllNewslettersJson() :JsonResponse
+    {
+        $result = [];
+
+        foreach ($this->getAllNewsletters() as $newsletter)
+            $result[] = [
+                'id' => $newsletter->getId(),
+                'email' => $newsletter->getEmail(),
+                'enabled' => $newsletter->getEnabled(),
+                'created' => $newsletter->getCreated()
+            ];
+
+        return new JsonResponse($result);
+    }
+
+    /**
      * @Route("/admin/newsletter/export/all", name="exportAllNewsletter")
      * @return StreamedResponse
      */

@@ -48,7 +48,7 @@
                     {
                         this.$toasted.success('<span class="p-2 text-center">' + data.message + '</span>');
                     }
-                })
+                });
             }
         }
     }
