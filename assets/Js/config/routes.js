@@ -1,3 +1,4 @@
 export default {
-    '/news/.*': 'post'
+    '/news/.*': 'post',
+    '/admin/newsletter': 'newsletter'
 }

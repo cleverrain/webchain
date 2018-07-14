@@ -44,22 +44,7 @@
                         <p class="text-white m-0">Copyright 2018 Webchain.network, All rights reserved</p>
                     </div>
                 </div>
-                <div class="col-md-5 col-sm-12 mb-4 order-1 order-md-2 mt-md-4">
-                    <section class="container">
-                        <div class="row">
-                            <div class="text-center col-sm-12">
-                                <h3 class="text-white newsletter-label">Signup in our Newsletter</h3>
-                                <span class="text-white">Receive Webchain news and updates in your inbox.</span>
-                                <form action="/newsletter/join" method="POST"  class="input-group mt-3">
-                                    <input type="email" class="form-control news round-left" name="email" placeholder="Your email address">
-                                    <span class="input-group-btn">
-                                        <input type="submit" class="btn btn-primary round-right" id="newsletter-subscribe-button" value="SUBSCRIBE">
-                                    </span>
-                                </form>
-                            </div>
-                        </div>
-                    </section>
-                </div>
+                <NewsletterFooter></NewsletterFooter>
             </div>
         </footer>
     </div>
@@ -75,10 +60,15 @@
     import discord from "../../../Images/social/icon-discord.png"
     import gitter from "../../../Images/social/icon-gitter.png"
     import qq from "../../../Images/social/icon-qq.png"
+    import NewsletterFooter from "../Newsletter"
 
     export default {
         name: "MainLayout",
-        data: function () {
+        components: {
+            NewsletterFooter
+        },
+        data: function ()
+        {
             return {
                 facebook: facebook,
                 linkedin: linkedin,

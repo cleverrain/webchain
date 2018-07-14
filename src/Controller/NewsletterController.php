@@ -27,16 +27,11 @@ class NewsletterController extends AbstractController
     public function joinNewsletter(Request $request, ValidatorInterface $validator) :Response
     {
 
-        $email = $request->get('email');
+        $email = json_decode($request->getContent(), true)['email'];
 
         $emailConstraint = new Assert\Email();
 
         $errors = $validator->validate($email, $emailConstraint);
-
-        if (!$request->isMethod('POST'))
-        {
-            return $this->redirect('/build/static/index.html');
-        }
 
         if (0 === count($errors) && $email != null)
         {
@@ -46,40 +41,52 @@ class NewsletterController extends AbstractController
 
             if(empty($existEmail))
             {
-                $this->addFlash('success','Thanks for your subscription!<br>'.
-                    'You’ll receive our news and important announcements in your email.<br>'.
-                    'Have a great day');
-
                 $em = $this->getDoctrine()->getManager();
                 $newsletter = new Newsletter($email, 1);
                 $em->persist($newsletter);
                 $em->flush();
+
+                $response = new Response(json_encode([
+                    'status' => 'success',
+                    'message' => 'Thanks for your subscription!<br>'.
+                        'You’ll receive our news and important announcements in your email.<br>'.
+                        'Have a great day'
+                ]));
             }
             else
             {
                 if ($existEmail[0]->getEnabled() == false)
                 {
-                    $this->addFlash('success','Thanks for  Re-subscription!');
-
                     $newsletterId = $existEmail[0]->getId();
                     $em = $this->getDoctrine()->getManager();
                     $newsletter = new Newsletter($email, 1);
                     $newsletter->setId($newsletterId);
                     $em->merge($newsletter);
                     $em->flush();
+
+                    $response = new Response(json_encode([
+                        'status' => 'success',
+                        'message' => 'Thanks for Re-subscription!'
+                    ]));
                 }
                 else
                 {
-                    $this->addFlash('info','You are already subscribed!');
+                    $response = new Response(json_encode([
+                        'status' => 'error',
+                        'message' => 'You are already subscribed!'
+                    ]));
                 }
             }
         }
         else
         {
-            $this->addFlash('danger','Invalid email address!');
+            $response = new Response(json_encode([
+                'status' => 'error',
+                'message' => 'Invalid email address!'
+            ]));
         }
 
-        return $this->render('newsletter.html.twig');
+        return $response;
 
     }
 
