@@ -109,7 +109,6 @@
             {
                 this.$http.post('/admin/newsletter/search/'+this.searchEmailValue, {}).then(function (ret)
                 {
-                    var self = this;
                     ret = ret.body;
 
                     if(ret.status == 'error')
@@ -119,14 +118,8 @@
                         return;
                     }
 
-                    // this.searchNewsletter.id = ret.id;
-                    // this.searchNewsletter.email = ret.email;
-                    // this.searchNewsletter.enabled = ret.email;
-                    // this.searchNewsletter.join = ret.join;
-                    //
                     this.searchError = false;
                     this.searchNewsletter = ret;
-
                 });
             },
             getAllNewsletters: function ()
