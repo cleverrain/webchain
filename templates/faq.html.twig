@@ -12,7 +12,7 @@
     <div id="app">
     <div class="faq container-fluid px-md-5 mx-auto my-5">
 
-        <p class="py-3">This Frequently Asked Questions section is made picking the most common questions submitted in our Bitcointalk thread, Telegram and Discord groups.</p>
+        <p class="py-3">This <b>Frequently Asked Questions</b> page was built aiming to address the most common questions, concerns and objections submitted by current or possible Webchain users through our different channels of communication.</p>
 
         <div class="mt-0 mb-3 pl-3">
 
@@ -50,8 +50,7 @@
                     I received an "Invalid Login" message
                 </p>
                 <b-collapse class="answer" id="q-2">
-                    If you get the following message when trying to run the miner:<br>
-                    The error means that the wallet address you added to the config file is not correct or is not a real webchain wallet address. If you generated the account (via GUI wallet or via console with webchaind), just make sure to add the 0x prefix to you address, when adding it to the config file. For example:<br>
+                    If you got the error: <code class="d-inline-block">"Invalid login", code -1</code> when trying to run the miner, it means that the wallet address you added to the config file is not correct or is not a real webchain wallet address. If you generated the account (via GUI wallet or via console with webchaind), just make sure to add the 0x prefix to you address, when adding it to the config file For example:<br>
                     <b>Account address number:</b> 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b<br>
                     <b>Way it should be added to the config file:</b> <b>0x</b>8d1ba0497c3e3db17143604ab7f5e93a3cbac68b.
                     <span class="py-2 d-block"></span>
@@ -215,9 +214,9 @@
                     <b>2.</b> Find “worker-id” as an argument within <i><u>pools</u></i>.<br>
                     <b>3.</b> Add the ID you prefer (a number, a word or a combination of both).<br><br>
 
-                    Run the miner, and after having the first share accepted, you will be able to track the performance of your workers on the <a href="https://pool.webchain.network" target="_blank">pool</a> website. Enter your account including the <b>0x</b> prefix:<br>
+                    Run the miner, and after having the first share accepted, you will be able to track the performance of your workers on the <a href="https://pool.webchain.network" target="_blank">pool</a> website. Enter your account including the <b>0x</b> prefix:<br><br>
 
-                    <img src="{{ asset('build/images/lookup.png') }}"><br>
+                    <img src="{{ asset('build/images/lookup.png') }}"><br><br>
 
                     You’ll be shown the statistics for your miner and in case of having multiple workers, you’ll have them organized as in the image below, where you could check what their hashrates are and when was the last time each one submitted a share.<br><br>
 
@@ -283,7 +282,7 @@
                     Does Webchain have a GUI Wallet? Where can I find it?
                 </p>
                 <b-collapse class="answer" id="q-15">
-                    Yes, it was released one month after releasing the project. You can download the <a href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">GUI Wallet</a> according to your OS. We invite you to follow the instructions on our <a href="https://webchain.network/start" target="_blank">How to Start Mining</a> page.
+                    Yes, it was released one month after releasing the project. You can download the <a href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">GUI Wallet</a> according to your OS. We invite you to follow the instructions on our <a href="https://webchain.network/start" target="_blank">How to Mine</a> page.
                     <span class="py-2 d-block"></span>
                 </b-collapse>
             </div>
