@@ -15,7 +15,6 @@ use Symfony\Component\Serializer\Serializer;
 use SymfonyComponentHttpFoundationStreamedResponse;
 use Symfony\Component\Serializer\Normalizer\ObjectNormalizer;
 
-
 class NewsletterController extends AbstractController
 {
     /**
