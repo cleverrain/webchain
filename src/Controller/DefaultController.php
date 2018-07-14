@@ -21,6 +21,15 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * Redirect /home to /
+     * @Route("/home", name="home")
+     */
+    public function home() :RedirectResponse
+    {
+        return $this->index();
+    }
+
+    /**
      * @Route("/start", name="start")
      */
     public function howToStartAction() :Response
