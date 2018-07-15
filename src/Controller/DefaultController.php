@@ -25,6 +25,6 @@ class DefaultController extends AbstractController
      */
     public function howToStart() :Response
     {
-        return $this->render('how_to_start.html.twig');
+        return $this->render('how_to_mine.html.twig');
     }
 }

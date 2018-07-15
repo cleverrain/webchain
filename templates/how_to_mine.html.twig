@@ -11,10 +11,11 @@
 
     <div class="start container-fluid px-md-5 mx-auto mt-5">
         <div class="mt-0 mb-3 pl-1 list-unstyled">
+
             <div class="mt-0 list-item">
-                <p class="title-text"><span class="square-black mr-3">1</span>Download the GUI Wallet according to your OS and install it:</p>
+                <p class="title-text"><span class="square-black mr-3">1</span>Download and Install the GUI Wallet according to your OS:</p>
                 <p class="description-text">
-                    <span class="mr-3 my-4 d-inline-block">Linux, Windows 32 / 64 bits</span>
+                    <span class="mr-3 my-4 d-inline-block">Linux 64/86 bits, Windows 64 bits</span>
 
                     <a class="wallet-btn d-inline-block" href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">
                         <span class="gui-wallet-text text-center">GUI WALLET</span>
@@ -24,11 +25,12 @@
                     <code class="mb-3 mt-5">Please be aware that current GUI wallet shows only outgoing transactions. To check history of incoming transactions for selected account, use <a href="http://explorer.webchain.network" target="_blank">http://explorer.webchain.network</a>.</code>
                 </p>
             </div>
+
             <div class="list-item">
-                <p class="title-text"><span class="square-black mr-3">2</span>Open it and follow this short set of directions</p>
+                <p class="title-text"><span class="square-black mr-3">2</span>Launch the app after the installation is over and follow these steps:</p>
 
                 <p class="description-text">
-                    <b>2.1)</b> Choose the node type that you prefer. If you choose the predetermined "FULL NODE", it will take some hours to be in full sync with the blockchain but your system will be completely secured in return. The "REMOTE NODE" offers a way faster syncing, but security will depend on your settings.<br>
+
                     Make the decision based on your preference. If you’d rather choose 100% security over fast syncing speed, we recommend you to pick the "FULL NODE" version, otherwise, the "REMOTE NODE" might be the best option for you. After you’ll have the following options on the screen:<br><br>
 
                     * MORE ABOUT WEBCHAIN<br>
@@ -59,21 +61,20 @@
             </div>
 
             <div class="list-item">
-                <p class="title-text"><span class="square-black mr-3">3</span>Mining: Introduction</p>
+                <p class="title-text"><span class="square-black mr-3">3</span>Mining Webchain: Introduction</p>
                 <p class="description-text">
-                    There is a new block every 10 seconds, approximately. In order to mine WEB coins:<br><br>
 
-                    <b>3.1)</b> Download the miner binary for your system from here <a href="https://github.com/webchain-network/webchain-miner/releases" target="_blank">https://github.com/webchain-network/webchain-miner/releases</a>.<br><br>
+                    <b>3.1)</b> Download and Install the miner according to your OS: <a href="https://github.com/webchain-network/webchain-miner/releases" target="_blank">https://github.com/webchain-network/webchain-miner/releases</a>.<br><br>
 
                     <b>Webchain-miner</b> is a high performance CPU miner for Webchain (WEB). Originally based on XMRig with changes that allow mining WEB.<br><br>
 
-                    <code class="my-3">Please be aware that Windows shows virus warning for all mining software, this is false positive and you should ignore it (or add it to exceptions and allow it to work).</code><br>
+                    <code class="my-3">Please be aware that Windows shows virus warnings for all mining software, this is a false positive and you should ignore it (or add it to exceptions and allow it to work).</code><br>
 
                     <b>3.2)</b> Unpack it and open config.json (miner configuration file). In config.json, you need to add your wallet number including the suffix "0x":<br>
 
                     <code class="my-2 py-1 ml-4 command">> "user": "YOUR_WALLET"</code><br>
 
-                    <b>3.3)</b> We’re ready to start mining, follow one of these options:<br><br>
+                    <b>3.3)</b> We’re ready to start mining, follow one of these options to launch the miner:<br><br>
 
                     <span class="ml-4 d-block">
                         <b>3.3.1)</b> Start the miner by running the command:<br><br>
@@ -83,7 +84,7 @@
 
                         <b>3.3.2)</b> Run the "webchain-miner.exe"<br><br>
 
-                        You’ll get information about the miner and the pool you’re trying to mine.<br><br>
+                        You’ll get information about the miner configurations and the pool you’re trying to mine.<br><br>
 
                         <img src="{{ asset('build/images/mining_linux.jpg') }}" width="1200" height="800"><br><br>
                     </span>
@@ -91,8 +92,8 @@
                     <b>3.4)</b> To check stats follow these instructions:<br><br>
 
                     <span class="ml-4 d-block">
-                        <span class="mr-2 circle"></span>Go to <a href="https://pool.webchain.network" target="_blank">https://pool.webchain.network</a> (or other pool of your choice).<br>
-                        <span class="mr-2 circle"></span>On "Your Stats & Payment History", type your wallet number (including the 0x suffix).<br>
+                        <span class="mr-2 circle"></span>Go to <a href="https://pool.webchain.network" target="_blank">Webchain Pool</a> (or any pool of your choice).<br>
+                        <span class="mr-2 circle"></span>On the homepage, look for the "Your Stats & Payment History" searching bar, enter your wallet number (including the 0x prefix).<br>
                         <span class="mr-2 circle"></span>After the miner has sent the first accepted share, you will see realtime stats on the upper part of this page.<br>
                     </span><br>
 
@@ -132,6 +133,9 @@
                     GonsPool (<a href="http://web.gonspool.com" target="_blank">web.gonspool.com</a>)<br>
                     ThetaPool (<a href="http://webchain.thetapool.com" target="_blank">webchain.thetapool.com</a>)<br>
                     LOUDMining (<a href="http://webcn.loudmining.com" target="_blank">webcn.loudmining.com</a>)<br><br>
+                    Mining Pool House (<a href="https://webchain.miningpoolhouse.com/" target="_blank">https://webchain.miningpoolhouse.com</a>)<br><br>
+                    Coorp.io: Webchain (<a href="https://coorp.io/pool/web" target="_blank">https://coorp.io/pool/web</a>)<br><br>
+
 
                     <code class="my-3">There are other parameters that can be set up in config.json: number of threads, max-cpu-usage, etc.</code><br>
 
@@ -151,13 +155,14 @@
 
                     <span class="ml-4 d-inline-block">
                         <b>1.</b> Click on "SEND" button.<br>
-                        <b>2.</b> Type the recipient address of account including "0x" prefix or choose it from the Address Book.<br>
-                        <b>3.</b> Write the amount of WEB and click "CREATE TRANSACTION".<br>
+                        <b>2.</b> Enter the recipient’s Webchain account address including “0x” prefix or choose it from the Address Book.<br>
+                        <b>3.</b> Write the amount of WEB you want to transfer and click on "CREATE TRANSACTION".<br>
+
                     </span><br>
 
                     <code class="my-3">Average time needed for one WEB transaction verification is 10 seconds.</code><br>
 
-                    Then you will need to enter a password and click "SIGN & SEND TRANSACTION". When transaction gets completed you will see it on dashboard in the history of transactions with status "Success". Until this status will be "In Queue".
+                    Then you will need to enter your account password and click on "SIGN & SEND TRANSACTION". When the transaction is completed, you will see it on the history of transactions with the status "Success". Before that, the status will be "In Queue".
                 </p>
 
             </div>
