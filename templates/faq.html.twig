@@ -134,21 +134,24 @@
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-plus fa-stack-1x"></i>
                     </span>
-                    How can I recover my webchain wallet? <span style="color:yellow;">(yellow)</span>
+                    How can I recover my webchain wallet?
                 </p>
                 <b-collapse class="answer" id="q-8">
                     To recover your wallet, whatever the reason is, just follow these short instructions:<br><br>
 
-                    <b>1.</b> Backup and delete the folder where Webchain was installed:<br>
+                    <b>1.</b> Backup and delete the folder where Webchain was installed:<br><br>
+
+                    Keep in mind that after installing, you need to manually add the account(s) you had registered, so it’s better if you have a backup of the UTC files generated for each account and saved in your device.<br>
+
                     <b>Windows:</b><br>
-                    <code>$HOME/AppData/Roaming/Webchain/</code>
+                    <code>$HOME/AppData/Roaming/Webchain/</code><br>
 
                     <b>Linux:</b><br>
                     <code>$HOME/.webchain/</code><br>
 
                     <b>2.</b> Run WebchainWallet app and repeat the installation process<br><Br>
 
-                    Keep in mind that after installing, you need to manually add the account(s) you had registered, so it’s better if you have a backup of the UTC files generated for each account and saved in your device.
+                    To reсover the wallet(s) from the backup, you just need to put your keyfiles to <b>$HOME\AppData\Roaming\Webchain\mainnet\keystore</b> (on Windows) or to  <b>$HOME/.webchain/mainnet/keystore</b> (on Linux). And then you can use them from console or GUI app
                     <span class="py-2 d-block"></span>
                 </b-collapse>
             </div>
@@ -373,14 +376,14 @@
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-plus fa-stack-1x"></i>
                     </span>
-                    How can I check my balance? <span style="color:yellow;">(yellow)</span>
+                    How can I check my balance?
                 </p>
                 <b-collapse class="answer" id="q-19">
                     There are a few ways to check it:<br>
 
-                    <b>1. Explorer:</b> go to <a href="https://explorer.webchain.network/" target="_blank">https://explorer.webchain.network/</a> and search your address on the bar. Your balance will be shown this way:<br>
+                    <b>1. Explorer:</b> go to <a href="https://explorer.webchain.network/" target="_blank">https://explorer.webchain.network/</a> and search your address on the bar. Your balance will be shown this way:<br><br>
 
-                    <img src="{{ asset('build/images/balance.png') }}" class="width-350"><br>
+                    <img src="{{ asset('build/images/balance.png') }}" class="width-350"><br><br>
 
 
                     <b>2. Console:</b> execute the command:<br>
@@ -416,12 +419,12 @@
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-plus fa-stack-1x"></i>
                     </span>
-                    How can I change my wallet password? <span style="color:yellow;">(yellow)</span>
+                    How can I change my wallet password?
                 </p>
                 <b-collapse class="answer" id="q-21">
-                    a. Enter the following command in linux shell console or windows cmd console from the directory where webchaind app is located:
-                    > webchaind account update YOURWALLETNUMBER
-                    b. You will be prompted for your current passphrase and if it is correct, you will be able to enter the new password.
+                    Enter the following command in linux shell console or windows cmd console from the directory where webchaind app is located:<br>
+                    <code>> webchaind account update YOURWALLETNUMBER</code><br>
+                    You will be prompted for your current passphrase and if it is correct, you will be able to enter the new password.
 
                     <span class="py-2 d-block"></span>
 
@@ -434,17 +437,18 @@
                         <i class="fa fa-circle-thin fa-stack-2x"></i>
                         <i class="fa fa-plus fa-stack-1x"></i>
                     </span>
-                    The balance I get when using the wallet is different than the balance showed on the explorer website. <span style="color:yellow;">(yellow)</span>
+                    The balance I get when using the wallet is different than the balance shown on the block explorer.
                 </p>
                 <b-collapse class="answer" id="q-22">
-                    The balance that is shown on the wallet must be the same you get from the website. If you are mining, it could be a little different because of the network syncing.
+                    The balance that is shown on the wallet must be the same you get from the <a href="https://explorer.webchain.network/home" target="_blank">Webchain Explorer</a>. If you are mining, it could be a little different because of the network syncing.<br><br>
 
-                    Check the log file and see if there are warnings about time differences. If your clock is significantly out of sync with the current time, it may prevent you from downloading/uploading the data on time. To check log files:
-                    Linux:
-                    > ~/.webchain/mainnet/log
+                    Check the log file and see if there are warnings about time differences. If your clock is significantly out of sync with the current time, it may prevent you from downloading/uploading the data on time. To check log files:<br>
 
-                    Windows:
-                    > C:\Users\&lt;profilename&gt;\AppData\Roaming\Webchain\mainnet\log
+                    <b>Linux:</b><br>
+                    <code>> ~/.webchain/mainnet/log</code><br>
+
+                    <b>Windows:</b><br>
+                    <code>> C:\Users\&lt;profilename&gt;\AppData\Roaming\Webchain\mainnet\log</code>
 
                     <span class="py-2 d-block"></span>
                 </b-collapse>
