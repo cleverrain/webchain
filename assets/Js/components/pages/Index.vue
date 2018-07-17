@@ -30,7 +30,7 @@
         </section>
 
         <section id="stocks" class="container-fluid mt-5 pt-3 text-center" data-aos="zoom-out-right" data-aos-delay="200">
-            <span class="d-inline-block m-0 text-center">Don't miss opportunity to get in early! Trade WEB on</span>
+            <span class="d-inline-block m-0 text-center">Don't miss the opportunity to get in early! Trade WEB on</span>
 
             <div class="row align-items-center">
                 <div class="col-6 text-right d-inline-block">
