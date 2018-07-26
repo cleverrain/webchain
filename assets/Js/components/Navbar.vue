@@ -14,6 +14,7 @@
                     <b-nav-item target="_self"  href="/news">News</b-nav-item>
                     <b-nav-item target="_blank" href="https://pool.webchain.network">Pool</b-nav-item>
                     <b-nav-item target="_blank" href="https://explorer.webchain.network">Explorer</b-nav-item>
+                    <b-nav-item target="_self"  href="/team">Team</b-nav-item>
                     <b-nav-item target="_blank" href="https://github.com/webchain-network" class="d-block d-md-none">GitHub</b-nav-item>
                     <b-nav-item target="_blank" href="https://github.com/webchain-network" class="ml-2 float-right d-none d-md-block">
                         <div class="github-icon d-block position-absolute"></div>
