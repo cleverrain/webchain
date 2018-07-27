@@ -141,15 +141,19 @@
 
                     <b>1.</b> Backup and delete the folder where Webchain was installed:<br><br>
 
-                    Keep in mind that after installing, you need to manually add the account(s) you had registered, so it’s better if you have a backup of the UTC files generated for each account and saved in your device.<br>
-
                     <b>Windows:</b><br>
                     <code>$HOME/AppData/Roaming/Webchain/</code><br>
 
                     <b>Linux:</b><br>
                     <code>$HOME/.webchain/</code><br>
 
-                    <b>2.</b> Run WebchainWallet app and repeat the installation process<br><Br>
+
+                    <span class="border-section p-2">
+                        Keep in mind that after installing, you need to manually add the account(s) you had registered, so it’s better if you have a backup of the UTC files generated for each account and saved in your device.
+                    </span><br>
+
+
+                    <b>2.</b> Run WebchainWallet app and repeat the installation process.<br><br>
 
                     To reсover the wallet(s) from the backup, you just need to put your keyfiles to <b>$HOME\AppData\Roaming\Webchain\mainnet\keystore</b> (on Windows) or to  <b>$HOME/.webchain/mainnet/keystore</b> (on Linux). And then you can use them from console or GUI app
                     <span class="py-2 d-block"></span>
@@ -379,7 +383,7 @@
                     How can I check my balance?
                 </p>
                 <b-collapse class="answer" id="q-19">
-                    There are a few ways to check it:<br>
+                    There are a few ways to check it:<br><br>
 
                     <b>1. Explorer:</b> go to <a href="https://explorer.webchain.network/" target="_blank">https://explorer.webchain.network/</a> and search your address on the bar. Your balance will be shown this way:<br><br>
 
@@ -390,7 +394,7 @@
                     <code>> webchain.getBalance("address")</code><br>
 
 
-                    Remember to add the address including <b>0x</b> at the beginning.<br>
+                    Remember to add the address including <b>0x</b> at the beginning.<br><br>
 
                     <b>3. Wallet:</b> open <a href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">GUI Wallet App</a>, add your account using a mnemonic phrase or the UTC file which is located in your keystore directory. On the <a href="https://webchain.network/start" target="_blank">How to Mine</a> page you can find more details (Check step 2.3. "In case you need to import an account").
 
