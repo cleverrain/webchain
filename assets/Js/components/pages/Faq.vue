@@ -1,0 +1,797 @@
+<template>
+
+    <MainLayout>
+
+        <div class="row p-0">
+            <NavBar class="col p-0 pt-2"></NavBar>
+        </div>
+
+        <div class="bg-darken-gradient basic-header">
+            <div class="bg-dotted-map mx-md-4 h-100 d-flex align-items-end">
+                <h1 class="text-white d-block ml-4 mb-1">
+                    FAQ
+                </h1>
+            </div>
+        </div>
+
+        <div class="faq container-fluid px-md-5 mx-auto my-5">
+
+            <p class="py-3">This <b>Frequently Asked Questions</b> page was built aiming to address the most common
+                questions, concerns and objections submitted by current or possible Webchain users through our different
+                channels of communication.</p>
+
+            <div class="mt-0 mb-3 pl-3">
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-1 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        I don’t know how to run commands and I’m a windows user
+                    </p>
+                    <b-collapse class="answer" id="q-1">
+                        The steps are easy to follow:<br><br>
+
+                        <b>1.</b> Go to <a
+                            href="https://github.com/webchain-network/webchaind#green_book-webchaind-the-basics"
+                            target="_blank">Webchain: the basics</a>. Here you will see a list of all the possible
+                        commands that you can use, from how to create a new wallet to how to access and mine
+                        Webchain.<br>
+                        <b>2.</b> From CMD, PowerShell or your preferred console, go to the route where you stored
+                        webchaind.exe<br>
+                        <span class="ml-5 d-block">
+                            <b>2.1</b> Let’s say you stored webchain.exe in the recommended directory:<br>
+                            <code>C:\Users\UserName\AppData\Roaming\Webchain</code>
+                        <b>2.2</b> Run the following command:<br>
+                            <code class="d-inline-block my-1">> cd c:\users\UserName\AppData\Roaming\Webchain</code> and hit enter.<br>
+                            <b>2.3</b> Once you’re there, you can write all the commands that webchaind.exe can execute.
+                    </span>
+                        <b>3</b> Check the instructions to <a
+                            href="https://github.com/webchain-network/webchaind#create-or-manage-accounts"
+                            target="_blank">Create or manage account(s)</a> if you need help to create your account.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-2 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        I received an "Invalid Login" message
+                    </p>
+                    <b-collapse class="answer" id="q-2">
+                        If you got the error: <code class="d-inline-block">"Invalid login", code -1</code> when trying
+                        to run the miner, it means that the wallet address you added to the config file is not correct
+                        or is not a real webchain wallet address. If you generated the account (via GUI wallet or via
+                        console with webchaind), just make sure to add the 0x prefix to you address, when adding it to
+                        the config file For example:<br>
+                        <b>Account address number:</b> 8d1ba0497c3e3db17143604ab7f5e93a3cbac68b<br>
+                        <b>Way it should be added to the config file:</b> <b>0x</b>8d1ba0497c3e3db17143604ab7f5e93a3cbac68b.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-3 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        My antivirus warns me that Webchain Miner has a Malware-gen virus, is this a false positive?
+                    </p>
+                    <b-collapse class="answer" id="q-3">
+                        Yes, it is false positive. AVs consider cryptocurrency miners as virus most of the times. If you
+                        downloaded the miner from the official site, we can assure you it isn’t infected. Run the miner
+                        in admin mode and exclude the file from analized by your AV.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-4 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        The miner is running but I see no workers on the pool
+                    </p>
+                    <b-collapse class="answer" id="q-4">
+                        Having the miner run without error messages only means that your settings on the config file
+                        were correct and that your device is properly connected to the blockchain. If after a while, you
+                        go to the pool site and there are no workers listed, something like this:<br>
+                        <img :src="workers"><br>
+                        It most of the time means that your device hashrate isn’t enough to mine the coin on this pool,
+                        probably because the difficulty is too high for you device to submit a share before a new block
+                        is generated. If you check the miner log, you shouldn’t find any “accepted share” message, and
+                        it’s right after the pool has accepted a share that your miner is shown as active.<br><br>
+                        We recommend users to switch pools (lower difficulty pools) until finding one that allows your
+                        device to submit shares. In the case of official pools, if your miner is working on
+                        pool.webchain.network:3333 with high difficulty (20000), it’d be a good idea to switch your
+                        miner to the port 2222 (pool.webchain.network:2222) which has a much lower difficulty (5000).
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-5 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        I find the network difficulty too high. Are there any other pools?
+                    </p>
+                    <b-collapse class="answer" id="q-5">
+                        <a href="https://pool.webchain.network" target="_blank">pool.webchain.network</a> is Webchain
+                        official pool, and you can use either of the ports to choose the most appropriate difficulty for
+                        your machine:<br><br>
+
+                        - pool.webchain.network:2222 which has 5000 difficulty.<br>
+                        - pool.webchain.network:3333 which has 20000 difficulty.<br><br>
+
+                        We have a list of official and community pools with different difficulties, choose the one that
+                        suits you best. Check our <a href="https://bitcointalk.org/index.php?topic=3649170.0"
+                                                     target="_blank">Bitcointalk</a> thread for updates, some pools
+                        might have been listed.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-7 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        I can't sync or connect to any nodes / I can’t find peers
+                    </p>
+                    <b-collapse class="answer" id="q-7">
+                        Everyone who runs webchaind becomes a node. And webchaind finds all nodes automatically, as it
+                        works according to the Peer-to-Peer principles. If you run webchaind, after sync it should show
+                        something like this:<br><br>
+                        <img :src="peers_error" class="full-width"><br><br>
+                        But sometimes you just can't get connected to the network (0 peers). The most common reasons
+                        are:<br><br>
+
+                        - <b>Your local time might be incorrect.</b> An accurate clock sync is required in order to be a
+                        Webchain node. Check your OS for how to resync your clock (example sudo ntpdate -s
+                        time.nist.gov). Consider that even 12 seconds of difference can lead you to 0 peers.<br>
+                        - <b>Some firewall configurations can prevent UDP traffic from flowing.</b>
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-8 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How can I recover my webchain wallet?
+                    </p>
+                    <b-collapse class="answer" id="q-8">
+                        To recover your wallet, whatever the reason is, just follow these short instructions:<br><br>
+
+                        <b>1.</b> Backup and delete the folder where Webchain was installed:<br><br>
+
+                        <b>Windows:</b><br>
+                        <code>$HOME/AppData/Roaming/Webchain/</code><br>
+
+                        <b>Linux:</b><br>
+                        <code>$HOME/.webchain/</code><br>
+
+
+                        <span class="border-section p-2">
+                        Keep in mind that after installing, you need to manually add the account(s) you had registered, so it’s better if you have a backup of the UTC files generated for each account and saved in your device.
+                    </span><br>
+
+
+                        <b>2.</b> Run WebchainWallet app and repeat the installation process.<br><br>
+
+                        To reсover the wallet(s) from the backup, you just need to put your keyfiles to <b>$HOME\AppData\Roaming\Webchain\mainnet\keystore</b>
+                        (on Windows) or to <b>$HOME/.webchain/mainnet/keystore</b> (on Linux). And then you can use them
+                        from console or GUI app.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-9 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Solo mining, slow synchronization
+                    </p>
+                    <b-collapse class="answer" id="q-9">
+                        Webchaind syncs with the network automatically after starting. However, this method is very slow
+                        when it comes to solo mining. We recommend you to download blockchain file and import it. Follow
+                        the instructions on this short Github guide on <a
+                            href="https://github.com/webchain-network/webchaind#fast-synchronisation" target="_blank">Fast
+                        synchronisation</a>.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-10 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How can some users reach such high hashes/second e.g. 20 KH, 30 KH?
+                    </p>
+                    <b-collapse class="answer" id="q-10">
+                        Since you can get multiple workers to mine webchain for one wallet, some users create what is
+                        known as a farm of servers. Some of those users sit on discord and even post their stats - how
+                        many servers they have and their devices specifications.<br><br>
+
+                        We cannot distinguish a CPU farm mining for one wallet from many different computers of
+                        different owners. Unless we forbid mining for one wallet address from more than one location,
+                        but then users would simply generate many wallets.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-11 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Do I earn more or fewer WEB depending on the pool difficulty?
+                    </p>
+                    <b-collapse class="answer" id="q-11">
+                        A <b><i>low difficult pool</i></b> allows miners to submit more shares before a new block is
+                        generated, so you get a higher number of payouts because this frequency is determined by the
+                        number of shares you submit. However, the size of the payout depends on the number of hashes
+                        contained in each share, which is lower as the pool difficulty is also lower. In the case of a
+                        <b><i>high difficult pool</i></b>, the miner is not able to submit the same number of shares
+                        before a new block is generated, but the submitted shares contain more hashes, meaning you get
+                        fewer but bigger payouts.<br><br>
+
+                        In summary, the difficulty doesn't determine how many coins you'll earn at the end of the day,
+                        but the frequency of the payouts.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-12 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        When mining on webchain pool, is there a way I can set a username to identify my miner?
+                    </p>
+                    <b-collapse class="answer" id="q-12">
+                        Yes, when you edit the json file, you add your wallet address number as your username, through
+                        which your transactions can be identified. In case of using different workers to mine off
+                        webchain for the same wallet, we have also enabled Worker-ID functionality for webchain miner
+                        after the 2.6.2.0 version. Just follow these steps:<br><br>
+
+                        <b>1.</b> Open you config file.<br>
+                        <b>2.</b> Find “worker-id” as an argument within <i><u>pools</u></i>.<br>
+                        <b>3.</b> Add the ID you prefer (a number, a word or a combination of both).<br><br>
+
+                        Run the miner, and after having the first share accepted, you will be able to track the
+                        performance of your workers on the <a href="https://pool.webchain.network"
+                                                              target="_blank">pool</a> website. Enter your account
+                        including the <b>0x</b> prefix:<br><br>
+
+                        <img :src="lookup"><br><br>
+
+                        You’ll be shown the statistics for your miner and in case of having multiple workers, you’ll
+                        have them organized as in the image below, where you could check what their hashrates are and
+                        when was the last time each one submitted a share.<br><br>
+
+                        <img :src="workers"><br>
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-13 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        I can't type on the Webchaind CMD prompt
+                    </p>
+                    <b-collapse class="answer" id="q-13">
+                        In case you're using windows, you can use powershell (CMD, Git bash or your preferred terminal)
+                        and type the command “cd” to enter the directory where webchaind app was saved. Example: <code>cd
+                        C:\Users\MyName\webchaind</code><br>
+
+                        Once located on that directory, you can use any of the commands listed here <a
+                            href="https://github.com/webchain-network/webchaind" target="_blank">https://github.com/webchain-network/webchaind</a>:<br>
+                        to create new addresses:<br>
+                        <code>> webchaind account new</code><br>
+
+                        to list all your addresses:<br>
+                        <code>> webchaind account list</code>
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-14 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How to setup Solo mining on Webchain?
+                    </p>
+                    <b-collapse class="answer" id="q-14">
+                        Follow these steps:<br><br>
+
+                        <b>1.</b> Start the console:
+                        <code>./webchaind console</code>
+                        or<br>
+                        <code class="d-inline-block my-1">webchaind.exe console</code> (for windows)<br><br>
+                        <b>2.</b> Get your balance (on console):<br>
+                        <code>web3.fromWei(webchain.getBalance(webchain.coinbase), "ether")</code><br>
+                        <b>3.</b> Start mining (on console):<br>
+                        <code>miner.start()</code><br>
+                        <b>4.</b> Get your balance again to confirm you are mining:<br>
+                        <code>web3.fromWei(webchain.getBalance(webchain.coinbase), "ether")</code>
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-15 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Does Webchain have a GUI Wallet? Where can I find it?
+                    </p>
+                    <b-collapse class="answer" id="q-15">
+                        Yes, it was released one month after releasing the project. You can download the <a
+                            href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">GUI
+                        Wallet</a> according to your OS. We invite you to follow the instructions on our <a
+                            href="https://webchain.network/start" target="_blank">How to Mine</a> page.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-16 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How can I get a Webchain wallet?
+                    </p>
+                    <b-collapse class="answer" id="q-16">
+                        We recommend you to follow the instructions given on the <a
+                            href="https://webchain.network/start" target="_blank">How to Mine</a> page for more details
+                        about how to generate your wallet account. It’s really simple using the GUI wallet.<br><br>
+
+                        If you decide to create it using webchaind, via console. You can find the instructions to <a
+                            href="https://github.com/webchain-network/webchaind#create-or-manage-accounts"
+                            target="_blank">Create or manage account(s)</a> on our Github site.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-17 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Where can I find the GUI wallet for Win32?
+                    </p>
+                    <b-collapse class="answer" id="q-17">
+                        Hello! You can download the GUI Wallet according to your OS from our <a
+                            href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">Github
+                        Repository</a>. So far, the wallet is only available for linux and win64. Follow our social
+                        media and our <a href="https://webchain.network/news" target="_blank">News Section</a> for
+                        future updates.<br><br>
+
+                        But don’t let that stop you from mining, download <a
+                            href="https://github.com/webchain-network/webchaind/releases" target="_blank">Webchaind</a>
+                        to create and operate your wallet via console. Follow <a
+                            href="https://github.com/webchain-network/webchaind#create-or-manage-accounts"
+                            target="_blank">this guide</a> to create or manage your account.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-18 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        I forgot / cannot see my wallet address, where can I find it?
+                    </p>
+                    <b-collapse class="answer" id="q-18">
+                        You can follow the following procedure if you are working on the same computer where you
+                        generated the wallet account.<br><br>
+
+                        <u>Windows users:</u><br>
+
+                        <b>1.</b> From CMD, PowerShell or your preferred console, go to the route where the app <u>webchaind</u>
+                        is located.<br>
+
+                        <b>2.</b> If webchain.exe is located in the the following directory<br>
+                        <code>> C:\Users\UserName\Download\Webchaind</code><br>
+
+                        <b>3.</b> Then, to go to that folder, run the command:<br>
+                        <code>> cd C:\Users\UserName\Download\Webchaind</code><br>
+
+                        <span class="border-section p-2">Step 3 will lead you to the directory where your webchaind.exe file is located</span><br>
+
+                        <span class="border-section p-2">Once you are in the directory where your webchaind.exe file is located, you can enter all the commands that webchaind.exe can execute</span><br>
+
+
+                        <b>4.</b> Execute the following command, which will show you the wallet address(es) created and
+                        stored in that directory:<br>
+                        <code>> webchaind.exe account list</code><br><br>
+
+
+                        <u><b>Linux users:</b></u><br>
+
+                        <b>1.</b> From Linux shell go to the folder where you decompressed <u>webchaind</u> by running
+                        the command "cd".<br>
+                        <b>2.</b> Let’s say you stored webchain in the directory <code class="d-inline-block my-1">>
+                        /opt/webchaind/</code><br>
+                        <b>3.</b> Type the following command <code class="d-inline-block my-1">> cd
+                        /opt/webchaind/</code> and press enter.<br><br>
+
+                        <span class="border-section p-2">Step 3 will lead you to the directory where webchaind is located</span><br>
+
+                        <span class="border-section p-2">Once you are in the directory where webchaind is located, you can enter all the commands that webchaind can execute</span><br>
+
+                        <b>4.</b> Execute the following command, which will show you the wallet address(es) created and
+                        stored in that directory:<br>
+                        <code>> ./webchaind account list</code><br>
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-19 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How can I check my balance?
+                    </p>
+                    <b-collapse class="answer" id="q-19">
+                        There are a few ways to check it:<br><br>
+
+                        <b>1. Explorer:</b> go to <a href="https://explorer.webchain.network/" target="_blank">https://explorer.webchain.network/</a>
+                        and search your wallet number on the bar. Your balance will be shown this way:<br><br>
+
+                        <img :src="balance" class="width-250"><br><br>
+
+
+                        <b>2. Console:</b> execute the command:<br>
+                        <code>> webchain.getBalance("address")</code><br>
+
+
+                        Remember to add the address including <b>0x</b> at the beginning.<br><br>
+
+                        <b>3. Wallet:</b> open <a href="https://github.com/webchain-network/webchain-wallet/releases"
+                                                  target="_blank">GUI Wallet App</a>, add your account using a mnemonic
+                        phrase or the UTC file which is located in your keystore directory. On the <a
+                            href="https://webchain.network/start" target="_blank">How to Mine</a> page you can find more
+                        details (Check step 2.3. "In case you need to import an account").
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-20 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How to send coins to other wallets?
+                    </p>
+                    <b-collapse class="answer" id="q-20">
+                        We encourage our users to use the GUI Wallet App, where operating your wallet becomes easier.
+                        Check the instructions on the <a href="https://webchain.network/start" target="_blank">How to
+                        Mine</a> page, "Transfers" section.
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-21 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        How can I change my wallet password?
+                    </p>
+                    <b-collapse class="answer" id="q-21">
+                        Enter the following command in linux shell console or windows cmd console from the directory
+                        where webchaind app is located:<br>
+                        <code>> webchaind account update YOURWALLETNUMBER</code><br>
+                        You will be prompted for your current passphrase and if it is correct, you will be able to enter
+                        the new password.
+
+                        <span class="py-2 d-block"></span>
+
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-22 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        The balance I get when using the wallet is different than the balance shown on the block
+                        explorer.
+                    </p>
+                    <b-collapse class="answer" id="q-22">
+                        The balance that is shown on the wallet must be the same you get from the <a
+                            href="https://explorer.webchain.network/home" target="_blank">Webchain Explorer</a>. If you
+                        are mining, it could be a little different because of the network syncing.<br><br>
+
+                        Check the log file and see if there are warnings about time differences. If your clock is
+                        significantly out of sync with the current time, it may prevent you from downloading/uploading
+                        the data on time. To check log files:<br>
+
+                        <b>Linux:</b><br>
+                        <code>> ~/.webchain/mainnet/log</code><br>
+
+                        <b>Windows:</b><br>
+                        <code>> C:\Users\&lt;profilename&gt;\AppData\Roaming\Webchain\mainnet\log</code>
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-23 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Can I mine WEB with my smartphone? What are the requirements for the device?
+                    </p>
+                    <b-collapse class="answer" id="q-23">
+                        Increase your hashrate by adding your smartphone as a mining worker, you can identify how much
+                        power it adds by setting a worker ID. Requirements:<br><br>
+
+                        <span class="ml-4 d-block">
+                        - Supported CPUs: arm64-v8a (64 bit), armeabi-v7a (32 bit) and x86 devices.<br>
+                        - Supported Android versions: 5.0.0+.<br>
+                    </span><br>
+                        Download the <a href="https://play.google.com/store/apps/details?id=webchain.miner"
+                                        target="_blank">mobile app</a> now!
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-24 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Which Android versions does Webchain Miner mobile APP support?
+                    </p>
+                    <b-collapse class="answer" id="q-24">
+                        The mobile version of Webchain Miner was designed to support all Android versions above 5.0.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-25 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Will the iOS version be ready soon?
+                    </p>
+                    <b-collapse class="answer" id="q-25">
+                        Apple has explicitly banned apps that mine cryptocurrency on its devices, according to newly
+                        updated Review Guidelines for the App Store. The new ban extends to all Apple platforms.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-26 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Will mining affect other CPU processes? I mean, will I be able to use my PC while mining?
+                    </p>
+                    <b-collapse class="answer" id="q-26">
+                        Of course you can use your PC while mining. With Webchain, the percent of your CPU dedicated to
+                        mining is up to you. If you want to be able to mine and do other things at the same time, you
+                        just need to adapt the parameter “max-cpu-usage” in the config file.<br><br>
+
+                        Remember that you can also use more than one device (a.k.a “worker”) to mine webchain for the
+                        same wallet at the same time. Set a worker-ID and assess the hashing power of each one.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-27 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Do you have any plans to build a GPU miner?
+                    </p>
+                    <b-collapse class="answer" id="q-27">
+                        We have no plans to build a GPU miner for the Webchain, as it would reduce the opportunity for
+                        low-power devices, going against one of our main features, which is to guarantee a profitable
+                        and egalitarian opportunity for as many users as possible.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-28 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Is Webchain mineable with cryptonight GPU miner?
+                    </p>
+                    <b-collapse class="answer" id="q-28">
+                        So far, we haven't found any evidences of GPU miners on webchain. Higher hashrates on the
+                        network are proved to be reached by using different workers and creating a farm. As we've always
+                        said, we aren't planning to release any GPU miner because our goal is to make CPU mining
+                        profitable.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-29 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        What if I try to build a GPU miner for Webchain?
+                    </p>
+                    <b-collapse class="answer" id="q-29">
+                        We are highly aware of the skills of the community, so building a GPU miner is up to anyone who
+                        decides to invest time on a miner that would not represent a so higher efficiency over our CPU
+                        miner, given our specifications and customizations of the Cryptonight algorithm.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-30 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        20% premine for a PoW project is too large
+                    </p>
+                    <b-collapse class="answer" id="q-30">
+                        We kindly ask you to consider that Webchain didn’t have any ICO or crowdfunding campaign. Our
+                        chances to keep developing this project come from those premined coins. We’ve set a lock-in
+                        dates for those premined coins, have a look at the time distribution:<br><br>
+
+                        5% - available in 2018 (part of it might be used as airdrops in another project to promote
+                        Webchain).<br>
+                        20% - available from early 2019.<br>
+                        30% - available from early 2020.<br>
+                        45% - available from early 2021.<br>
+
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-31 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Where can I trade Webchain?
+                    </p>
+                    <b-collapse class="answer" id="q-31">
+                        We keep our <a href="https://webchain.network/" target="_blank">main page</a> updated with the
+                        exchanges Webchain has been listed on. Besides that, our team keeps contacting exchanges and
+                        trying to get Webchain listed, it highly depends on your support, the more known the coin, the
+                        easier and cheaper it is to list it.
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+
+                <div class="faq-block mx-0">
+                    <p v-b-toggle.q-32 class="question ml-2 font-weight-bold" v-on:click="pToggle">
+                    <span class="float-left mr-2 fa-stack" v-on:click="iToggle">
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                        <i class="fa fa-plus fa-stack-1x"></i>
+                    </span>
+                        Which is the wallet with the premined coins?
+                    </p>
+                    <b-collapse class="answer" id="q-32">
+                        Check the balance on the explorer:<br>
+                        <a href="https://explorer.webchain.network/addr/0x8cc415d55815d092d59d1ff66bd751bae519c9ec">https://explorer.webchain.network/addr/0x8cc415d55815d092d59d1ff66bd751bae519c9ec</a>
+
+                        <span class="py-2 d-block"></span>
+                    </b-collapse>
+                </div>
+            </div>
+        </div>
+    </MainLayout>
+</template>
+
+<script>
+
+    import workers from "../../../Images/documentary/workers.jpg";
+    import peers_error from "../../../Images/documentary/peers_error.png";
+    import lookup from "../../../Images/documentary/lookup.png";
+    import balance from "../../../Images/documentary/balance.png";
+
+    import MainLayout from '../layouts/Mainlayout';
+    import NavBar from '../Navbar';
+
+
+    export default {
+        name: "faq",
+        components: {
+            MainLayout,
+            NavBar,
+        },
+        data: function () {
+            return {
+                workers: workers,
+                peers_error: peers_error,
+                lookup: lookup,
+                balance: balance,
+
+            }
+        },
+        methods: {
+            changeIcon: function (icon) {
+                if (icon.hasClass('fa-plus')) {
+                    icon.removeClass('fa-plus');
+                    icon.addClass('fa-minus');
+                    return;
+                }
+                icon.removeClass('fa-minus');
+                icon.addClass('fa-plus');
+            },
+            pToggle: function (event) {
+                var icon = $($(event.target.childNodes[0]).children()[1]);
+                this.changeIcon(icon);
+            },
+            iToggle: function (event) {
+                var icon = $(event.target);
+                this.changeIcon(icon);
+            }
+
+        }
+    }
+</script>
