@@ -27,4 +27,12 @@ class DefaultController extends AbstractController
     {
         return $this->render('how_to_mine.html.twig');
     }
+
+    /**
+     * @Route("/team", name="team")
+     */
+    public function team() :Response
+    {
+        return $this->render('team.html.twig');
+    }
 }
