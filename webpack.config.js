@@ -6,7 +6,6 @@ Encore
     .setPublicPath('/build')
     .addEntry('index', './assets/Js/index.js')
     .addEntry('main', './assets/Js/main.js')
-    .addEntry('faq', './assets/Js/faq.js')
     .autoProvidejQuery()
     .enableSourceMaps(!Encore.isProduction())
     .cleanupOutputBeforeBuild()
@@ -18,12 +17,6 @@ Encore
         template: 'assets/Static/index.html',
         favicon: 'assets/Images/favicon.png',
         chunks: ['index']
-    }))
-    .addPlugin(new HtmlWebpackPlugin({
-        filename: 'static/faq.html',
-        template: 'assets/Static/faq.html',
-        favicon: 'assets/Images/favicon.png',
-        chunks: ['faq']
     }))
 ;
 

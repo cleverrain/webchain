@@ -26,7 +26,7 @@ class DefaultController extends AbstractController
      */
     public function faq() :Response
     {
-        return $this->redirect('/build/static/faq.html');
+        return $this->render('faq.html.twig');
     }
 
     /**
