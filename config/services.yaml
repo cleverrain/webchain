@@ -1,6 +1,7 @@
 # Put parameters here that don't need to change on each machine where the app is deployed
 # https://symfony.com/doc/current/best_practices/configuration.html#application-related-configuration
 parameters:
+    locale: 'en'
 
 services:
     # default configuration for services in *this* file
@@ -48,5 +49,5 @@ services:
             - sonata_news.title
             - sonata_news.link
             - sonata_news.description
-            - '@sonata.news.permalink.date'
+            - '@sonata.news.permalink.collection'
     # =============================================
