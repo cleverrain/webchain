@@ -26,6 +26,5 @@ export default {
             var icon = $(event.target);
             this.changeIcon(icon);
         }
-
     }
 }
