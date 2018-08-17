@@ -24,8 +24,16 @@ class DefaultController extends AbstractController
     /**
      * @Route("/start", name="start")
      */
-    public function howToStartAction() :Response
+    public function howToStart() :Response
     {
-        return $this->render('how_to_start.html.twig');
+        return $this->render('how_to_mine.html.twig');
+    }
+
+    /**
+     * @Route("/team", name="team")
+     */
+    public function team() :Response
+    {
+        return $this->render('team.html.twig');
     }
 }

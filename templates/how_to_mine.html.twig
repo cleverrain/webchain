@@ -1,0 +1,172 @@
+{% extends 'base_basic_header.twig' %}
+
+{% block title %}
+    How to Mine | Webchain
+{% endblock %}
+{% block section %}
+    How to Mine
+{% endblock %}
+
+{% block content_injected %}
+
+    <div class="start container-fluid px-md-5 mx-auto mt-5">
+        <div class="mt-0 mb-3 pl-1 list-unstyled">
+
+            <div class="mt-0 list-item">
+                <p class="title-text"><span class="square-black mr-3">1</span>Download and Install the GUI Wallet according to your OS:</p>
+                <p class="description-text">
+                    <span class="mr-3 my-4 d-inline-block">Linux 64/86 bits, Windows 64 bits</span>
+
+                    <a class="wallet-btn d-inline-block" href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">
+                        <span class="gui-wallet-text text-center">GUI WALLET</span>
+                        <img class="gui-wallet-circle" src="{{ asset('build/images/gui_wallet_button.png') }}">
+                    </a>
+
+                    <code class="mb-3 mt-5">Please be aware that current GUI wallet shows only outgoing transactions. To check history of incoming transactions for selected account, use <a href="http://explorer.webchain.network" target="_blank">http://explorer.webchain.network</a>.</code>
+                </p>
+            </div>
+
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">2</span>Launch the app after the installation is over and follow these steps:</p>
+
+                <p class="description-text">
+
+                    <b>2.1)</b> Make the decision based on your preference. If you’d rather choose 100% security over fast syncing speed, we recommend you to pick the "FULL NODE" version, otherwise, the "REMOTE NODE" might be the best option for you. After you’ll have the following options on the screen:<br><br>
+
+                    * MORE ABOUT WEBCHAIN<br>
+                    * GENERATE A NEW ACCOUNT<br>
+                    * ADD YOUR ACCOUNT --> You have two options to add your existing account address:<br>
+                    <span class="ml-4 d-block">
+                        <span class="mr-2 circle"></span>"FROM KEYSTORE FILE (UTC/JSON)": select this option if you want to import the key from a UTC/JSON keystore file.<br>
+                        <span class="mr-2 circle"></span>"FROM PRIVATE KEY": pick this option if you want to manually input the private key.
+                    </span><br>
+
+                    <b>2.2)</b> In case you need to generate a new account:<br><br>
+
+                    <span class="ml-4 d-block">
+                        <b>2.2.1)</b> Click on "GENERATE A NEW ACCOUNT" and set a password to continue.<br>
+                        <b>2.2.2)</b> Carefully read the instructions and click on "Download Account Key File" and store it safely along with your password (this file is encrypted with your password).<br>
+                        <b>2.2.3)</b> Read the instructions given on the screen and click on "next" once you're done with it.<br>
+                        <b>2.2.4)</b> Set account properties: in this section you can create a new account name.
+                    </span><br>
+
+                    <b>2.3)</b> In case you need to import an account:<br><br>
+
+                    <span class="ml-4 d-block">
+                        <b>2.3.1)</b> You can also import mnemonic account. You need to type a strong password and generate mnemonic phrase.<br>
+                        <b>2.3.2)</b> Another way is to import the json file located in your keystore account. Follow the instructions given at <a href="https://github.com/webchain-network/webchaind#create-or-manage-accounts" target="_blank">How to Create or Manage an Account</a> so you can find the json file with your account details.<br><br>
+                    </span>
+                    Once you have created a new address or registered your existing one, you will be on the accounts module, where you can manage your accounts, add new ones, send or receive WEB, and see your transactions record.<br>
+                </p>
+            </div>
+
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">3</span>Mining Webchain: Introduction</p>
+                <p class="description-text">
+
+                    <b>3.1)</b> Download and Install the miner according to your OS: <a href="https://github.com/webchain-network/webchain-miner/releases" target="_blank">https://github.com/webchain-network/webchain-miner/releases</a>.<br><br>
+
+                    <b>Webchain-miner</b> is a high performance CPU miner for Webchain (WEB). Originally based on XMRig with changes that allow mining WEB.<br><br>
+
+                    <code class="my-3">Please be aware that Windows shows virus warnings for all mining software, this is a false positive and you should ignore it (or add it to exceptions and allow it to work).</code><br>
+
+                    <b>3.2)</b> Unpack it and open config.json (miner configuration file). In config.json, you need to add your wallet number including the suffix "0x":<br>
+
+                    <code class="my-2 py-1 ml-4 command">> "user": "YOUR_WALLET"</code><br>
+
+                    <b>3.3)</b> We’re ready to start mining, follow one of these options to launch the miner:<br><br>
+
+                    <span class="ml-4 d-block">
+                        <b>3.3.1)</b> Start the miner by running the command:<br><br>
+
+                        <b>Linux</b> <code class="my-2 py-1 command">> ./webchain-miner</code><br>
+                        <b>Windows</b> <code class="my-2 py-1 command">> webchain-miner.exe</code><br>
+
+                        <b>3.3.2)</b> Run the "webchain-miner.exe"<br><br>
+
+                        You’ll get information about the miner configurations and the pool you’re trying to mine.<br><br>
+
+                        <img src="{{ asset('build/images/mining_linux.jpg') }}" width="1200" height="800"><br><br>
+                    </span>
+
+                    <b>3.4)</b> To check stats follow these instructions:<br><br>
+
+                    <span class="ml-4 d-block">
+                        <span class="mr-2 circle"></span>Go to <a href="https://pool.webchain.network" target="_blank">Webchain Pool</a> (or any pool of your choice).<br>
+                        <span class="mr-2 circle"></span>On the homepage, look for the "Your Stats & Payment History" searching bar, enter your wallet number (including the 0x prefix).<br>
+                        <span class="mr-2 circle"></span>After the miner has sent the first accepted share, you will see realtime stats on the upper part of this page.<br>
+                    </span><br>
+
+                    At the beginning, you will see coins as <b>Immature Balance</b><br><br>
+
+                    <img src="{{ asset('build/images/mining_monitoring.jpg') }}" width="1200" height="800"><br><br>
+
+                    This means that you have indeed mined some coins, but transactions are still waiting to be confirmed.<br><br>
+
+                    <b>Pending Balance:</b> once mining transactions have been confirmed, the coins already belong to the user. Those coins are going to be sent to your wallet according to the pool payment schedule if you have reached the respective threshold.<br><br>
+
+                    <b>Total Paid</b> after the pool payment schedule is run, this shows the balance of coins that have already been sent to your wallet.<br><br>
+
+                    <b>Last Share Submitted</b> how long ago your miner(s) submitted an accepted share to the pool.<br><br>
+                    <b>Workers Online</b> shows how many devices are mining to the same wallet.<br><br>
+                    <b>Hashrate</b> shows the total mining hashrate of all the devices associated to a same wallet.<br><br>
+                    <b>Blocks Found</b> shows how many blocks were found by your share.<br><br>
+                    <b>Total payments</b> shows how many scheduled payments have been completed.<br><br>
+                    <b>Your round share</b> shows how much you’re contributing to the block solution using your worker(s).<br><br>
+
+
+                    <code class="my-3">You can always check your coins balance visiting <a href="https://explorer.webchain.network" target="_blank">https://explorer.webchain.network</a>.<br>Type your wallet number on the upper right corner and you will see how many coins you’ve earned.</code><br>
+
+                    <img src="{{ asset('build/images/explorer.jpg') }}" width="1200" height="800">
+                </p>
+            </div>
+
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">4</span>Pools</p>
+                <p class="description-text">
+                    <b>Official Pool:</b><br>
+                    a) <a href="http://pool.webchain.network" target="_blank">Pool.webchain.network:3333</a>, with 20000 difficulty<br> 
+                    b) <a href="http://pool.webchain.network" target="_blank">Pool.webchain.network:2222</a>, with 5000 difficulty<br><br>
+
+                    <b>Community Pools:</b><br>
+                    HashLuck (<a href="http://webcn.hashluck.net" target="_blank">webcn.hashluck.net</a>)<br>
+                    TypeMine (<a href="http://webchain.typemine.com" target="_blank">webchain.typemine.com</a>)<br>
+                    GonsPool (<a href="http://web.gonspool.com" target="_blank">web.gonspool.com</a>)<br>
+                    ThetaPool (<a href="http://webchain.thetapool.com" target="_blank">webchain.thetapool.com</a>)<br>
+                    LOUDMining (<a href="http://webcn.loudmining.com" target="_blank">webcn.loudmining.com</a>)<br>
+                    Mining Pool House (<a href="https://webchain.miningpoolhouse.com/" target="_blank">webchain.miningpoolhouse.com</a>)<br>
+                    Coorp.io: Webchain (<a href="https://coorp.io/pool/web" target="_blank">coorp.io/pool/web</a>)<br><br>
+
+
+                    <code class="my-3">There are other parameters that can be set up in config.json: number of threads, max-cpu-usage, etc.</code><br>
+
+                    <img src="{{ asset('build/images/config_json.jpg') }}" width="1200" height="800">
+                </p>
+            </div>
+
+            <div class="list-item">
+                <p class="title-text"><span class="square-black mr-3">5</span>Transfers</p>
+                <p class="description-text">
+                    <span class="mr-3 my-4 d-inline-block">You can send coins to others with Webchain</span>
+
+                    <a class="wallet-btn d-inline-block" href="https://github.com/webchain-network/webchain-wallet/releases" target="_blank">
+                        <span class="gui-wallet-text text-center">GUI WALLET</span>
+                        <img class="gui-wallet-circle" src="{{ asset('build/images/gui_wallet_button.png') }}">
+                    </a><br><br>
+
+                    <span class="ml-4 d-inline-block">
+                        <b>1.</b> Click on "SEND" button.<br>
+                        <b>2.</b> Enter the recipient’s Webchain account address including “0x” prefix or choose it from the Address Book.<br>
+                        <b>3.</b> Write the amount of WEB you want to transfer and click on "CREATE TRANSACTION".<br>
+
+                    </span><br>
+
+                    <code class="my-3">Average time needed for one WEB transaction verification is 10 seconds.</code><br>
+
+                    Then you will need to enter your account password and click on "SIGN & SEND TRANSACTION". When the transaction is completed, you will see it on the history of transactions with the status "Success". Before that, the status will be "In Queue".
+                </p>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
