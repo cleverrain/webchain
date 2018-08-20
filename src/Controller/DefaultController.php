@@ -14,6 +14,7 @@ class DefaultController extends AbstractController
      * Only for dev purposes. In prod environment
      * it must be overritten by server
      * @Route("/", name="index")
+     * @Route("/home", name="home")
      */
     public function index() :RedirectResponse
     {
