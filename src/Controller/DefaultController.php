@@ -22,6 +22,15 @@ class DefaultController extends AbstractController
     }
 
     /**
+     * @return Response
+     * @Route("/faq", name="faq")
+     */
+    public function faq() :Response
+    {
+        return $this->render('faq.html.twig');
+    }
+
+    /**
      * @Route("/start", name="start")
      */
     public function howToStart() :Response
