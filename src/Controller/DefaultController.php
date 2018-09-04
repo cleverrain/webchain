@@ -14,10 +14,20 @@ class DefaultController extends AbstractController
      * Only for dev purposes. In prod environment
      * it must be overritten by server
      * @Route("/", name="index")
+     * @Route("/home", name="home")
      */
     public function index() :RedirectResponse
     {
         return $this->redirect('/build/static/index.html');
+    }
+
+    /**
+     * @return Response
+     * @Route("/faq", name="faq")
+     */
+    public function faq() :Response
+    {
+        return $this->render('faq.html.twig');
     }
 
     /**
